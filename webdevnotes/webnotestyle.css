@@ -1,0 +1,135 @@
+/* link style */
+            a:link {
+            color: black;
+            background-color: none;
+            text-decoration: none;
+            }
+            a:visited {
+            color: black;
+            background-color: none;
+            text-decoration: none;
+            }
+            a:hover {
+            color: black;
+            background-color: none;
+            text-decoration: none;
+            }
+            a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: none;
+            }
+            h2:link {
+            color: white;
+            background-color: none;
+            text-decoration: none;
+            }
+            h2:visited {
+            color: white;
+            background-color: none;
+            text-decoration: none;
+            }
+            h2:hover {
+            color: yellow;
+            background-color: none;
+            text-decoration: none;
+            }
+            h2:active {
+            color: red;
+            background-color: transparent;
+            text-decoration: none;
+            }
+        /* h4 link style, for disclaimer/archive buttons */
+            h4:link {
+            color: white;
+            text-decoration: none;
+            }
+            h4:visited {
+            color: white;
+            text-decoration: none;
+            }
+            h4:hover {
+            color: black;
+            text-decoration: none;
+            }
+            h4:active {
+            color: yellow;
+            text-decoration: none;
+            }
+        /* h1, h2, h4, h5 text whitening. h2&4 have backgrounds */
+            h1 {
+            font-family: 'Comfortaa';
+            color: white;
+            text-align:center;
+            }
+            h2 {
+            font-family: 'Comfortaa';
+            color: #DADADA;
+            text-align:center;
+            }
+            h4 {
+            font-family: 'Comfortaa';
+            color: white;
+            background-color: gray;
+            text-align:center;
+            }
+            p {
+            font-family: 'Comfortaa';
+            color: #DADADA;
+            text-align:center;
+            }
+            h5 {
+            font-family: 'Comfortaa';
+            color: white;
+            text-align:center;
+            }
+        /* the rest of the style for the site */
+            html, body {
+            height: 100%;
+            margin: 0;
+            }
+            body {
+            background: rgb(90, 40, 40);
+            display: flex;
+            justify-content: center;
+            }
+            canvas {
+            border: 5px solid rgb(255, 255, 255);
+            }
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+            /* Bottom left text */
+            .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            }
+            /* Top left text */
+            .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            }
+            /* Top right text */
+            .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            }
+            /* Bottom right text */
+            .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+            }
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
