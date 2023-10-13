@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='ngCheckers'>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="ngCheckers.css">
+    <title>checkers</title>
+  </head> 
+  <link rel="icon" type="image/x-icon" href="https://codehs.com/uploads/7c28d5f8e34deca09e2ec491a6288379">
+
+  <body ng-controller="checkersCtrl">
+    <div id="gameContainer">
+      <div>
+          <div class="row" ng-repeat="row in board">
+              <div class="square" ng-style="setClass(square)" ng-repeat="square in row track by $index" ng-click="select(square)">
+                <div ng-style="setStyling(square)" class="circle">
+                  <span>{{square.isKing ? 'K' : ''}}</span>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div>Player Turn : {{player}}</div>
+    <div>Red Score : {{redScore}}</div>
+    <div>Black Score : {{blackScore}}</div>
+    <script src="angular.min.js"></script>
+    <script src="ngCheckers.js"></script> 
+    <a href="/index.html"><h1>main<br>menu</h1></a>
+    <audio controls autoplay hidden>
+                <source src="https://codehs.com/uploads/c0341274761911008ac1915ba1663eae" type="audio/mpeg">
+            </audio>
+  </body>
+
+</html>
