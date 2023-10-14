@@ -40,6 +40,27 @@ h2:active {
     background-color: transparent;
     text-decoration: none;
 }
+/* p link style */
+p:link {
+    color: white;
+    background-color: none;
+    text-decoration: none;
+}
+p:visited {
+    color: white;
+    background-color: none;
+    text-decoration: none;
+}
+p:hover {
+    color: blue;
+    background-color: none;
+    text-decoration: none;
+}
+p:active {
+    color: cyan;
+    background-color: transparent;
+    text-decoration: none;
+}
 /* h1, h2, h4, h5 text whitening. h2&4 have backgrounds */
 h1 {
     font-family: 'Comfortaa';
@@ -49,14 +70,14 @@ h2 {
     font-family: 'Comfortaa';
     color: #DADADA;
 }
+h3 {
+    font-family: 'Comfortaa';
+    color: white;
+}
 h4 {
     font-family: 'Comfortaa';
     color: white;
     background-color: gray;
-}
-h3 {
-    font-family: 'Comfortaa';
-    color: white;
 }
 p {
     font-family: 'Comfortaa';
