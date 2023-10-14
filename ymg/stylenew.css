@@ -70,7 +70,7 @@ h2 {
     font-family: 'Comfortaa';
     color: #DADADA;
 }
-.noth2link {
+.noth2link:hover {
     font-family: 'Comfortaa';
     color: #DADADA;
 }
@@ -87,7 +87,7 @@ p {
     font-family: 'Comfortaa';
     color: #DADADA;
 }
-.notPlink {
+.notPlink:hover {
     font-family: 'Comfortaa';
     color: #DADADA;
 }
