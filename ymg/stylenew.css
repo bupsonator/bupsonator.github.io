@@ -140,3 +140,4 @@ canvas {
             left: 50%;
             transform: translate(-50%, -50%);
             }
+            .over { position:absolute; top:20px; left:20px;  }
