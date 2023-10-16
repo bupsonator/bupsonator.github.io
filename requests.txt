@@ -2,6 +2,7 @@ Games that people have requested:
 - Pixel Car Racing
 - My Singing Monsters
 - Time Shooter
+- Angry Birds
 
 Features that people have requested:
 
