@@ -2,9 +2,10 @@ Games that people have requested:
 - Pixel Car Racing
 - My Singing Monsters
 - Time Shooter
-- Drift Hunters (replace Drift Racing)
 - Retrobowl (possible)
 - Cut the Rope
+- Fruit Ninja
+- Angry Birds
 
 Features that people have requested:
 
