@@ -8,4 +8,4 @@ Games that people have requested:
 - Angry Birds
 
 Features that people have requested:
-
+- Fullscreen (W.I.P.)
