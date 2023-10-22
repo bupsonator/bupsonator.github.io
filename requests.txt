@@ -1,6 +1,6 @@
 Games that people have requested:
-- Pixel Car Racing
 - My Singing Monsters
 - Angry Birds
 - Cut The Rope
 - Fruit Ninja
+- Mine Clone
