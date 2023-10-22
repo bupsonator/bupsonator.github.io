@@ -1,5 +1,3 @@
 Games that people have requested:
-- Angry Birds
-- Cut The Rope
 - Fruit Ninja
 - Mine Clone
