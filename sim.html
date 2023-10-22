@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Internet Simulator</title>
-        <link rel="icon" type="image/x-icon" href="/media/mainicon.ico">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
-        <link rel="stylesheet" href="indexstyle.css">
-        <style>
-          body {
-            align-items: center;
-            justify-content: center;
-          }
-        </style>
-    </head>
-    <body class="centered">
-        <h1 style="text-align:center">Internet Simulator</h1>
-        <h5 style="text-align:center">100% accurate recreation of the World Wide Web.</h5>
+  <head>
+      <link rel="stylesheet" type="text/css" href="indexstyle.css">
+      <link rel="icon" type="image/x-icon" href="/media/mainicon.ico">
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
+      <title>Internet Simulator</title>
+    <style>
+      /* CSS code for styling */
+      body {
+        font-family: Courier, sans-serif;
+        background-color: rgb(20, 20, 20);
+      }
+      h2 {
+        font-size: 20px;
+      }
+      #search-container {
+        margin: 50px auto;
+        width: 50%;
+        text-align: center;
+      }
+      #search-box {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 0px 0px 5px rgb(40, 40, 40);
+        background-color: rgb(40, 40, 40);
+      }
+      #search-button {
+        background-color: rgb(0, 80, 0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      h1 {
+          color: #DADADA;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="search-container">
+      <h1>internet simulator</h1>
+      <form>
+        <input  style="color:#DADADA" type="text" id="search-box" placeholder="enter query...">
+        <br>
+        <br>
+        <button type="submit" id="search-button">search</button>
+        <br>
+        <br>
+        <br>
         <a href="index.html">
           <div class="container">
-              <img src="/media/graybutton.png" height="80px" width="180px">
+              <img src="/media/graybutton.png" height="55px" width="100px">
                 <div class="centered"><h2>Return</h2></div>
           </div>
         </a>
-        <iframe src="https://www.bing.com/" style="width:1000px;height:700px"></iframe>
-        <audio controls autoplay hidden>
-          <source src="/media/candyland.mp3" type="audio/mpeg">
-        </audio>
-    </body>
+      </form>
+    </div>
+    <script>
+      // JavaScript code for functionality (zzzcode.ai helped with this)
+      const form = document.querySelector('form');
+      const searchBox = document.querySelector('#search-box');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const searchTerm = searchBox.value;
+        alert(`and then you interneted "${searchTerm}" all over the place`);
+      });
+    </script>
+    <audio controls autoplay hidden>
+      <source src="/media/candyland.mp3" type="audio/mpeg">
+  </audio>
+  </body>
 </html>
