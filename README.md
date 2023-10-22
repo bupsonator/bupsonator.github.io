@@ -20,6 +20,7 @@ Here's what I've got so far:
     In my AP Computer Science class that I'm learning Java in, we are in the corner learning at
     our own pace while the teacher teaches Computer Science Principles to everyone else. I
     overheard that they were using an "internet simulator" to simulate the internet for some
-    reason, so I copied a Your Mom Gaming game window to display Bing. That's all this one is.
+    reason, so I used a code AI to create an internet simulator, and then proceeced to make it
+    extremely unfunny. 
 
 **AND THERE'S MORE TO COME!**
