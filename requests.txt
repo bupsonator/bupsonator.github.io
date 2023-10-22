@@ -4,7 +4,5 @@ Games that people have requested:
 - Time Shooter
 - Angry Birds
 - Retrobowl
-- Drift Hunters
-
-Features that people have requested:
-
+- Cut The Rope
+- Fruit Ninja
