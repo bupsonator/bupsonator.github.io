@@ -141,5 +141,5 @@ canvas {
 }
 .newgames {
   font-style: italic;
-  color: #a3dcff;
+  text-shadow:#a3dcff 1px 0 10px;
 }
