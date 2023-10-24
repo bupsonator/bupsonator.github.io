@@ -1,6 +1,6 @@
 /* tags */
 body {
-  background-color: #103030;
+  background-color: #301010;
   margin: 30px;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -18,26 +18,26 @@ img {
 
 /* link style */
 a:link {
-  color:cyan;
-  background-color: #108080;
+  color:red;
+  background-color: #801010;
   text-decoration: none;
 }
 a:visited {
-  color:cyan;
-  background-color: #108080;
+  color:red;
+  background-color: #801010;
   font-style: none;
 }
 a:hover {
-  color: #10A0A0;
-  background-color: #105050;
+  color: #a01010;
+  background-color: #501010;
   text-decoration: underline;
 }
 a:active{
-  color: #104040;
-  background-color: #103030;
+  color: #401010;
+  background-color: #301010;
   text-decoration: underline;
 }
 /* id */
 #intro {
-  color: #CCFFFF;
+  color: #ffcccc;
 }
