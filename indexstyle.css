@@ -1,5 +1,5 @@
 /* link style */
-a {
+a, button {
   font-family: 'Montserrat';
   color: #CC00AA;
   text-decoration: none;
@@ -22,7 +22,7 @@ a:active {
 }
 
 /* h, a, p tag style */
-h1, h2, h3, h4, h5, h6, p, ol, ul, li, span, div {
+h1, h2, h3, h4, h5, h6, p, ol, ul, li, span, div{
   font-family: 'Montserrat';
   color: white;
 }
@@ -65,4 +65,30 @@ body {
   position:absolute; 
   top:20px; 
   left:20px;  
+}
+
+
+/* New Style 4 collapsibles */
+.collapsible {
+  background-color: rgb(20, 20, 20);
+  font-family: 'Montserrat';
+  color: #C0a;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+}
+.content {
+  padding: 0 18px;
+  font-family: 'Montserrat';
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(20, 20, 20)
+}
+
+.active, .collapsible:hover {
+  color:red;
+  font-family: 'Montserrat';
 }
