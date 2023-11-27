@@ -1,14 +1,23 @@
 /* link style */
+.social a:link, .social a:visited {
+  color: #0BB;
+  text-decoration: none;
+}
+.social a:hover {
+  color: cyan;
+  text-decoration: none;
+}
+.social a:active {
+  color: yellow;
+  text-decoration: none;
+}
+
 a, button {
   font-family: 'Montserrat';
-  color: #CC00AA;
+  color: #DADADA;
   text-decoration: none;
 }
-a:link {
-  color: #CC00AA;
-  text-decoration: none;
-}
-a:visited {
+a:link, a:visited {
   color: #CC00AA;
   text-decoration: none;
 }
@@ -21,10 +30,20 @@ a:active {
   text-decoration: none;
 }
 
+
+
+
 /* h, a, p tag style */
 h1, h2, h3, h4, h5, h6, p, ol, ul, li, span, div{
   font-family: 'Montserrat';
   color: white;
+}
+
+button a {
+    color:#0bb;
+}
+button a:hover {
+    color:cyan;
 }
 
 /* table style */
