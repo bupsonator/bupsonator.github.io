@@ -1,33 +1,53 @@
 /* link style */
+.about a:link, .about a:visited {
+  color: green;
+  text-decoration-line: underline;
+}
+.about a:hover {
+  color: lime;
+  text-decoration-line: underline;
+}
+.about a:active {
+  color: yellow;
+  text-decoration-line: underline;
+}
+
 .social a:link, .social a:visited {
   color: #0BB;
   text-decoration: none;
+  transition: 0.1s;
 }
 .social a:hover {
   color: cyan;
   text-decoration: none;
+  transition: 0.1s;
 }
 .social a:active {
   color: yellow;
   text-decoration: none;
+  transition: 0.1s;
 }
 
 a, button {
   font-family: 'Montserrat';
   color: #DADADA;
   text-decoration: none;
+  transition: 0.1s;
 }
 a:link, a:visited {
   color: #CC00AA;
   text-decoration: none;
+  transition: 0.1s;
 }
 a:hover {
   color: red;
   text-decoration: none;
+  transition: 0.1s;
 }
 a:active {
   color: yellow;
   text-decoration: none;
+  transition: 0.1s;
 }
 
 
@@ -37,13 +57,16 @@ a:active {
 h1, h2, h3, h4, h5, h6, p, ol, ul, li, span, div{
   font-family: 'Montserrat';
   color: white;
+  transition: 0.1s;
 }
 
 button a {
     color:#0bb;
+    transition: 0.1s;
 }
 button a:hover {
     color:cyan;
+    transition: 0.1s;
 }
 
 /* table style */
@@ -110,4 +133,5 @@ body {
 .active, .collapsible:hover {
   color:red;
   font-family: 'Montserrat';
+  transition: 0.1s;
 }
