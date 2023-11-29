@@ -33,14 +33,14 @@ h2:visited {
   transition: 0.1s;
 }
 h2:hover {
-  color: #18D;
+  color: #D21;
   font-size: 26px;
   background-color: none;
   text-decoration: none;
   transition: 0.1s;
 }
 h2:active {
-  color: #2CF;
+  color: #0A1;
   background-color: transparent;
   text-decoration: none;
 }
@@ -110,7 +110,8 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background: rgb(40, 40, 40);
+  /* og color: 40, 40, 40 */
+  background: rgb(30, 60, 30);
   justify-content: center;
   align-items: center;
 }
