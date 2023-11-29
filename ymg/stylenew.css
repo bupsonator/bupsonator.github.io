@@ -33,6 +33,7 @@ h2:visited {
   transition: 0.1s;
 }
 h2:hover {
+  /* og color: #18D */
   color: #D21;
   font-size: 26px;
   background-color: none;
@@ -40,6 +41,7 @@ h2:hover {
   transition: 0.1s;
 }
 h2:active {
+  /* og color: #2CF */
   color: #0A1;
   background-color: transparent;
   text-decoration: none;
@@ -56,12 +58,12 @@ p:visited {
   text-decoration: none;
 }
 p:hover {
-  color: blue;
+  color: red; /* og color: blue */
   background-color: none;
   text-decoration: none;
 }
 p:active {
-  color: cyan;
+  color: lime; /* og color: cyan */
   background-color: transparent;
   text-decoration: none;
 }
@@ -146,5 +148,5 @@ canvas {
 }
 .newgames {
   font-style: italic;
-  text-shadow:#a3dcff 1px 0 10px;
+  text-shadow:#a3ffa3 1px 0 10px; /* og color: #a3dcff */
 }
