@@ -22,7 +22,7 @@ a, button {
   transition: 0.1s;
 }
 a:link, a:visited {
-  color: #CC00AA;
+  color: rgb(14, 204, 0); /* og color: #C0A */
   text-decoration: none;
   transition: 0.1s;
 }
@@ -102,7 +102,7 @@ body {
 .collapsible {
   background-color: rgb(20, 20, 20);
   font-family: 'Montserrat';
-  color: #C0a;
+  color: rgb(14, 204, 0); /* og color: #C0A */
   cursor: pointer;
   width: 100%;
   border: none;
