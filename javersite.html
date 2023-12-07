@@ -30,8 +30,11 @@
                 text-decoration-line: none;
             }
             
-            span {
+            span.hide {
                 color: #288 !important;
+            }
+            span.h2 {
+                font-size: 16px;
             }
             
             /* New Style 4 collapsibles */
@@ -60,8 +63,7 @@
         </style>
     </head>
     <body>
-        <h1>javersite</h1>
-        <p>&nbsp;an app with all of my javer stuff. click the run button to begin. </p>
+        <h1>javersite<span class="h2"> - an app with all of my javer stuff. click the run button to begin.</span></h1>
         
         <button class="collapsible">+ about the apps & the link to leave</button>
         <div class="content">
@@ -78,7 +80,7 @@
                 terms into an integer that's more understandable.<br>
                 6. ANSI fancy text sequences shows how I made the colored/bold text happen, and
                 how you can in your programs if you wanna figure them out. 
-                <span>entering "t" may or may not do something </span>
+                <span class="hide">entering "t" may or may not do something </span>
             </p>
         </div>
         <br>
