@@ -150,7 +150,10 @@ canvas {
   font-style: italic;
   text-shadow:#a3ffa3 1px 0 10px; /* og color: #a3dcff */
 }
-
+.newgames:hover {
+  font-style: italic;
+  text-shadow: red 1px 0 10px;
+}
 
 
 
