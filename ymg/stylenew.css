@@ -109,6 +109,10 @@ html {
   justify-content: center;
   align-items: center;
 }
+::selection {
+  background-color:white;
+  color: black;
+}
 body {
   height: 100%;
   margin: 0;
