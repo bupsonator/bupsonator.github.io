@@ -1,21 +1,21 @@
 /* link style */
 a:link {
-  color: rgb(255, 255, 255);
+  color: white;
   background-color: none;
   text-decoration: none;
 }
 a:visited {
-  color: rgb(255, 255, 255);
+  color: white;
   background-color: none;
   text-decoration: none;
 }
 a:hover {
-  color: blue;
+  color: #D21;
   background-color: none;
   text-decoration: none;
 }
 a:active {
-  color: cyan;
+  color: #0A1;
   background-color: transparent;
   text-decoration: none;
 }
@@ -80,6 +80,7 @@ h2 {
 .noth2link:hover {
   font-family: 'Comfortaa';
   color: #DADADA;
+  font-size: 24px;
 }
 h3 {
   font-family: 'Comfortaa';
