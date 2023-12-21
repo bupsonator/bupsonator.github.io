@@ -20,7 +20,7 @@ h2:link, h2:visited {
 h2:hover {
   /* og color: #18D */
   color: #D21;
-  font-size: 26px;
+  font-size: 24px;
   text-decoration: none;
   transition: 0.1s;
 }
