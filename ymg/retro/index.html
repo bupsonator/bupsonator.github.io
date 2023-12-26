@@ -4,13 +4,12 @@
         <title>your mom gaming&trade;</title>
         <link rel="icon" type="image/x-icon" href="/media/ymgicon.ico">
         <style>
-        /* link style */
-            a:link {
-            color: black;
+            ::selection {
             background-color: white;
-            text-decoration: none;
+            color: black;
             }
-            a:visited {
+        /* link style */
+            a:link, a:visited {
             color: black;
             background-color: white;
             text-decoration: none;
@@ -26,12 +25,7 @@
             text-decoration: underline;
             }
         /* h2 link style, for game buttons */
-            h2:link {
-            color: black;
-            background-color: white;
-            text-decoration: none;
-            }
-            h2:visited {
+            h2:link, h2:visited {
             color: black;
             background-color: white;
             text-decoration: none;
@@ -47,12 +41,7 @@
             text-decoration: underline;
             }
         /* h4 link style, for disclaimer button */
-            h4:link {
-            color: white;
-            background-color: gray;
-            text-decoration: none;
-            }
-            h4:visited {
+            h4:link, h4:visited {
             color: white;
             background-color: gray;
             text-decoration: none;
@@ -93,9 +82,6 @@
             background: rgb(0, 0, 0);
             display: flex;
             justify-content: center;
-            }
-            canvas {
-            border: 5px solid rgb(255, 255, 255);
             }
             </style>
     </head>

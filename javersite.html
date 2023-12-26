@@ -13,11 +13,7 @@
                 color: white;
                 margin: 10px;
             }
-            a:link {
-                color: #2BB;
-                text-decoration-line: none;
-            }
-            a:visited {
+            a:link, a:visited {
                 color: #2BB;
                 text-decoration-line: none;
             }
@@ -36,7 +32,10 @@
             span.h2 {
                 font-size: 16px;
             }
-            
+            ::selection {
+                background-color: white;
+                color: #288;
+            }
             /* New Style 4 collapsibles */
             .collapsible {
               background-color: #288;

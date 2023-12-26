@@ -20,7 +20,7 @@ h2:link, h2:visited, a:link, a:visited {
   text-decoration: none;
   transition: 0.1s;
 }
-h2:hover {
+h2:hover, a:hover {
   color: #18D;
   font-size: 24px;
   text-decoration: none;

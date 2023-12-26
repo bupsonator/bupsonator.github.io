@@ -7,21 +7,10 @@
             body {
                 background-color: #110000;
                 margin: 20px;
-            }
-            h1, h2, h3, h4, h5, h6, p, ol, ul, li, span, div {
                 font-family: Verdana;
                 color: white;
             }
-            a {
-  font-family: Verdana;
-  color: #BB0000;
-  text-decoration: none;
-}
-a:link {
-  color: #BB0000;
-  text-decoration: none;
-}
-a:visited {
+a:link, a:visited {
   color: #BB0000;
   text-decoration: none;
 }
@@ -33,6 +22,11 @@ a:active {
   color: white;
   text-decoration: none;
 }
+/* style for selected text */
+::selection {
+  background-color: white;
+  color: black;
+}
         </style>
     </head>
     <body>
@@ -40,7 +34,7 @@ a:active {
         <br>
         
         <a href="/index.html">&gt; go to homepage</a>
-        <br><br><br>
+        <br><br>
         
         <p>the link you attempted to go to is broken.</p>
 
