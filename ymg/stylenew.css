@@ -1,83 +1,8 @@
-/* style for the entire site */
-html, body {
-  height: 100%;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Comfortaa';
-  background: #282828;
+/* legacy style */
+.tablecenter {
+  margin-left: auto;
+  margin-right: auto;
 }
-
-/* a:hover style */
-a:hover {
-  color: #18D;
-  text-decoration: none;
-}
-
-/* h2 link style */
-h2:link, h2:visited, a:link, a:visited {
-  color: white;
-  text-decoration: none;
-  transition: 0.1s;
-}
-h2:hover {
-  color: #18D;
-  font-size: 24px;
-  text-decoration: none;
-  transition: 0.1s;
-}
-h2:active, a:active {
-  color: #2CF;
-  text-decoration: none;
-}
-
-/* p link style */
-p:link, p:visited {
-  color: white;
-  background-color: none;
-  text-decoration: none;
-}
-p:hover {
-  color: #18D;
-  background-color: none;
-  text-decoration: none;
-}
-p:active {
-  color: #2CF;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-/* text styling */
-h1, h3, h4, h5, h6 {
-  color: white;
-}
-h2 {
-  color: #DADADA;
-  transition: 0.1s;
-  font-size: 22px;
-}
-p {
-  color: #DADADA;
-}
-
-/* classes to fix non-link h2 and p */
-.noth2link, .noth2link:hover{
-  color: #DADADA;
-  font-size: 24px;
-}
-.notPlink:hover {
-  color: #DADADA;
-}
-
-/* style for selected text */
-::selection {
-  background-color: white;
-  color: black;
-}
-
-
-/* style that centers text inside of images */
 .container {
   position: relative;
   text-align: center;
@@ -90,25 +15,173 @@ p {
   transform: translate(-50%, -50%);
 }
 
-/* put text over images */
-.over { 
-  position:absolute; 
-  top:20px; 
-  left:20px;  
+/*BRAND SPANKIN NEW GRID STYLE*/
+.grid {
+  display: grid;
+  grid-template-columns: 175px 175px 175px 175px 175px 175px ;
 }
 
-/* center the tables for the indices */
-.tablecenter {
-  margin-left: auto;
-  margin-right: auto;
+.nullitem {
+  border: none;
+}
+
+.item {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 18px;
+  margin: 10px;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  transition: .1s;
+  background-color: #212121;
+  box-shadow: black 1px 0 10px;
+}
+.item:hover {
+  margin: 7px;
+  padding: 19px;
+  transition: .1s;
+  box-shadow: black 2px 0 17px;
+  font-size: 23px;
+  color: #18D;
+}
+
+.twoline {
+  padding: 6px;
+  font-size: 22px;
+}
+.twoline:hover {
+  font-size: 23px;
+  padding: 7px;
+}
+
+.topitem {
+  padding: 8px;
+  margin: 10px;
+  background-color: #1C2443;
+}
+
+.topitem:hover {
+  margin: 8px;
+  padding: 9px;
+  box-shadow: black 2px 0 15px;
+  font-size: 23px;
 }
 
 /* featured game style */
 .featured {
-  font-style: italic;
-  text-shadow:white 1px 0 10px;
+font-style: italic;
+box-shadow: gray 1px 0 10px;
 }
 .featured:hover {
-  font-style: italic;
-  text-shadow: #18D 1px 0 10px;
+font-style: italic;
+box-shadow: #18D 1px 0 10px;
+}
+
+/* style for the entire site */
+html, body {
+height: 100%;
+margin: 0;
+justify-content: center;
+align-items: center;
+font-family: 'Comfortaa';
+background: #282828;
+}
+
+.index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* a:hover style */
+a:hover {
+color: #18D;
+text-decoration: none;
+}
+
+/* h2 link style */
+h2:link, h2:visited, a:link, a:visited {
+color: white;
+text-decoration: none;
+transition: 0.1s;
+}
+h2:hover {
+color: #18D;
+font-size: 24px;
+text-decoration: none;
+transition: 0.1s;
+}
+h2:active, a:active {
+color: #2CF;
+text-decoration: none;
+}
+
+/* p link style */
+p:link, p:visited {
+color: white;
+background-color: none;
+text-decoration: none;
+}
+p:hover {
+color: #18D;
+background-color: none;
+text-decoration: none;
+}
+p:active {
+color: #2CF;
+background-color: transparent;
+text-decoration: none;
+}
+
+/* text styling */
+h1, h3, h4, h5, h6 {
+color: white;
+text-align: center;
+}
+h2 {
+color: #DADADA;
+transition: 0.1s;
+font-size: 22px;
+}
+p {
+color: #DADADA;
+}
+
+/* classes to fix non-link h2 and p */
+.noth2link, .noth2link:hover{
+color: #DADADA;
+font-size: 24px;
+}
+.notPlink:hover {
+color: #DADADA;
+}
+
+/* style for selected text */
+::selection {
+background-color: white;
+color: black;
+}
+
+
+/* put text over images */
+.over { 
+position:absolute; 
+top:20px; 
+left:20px;  
+}
+
+.fullscreen {
+  position:fixed; 
+  top:0; 
+  left:0; 
+  bottom:0; 
+  right:0; 
+  width:100%; 
+  height:100%; 
+  border:none; 
+  margin:0; 
+  padding:0; 
+  overflow:hidden; 
+  z-index:999999;
 }
