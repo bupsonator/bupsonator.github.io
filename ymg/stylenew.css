@@ -34,35 +34,33 @@
 .item {
   border: 0.5px solid black;
   border-radius: 10px;
-  padding: 18px;
-  margin: 12px;
+  padding: 16px;
+  margin: 19px;
   font-size: 22px;
   text-align: center;
   color: white;
   transition: .1s;
   background-color: #212121;
-  background-size: 157px 60px;
+  background-size: 150px 58px;
   box-shadow: black 1px 0 10px;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 4px 4px 4px black;
 }
 .item:hover {
-  margin: 11px;
-  padding: 19px;
+  margin: 17px;
+  padding: 17px;
   transition: .1s;
   box-shadow: black 2px 0 17px;
   font-size: 23px;
-  color: #18D;
-  
   background-size: 157px 63px;
 }
 
 .twoline {
-  padding: 6px;
+  padding: 3.5px !important;
   font-size: 22px;
 }
 .twoline:hover {
   font-size: 23px;
-  padding: 7px;
+  padding: 3px !important;
 }
 
 .topitem {
@@ -80,22 +78,12 @@
 
 /* featured game style */
 .featured {
-  font-style: italic;
-  box-shadow: gray 3px 0 17px;
-}
-.featured:hover {
-  font-style: italic;
-  box-shadow: 3px 0 20px #18D;
-}
-
-/* featured game style */
-.featured {
 font-style: italic;
-box-shadow: gray 1px 0 10px;
+box-shadow: gray 3px 0 17px;
 }
 .featured:hover {
 font-style: italic;
-box-shadow: #18D 1px 0 10px;
+box-shadow: 3px 0 20px #18D;
 }
 
 /* style for the entire site */
