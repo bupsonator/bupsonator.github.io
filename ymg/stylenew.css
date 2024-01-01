@@ -41,7 +41,7 @@
   color: white;
   transition: .1s;
   background-color: #212121;
-  background-size: 140px 58px;
+  background-size: 141px 58px;
   box-shadow: black 1px 0 10px;
   text-shadow: 4px 4px 4px black;
 }
@@ -51,7 +51,6 @@
   transition: .1s;
   box-shadow: black 2px 0 17px;
   font-size: 23px;
-  background-size: 141px 59px;
 }
 
 .twoline {
