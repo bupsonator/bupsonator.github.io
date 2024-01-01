@@ -16,6 +16,7 @@
 }
 
 /*BRAND SPANKIN NEW GRID STYLE*/
+
 .window {
   margin: 0px 0px 0px 22px;
   border: 5px solid #2D3554;
@@ -26,7 +27,10 @@
   display: grid;
   grid-template-columns: 175px 175px 175px 175px 175px 175px;
 }
-
+.oddgrid {
+    display: grid;
+    grid-template-columns: 175px 175px 175px 175px 175px
+}
 .nullitem {
   border: none;
 }
@@ -41,7 +45,7 @@
   color: white;
   transition: .1s;
   background-color: #212121;
-  background-size: 141px 58px;
+  background-size: 140px 58px;
   box-shadow: black 1px 0 10px;
   text-shadow: 4px 4px 4px black;
 }
@@ -51,7 +55,7 @@
   transition: .1s;
   box-shadow: black 2px 0 17px;
   font-size: 23px;
-  background-size: 142px 59px;
+  background-size: 141px 59px;
 }
 
 .twoline {
