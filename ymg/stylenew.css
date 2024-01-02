@@ -10,7 +10,7 @@
 }
 .centered {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -78,6 +78,19 @@
   padding: 9px;
   box-shadow: black 2px 0 15px;
   font-size: 23px;
+}
+
+.minimize {
+    padding: 3px;
+    margin: 10px;
+    background-color: #515111;
+}
+.minimize:hover {
+    margin: 8px;
+    padding: 4px;
+    background-color: #818111;
+    box-shadow: black 2px 0 15px;
+    font-size: 23px;
 }
 
 /* featured game style */
