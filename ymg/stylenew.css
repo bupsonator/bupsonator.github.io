@@ -78,9 +78,11 @@
 /* featured game style */
 .featured {
 font-style: italic;
+border: solid 1px white;
 box-shadow: gray 3px 0 17px;
 }
 .featured:hover {
+border: solid 1px #18D;
 font-style: italic;
 box-shadow: 3px 0 20px #18D;
 }
