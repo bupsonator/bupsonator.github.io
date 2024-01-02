@@ -1,20 +1,3 @@
-/* legacy style */
-.tablecenter {
-  margin-left: auto;
-  margin-right: auto;
-}
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.centered {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /*BRAND SPANKIN NEW GRID STYLE*/
 
 .window {
@@ -113,7 +96,7 @@ font-family: 'Comfortaa';
 background: #282828;
 }
 
-.index {
+.index, .centered {
   position: absolute;
   top: 50%;
   left: 50%;
