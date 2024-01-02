@@ -1,6 +1,6 @@
 /*BRAND SPANKIN NEW GRID STYLE*/
 .window {
-  margin: 0px 0px 0px 22px;
+  margin: 0px 0px 0px 50px;
   border: 5px solid #2D3554;
   border-radius: 5px;
 }
@@ -154,7 +154,6 @@ font-size: 22px;
 p {
 color: #DADADA;
 }
-
 /* classes to fix non-link h2 and p */
 .noth2link, .noth2link:hover{
 color: #DADADA;
