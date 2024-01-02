@@ -1,3 +1,20 @@
+/* legacy style */
+.tablecenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*BRAND SPANKIN NEW GRID STYLE*/
 
 .window {
@@ -8,11 +25,11 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 175px 175px 175px 175px 175px 175px;
+  grid-template-columns: 185px 185px 185px 185px 185px 185px;
 }
 .oddgrid {
     display: grid;
-    grid-template-columns: 175px 175px 175px 175px 175px
+    grid-template-columns: 185px 185px 185px 185px 185px
 }
 .nullitem {
   border: none;
@@ -21,33 +38,33 @@
 .item {
   border: 0.5px solid black;
   border-radius: 10px;
-  padding: 16px;
+  padding: 22px;
   margin: 19px;
   font-size: 22px;
   text-align: center;
   color: white;
   transition: .1s;
   background-color: #212121;
-  background-size: 140px 58px;
+  background-size: 155px 70px;
   box-shadow: black 1px 0 10px;
   text-shadow: 4px 4px 4px black;
 }
 .item:hover {
   margin: 17px;
-  padding: 17px;
+  padding: 23px;
   transition: .1s;
   box-shadow: black 2px 0 17px;
   font-size: 23px;
-  background-size: 141px 59px;
+  background-size: 160px 75px;
 }
 
 .twoline {
-  padding: 3.5px !important;
+  padding: 8px !important;
   font-size: 22px;
 }
 .twoline:hover {
   font-size: 23px;
-  padding: 3px !important;
+  padding: 8.5px !important;
 }
 
 .topitem {
@@ -96,7 +113,7 @@ font-family: 'Comfortaa';
 background: #282828;
 }
 
-.index, .centered {
+.index {
   position: absolute;
   top: 50%;
   left: 50%;
