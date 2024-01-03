@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>web dev notes</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="/media/wdnicon.ico">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+        <style>
+            /* tags */
+            body {
+              background-color: #201010;
+              margin: 30px;
+              font-family: Source Code Pro, Courier;
+              color: #CBCBCB;
+            }
+            span {
+              color: #B11;
+            }
+            /* link style */
+            a:link, a:visited {
+              color:red;
+              background-color: #801010;
+              text-decoration: none;
+              padding: 2px;
+              border: solid 0.5px red;
+              border-radius: 10px;
+            }
+            a:hover {
+              color: #a01010;
+              background-color: #501010;
+              text-decoration: none;
+            }
+            /* New Style 4 collapsibles */
+            .collapsible {
+              background-color: #201010;    
+              font-family: 'Source Code Pro';
+              color: red;
+              cursor: pointer;
+              border: none;
+              text-align: left;
+              font-size: 15px;
+              transition: 0.2s;
+            }
+            .content {
+              padding: 0 18px;
+              font-family: 'Source Code Pro';
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+            }
+            .active, .collapsible:hover {
+              color:#FAA;
+              font-family: 'Source Code Pro';
+              transition: 0.1s;
+              font-size: 16px;
+              transition: 0.2s;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <span>-$</span> web dev notes
+        </h1>
+        <h2>
+            a collection of all of my html notes and stuff
+        </h2>
+        <a href="/index.html">
+            &lt;!RETURN to homepage&gt;
+        </a>
+        <br><br>
+        <button class="collapsible">&gt; html tags</button>
+        <div class="content">
+            <p>
+            <b>&lt;p&gt;</b> - Paragraph tag. Tells HTML where a paragraph is.<br>
+            <br>
+            <b>&lt;a&gt;</b> - Link tag. Use "href" to tell HTML where the link goes.<br>
+            <br>
+            <b>&lt;b&gt;</b> - Bold tag. Makes text <b>bold.</b><br>
+            <br>
+            <b><i>&lt;i&gt;</i></b> - Italicise tag. Makes text <i>slanted.</i><br>
+            <br>
+            <b><u>&lt;u&gt;</u></b> - Underline tag. <u>Underlines</u> text.<br>
+            <br>
+            <b>&lt;h1-6&gt;</b> - Header tag. It's bold text going from least(big)-greatest(small).<br>
+            <br>
+            <b>&lt;hr&gt;</b> - Inserts a line. DOESN'T need a closing tag.<br>
+            <br>
+            <b>&lt;br&gt;</b> - Line break. DOESN'T need a closing tag.<br>
+            <br>
+            <b>&lt;img&gt;</b> - Uses "src" to get the image. DOESN'T need a closing tag. 
+            Use the alt="" attribute to add a description.<br>
+            <br>
+            <b>&lt;ul&gt;</b> - Defines an unordered list (bullet points) (can be nested)<br>
+            <br>
+            <b>&lt;ol&gt;</b> - Defines an ordered list (numbered) (can be nested)<br>
+            <br>
+            <b>&lt;li&gt;</b> - Defines a list item in a list<br>
+            <br>
+            <b>&lt;table&gt;</b> - Container for all table data. border= attribute adds border<br>
+            <br>
+            <b>&lt;tr&gt;</b> - Container for a single row. border attribute works here.<br>
+            <br>
+            <b>&lt;th&gt;</b> - Single table header element<br>
+            <br>
+            <b>&lt;td&gt;</b> - Single table data element<br>
+            <br>
+            <b>style</b> - The style attribute. Use this for style! Size, color.<br>
+            <br>
+            <b>&lt;style&gt;</b> - The style tag. CSS goes in between these.<br>
+            <br>
+            <b>class</b> - The class attribute will "group" an element to make CSS easier. 
+            Class names can't have spaces, or a number as the first character.<br>
+            <br>
+            <b>id</b> - The ID attribute is like class, but more specific. ONE ID PER TAG. 
+            ID names can't have spaces, or a number as the first character.<br>
+            <br>
+            <b>&lt;meta&gt;</b> - This tag will add a short description to your site with the 
+            name="description" and the content="" attributes.<br>
+            <br>
+            <b>&lt;iframe&gt;</b> - This tag lets you add another HTML site to yours using the 
+            src attribute.<br>
+            <br>
+            <b>&lt;link&gt;</b> - This tag allows you to link a whole bunch of stuff, like CSS files 
+            and favicons! rel="" allows you to define what it is (stylesheet, icon), type="" tells 
+            HTML what it is (text/css, image/x-icon), and finally, href="" lets you tell HTML where it 
+            is.<br>
+            <br>
+            <b>&lt;div&gt;</b> - This tag allows you to separate block content on your page. It's like 
+            a p tag, without making the contents a paragraph, allowing you to add whatever style you like!<br>
+            <br>
+            <b>&lt;span&gt;</b> - This tag is like div, but it doesn't create line breaks, which means 
+            you can put inline style!<br>
+            <br>
+            <b>&lt;Semantic Tags&gt;</b> - These tags can be called whatever you want, so long as it isn't 
+            an existing tag that has a function. They act like divs, and can divide your content in an easier 
+            way. A semantic tag can be called header, main, footer, whatever you want!<br>
+            <br></br>
+            </p>
+        </div>
+        <br>
+        
+        <button class="collapsible">&gt; html skeleton</button>
+        <div class="content">
+            <p>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Your Page Title&lt;/title&gt;<br>
+            &lt;style&gt; put css here &lt;/style&gt;<br>
+            &lt;script&gt; put js here &lt;/script&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Inside the body tag is where you put all the cool stuff<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;you want on your page!--&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+            </p>
+        </div>
+        <br>
+        
+        <button class="collapsible">&gt; html colors</button>
+        <div class="content">
+            <iframe src="https://html-color-codes.info/color-names/" style="width:600px;height:400px"></iframe>
+        </div>
+        <br>
+        
+        <button class="collapsible">&gt; html special characters</button>
+        <div class="content">
+        <p>
+            <b>&amp;amp</b> - Ampersand &amp;<br>
+            <b>&amp;nbsp</b> - Space &nbsp;<br>
+            <b>&amp;quot</b> - Quotes &quot;<br>
+            <b>&amp;gt</b> - Greater Than &gt;<br>
+            <b>&amp;lt</b> - Less Than &lt;<br>
+            <b>&amp;ndash</b> - Dash &ndash;<br>
+            <b>&amp;copy</b> - Copyright &copy;<br>
+            <b>&amp;trade</b> - Trademark &trade;<br>
+            <b>&amp;reg</b> - Registered &reg;<br>
+            <br>
+            In some cases, you can use the raw symbols instead of<br>
+            the shortcuts. Like, "", - and & were typed without<br>
+            the shortcut just now. But, when they interfere<br>
+            with code, like how &lt; &gt; do, they need the<br>
+            shortcut. For example, let's say I want to show<br>
+            the br tag. If I typed the &lt; &gt; without the<br>
+            shortcuts, HTML would think it's real code. We don't<br>
+            want that, so we use the shortcuts: &lt;br&gt;
+        </p>
+        </div>
+        <br>
+        
+        <button class="collapsible">&gt; css rules</button>
+        <div class="content">
+                    <p>
+            CSS rules are easy. However they were written in the style= attribute, 
+            that's how you do it in pure CSS. Here's an example rule:<br>
+            <br>
+            selector {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:red;<br>
+            }<br>
+            <br>
+            Now, just replace h1 with any HTML element, and it will apply to that 
+            element. Same goes for the actual properties. Background color, text align, 
+            and all of the others that were learned. Maybe one day I'll put 'em here. <br>
+            <br>
+            TAGS (Least Specific): Selector looks like: h1<br>
+            CLASS (Middle specific): Selector looks like: .class OR tag.class<br>
+            ID (Most specific): Selector looks like: #ID<br>
+            <br>
+            The Cascade of CSS introduces a new rule: !important. This rule will override 
+            every single selector. Also, if both rules have the same specific-ness, 
+            the <b>later</b> rule will be applied. <br>
+            <br>
+            The cascade's order is Importance > Specificity > Order.<br>
+            <br>
+            We can use combinators to combine CSS elements.<br>
+            A space is a descendant selector, which is everything inside an element.<br>
+            &gt; is a child selector, which is everything one level in an element.<br>
+            + is a next sibling selector, which will select ONLY the next element in the same parent.<br>
+            <br>
+            :hover :link :visited and :active are all pseudo-classes. These classes can select an element 
+            when it is in a certain state. For example, hover will only apply the style if the element is 
+            being hovered over by the cursor. To use them: selector:pseudo-class<br>
+            <br>
+            Pseudo elements can also be used. These are before, after, first-letter, first-line, and selection. 
+            The way you use them is element::pseudo. NOTICE THE TWO COLONS. Before/after use the content: ""; 
+            attribute to add content to put before or after an element. First-letter/line will style the first 
+            letter or line. Selection will style the content that the user selects.<br>
+            <br>
+            The visibility attribute can change if an element is visible or not. It will still take up space,
+            though. The display attribute can change if an element is shown or not, so it will not take up space
+            if it's not, unlike visibility. Opacity works in a similar way, taking a value from 0-1.<br>
+            <br>                                                           
+        </p>
+        </div>
+        <br>
+        <audio controls autoplay hidden>
+            <source src="/media/sneaky.mp3" type="audio/mpeg">
+        </audio>
+        <script src="/collapsible.js"></script>
+    </body>
+</html>

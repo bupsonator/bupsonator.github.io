@@ -67,7 +67,7 @@
         <button class="collapsible">&gt; educational sites</button>
         <div class="content">
             <p>
-                <a href="/webdevnotes/index.html">&gt; web dev notes</a>
+                <a href="devnotes.html">&gt; web dev notes</a>
                 <span> - my html & css documentation</span>
                 <br><br>
                 
@@ -108,21 +108,6 @@
         <audio controls autoplay hidden>
             <source src="/media/sneaky.mp3" type="audio/mpeg">
         </audio>
-        <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
+        <script src="/collapsible.js"></script>
     </body>
 </html>
