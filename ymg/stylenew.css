@@ -38,7 +38,7 @@ a:hover {
 }
 .oddgrid {
   display: grid;
-  grid-template-columns: 185px 185px 185px 185px 185px
+  grid-template-columns: 185px 185px 185px 185px 185px;
 }
 
 /* the default grid item and its hover style */
