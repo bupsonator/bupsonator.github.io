@@ -41,12 +41,12 @@
 }
 
 .twoline {
-  padding: 8px !important;
+  padding: 10px !important;
   font-size: 22px;
 }
 .twoline:hover {
   font-size: 23px;
-  padding: 8.5px !important;
+  padding: 10.5px !important;
 }
 
 .topitem {
