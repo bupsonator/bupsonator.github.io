@@ -2,14 +2,13 @@
 body {
   background-color: #301010;
   margin: 30px;
+  font-family: Source Code Pro, Courier;
 }
 h1, h2, h3, h4, h5, h6 {
   color: white;
-  font-family: Source Code Pro, Courier;
 }
 p, a {
   color: #DADADA;
-  font-family: Source Code Pro, Courier;
 }
 img {
   width: 200px;
@@ -17,15 +16,10 @@ img {
 }
 
 /* link style */
-a:link {
+a:link, a:visited {
   color:red;
   background-color: #801010;
   text-decoration: none;
-}
-a:visited {
-  color:red;
-  background-color: #801010;
-  font-style: none;
 }
 a:hover {
   color: #a01010;

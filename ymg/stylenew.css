@@ -1,22 +1,47 @@
-/*BRAND SPANKIN NEW GRID STYLE*/
+/* style for the entire site */
+html, body {
+  height: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comfortaa';
+  background: #282828;
+}
+
+/* text styling */
+h1, h2, h3, h4, h5, h6, p {
+  color: white;
+  text-align: center;
+}
+
+/* a link style for the about page */
+a:link, a:visited {
+  color: #DDF;
+  text-decoration: none;
+}
+a:hover {
+  color: #18D;
+  text-decoration: none;
+}
+
+/* style for iframes on the windowed game pages */
 .window {
   margin: 0px 0px 0px 50px;
   border: 5px solid #2D3554;
   border-radius: 5px;
 }
 
+/* grid and odd grid class for grid layout */
 .grid {
   display: grid;
   grid-template-columns: 185px 185px 185px 185px 185px 185px;
 }
 .oddgrid {
-    display: grid;
-    grid-template-columns: 185px 185px 185px 185px 185px
-}
-.nullitem {
-  border: none;
+  display: grid;
+  grid-template-columns: 185px 185px 185px 185px 185px
 }
 
+/* the default grid item and its hover style */
 .item {
   border: 0.5px solid black;
   border-radius: 10px;
@@ -40,6 +65,7 @@
   background-size: 152px 75px;
 }
 
+/* adjusts .item so it's the same size when it has two lines of text */
 .twoline {
   padding: 10px !important;
   font-size: 22px;
@@ -49,12 +75,12 @@
   padding: 10.5px !important;
 }
 
+/* top items, used for navigation buttons */
 .topitem {
   padding: 8px;
   margin: 10px;
   background-color: #1C2443;
 }
-
 .topitem:hover {
   margin: 8px;
   padding: 9px;
@@ -62,119 +88,49 @@
   font-size: 23px;
 }
 
+/* style for the minimize button on fullscreen files */
 .minimize {
-    padding: 3px;
-    margin: 10px;
-    background-color: #515111;
+  padding: 3px;
+  margin: 10px;
+  background-color: #515111;
 }
 .minimize:hover {
-    margin: 8px;
-    padding: 4px;
-    background-color: #818111;
-    box-shadow: black 2px 0 15px;
-    font-size: 23px;
+  margin: 8px;
+  padding: 4px;
+  background-color: #818111;
+  box-shadow: black 2px 0 15px;
+  font-size: 23px;
 }
 
 /* featured game style */
 .featured {
-font-style: italic;
-border: solid 1px white;
-box-shadow: gray 3px 0 17px;
+  font-style: italic;
+  border: solid 1px white;
+  box-shadow: gray 3px 0 17px;
 }
 .featured:hover {
-border: solid 1px #18D;
-font-style: italic;
-box-shadow: 3px 0 20px #18D;
+  border: solid 1px #18D;
+  font-style: italic;
+  box-shadow: 3px 0 20px #18D;
 }
 
-/* style for the entire site */
-html, body {
-height: 100%;
-margin: 0;
-justify-content: center;
-align-items: center;
-font-family: 'Comfortaa';
-background: #282828;
-}
-
-.index, .centered {
+/* style that makes sure indexes and windows arent broken */
+.index {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* a:hover style */
-a:hover {
-color: #18D;
-text-decoration: none;
-}
-
-/* h2 link style */
-h2:link, h2:visited, a:link, a:visited {
-color: white;
-text-decoration: none;
-transition: 0.1s;
-}
-h2:hover {
-color: #18D;
-font-size: 24px;
-text-decoration: none;
-transition: 0.1s;
-}
-h2:active, a:active {
-color: #2CF;
-text-decoration: none;
-}
-
-/* p link style */
-p:link, p:visited {
-color: white;
-background-color: none;
-text-decoration: none;
-}
-p:hover {
-color: #18D;
-background-color: none;
-text-decoration: none;
-}
-p:active {
-color: #2CF;
-background-color: transparent;
-text-decoration: none;
-}
-
-/* text styling */
-h1, h3, h4, h5, h6 {
-color: white;
-text-align: center;
-}
-h2 {
-color: #DADADA;
-transition: 0.1s;
-font-size: 22px;
-}
-p {
-color: #DADADA;
-}
-/* classes to fix non-link h2 and p */
-.noth2link, .noth2link:hover{
-color: #DADADA;
-font-size: 24px;
-}
-.notPlink:hover {
-color: #DADADA;
-}
 
 /* style for selected text */
 ::selection {
-background-color: white;
-color: black;
+  background-color: white;
+  color: black;
 }
 
-
-/* put text over images */
+/* puts stuff over other stuff, used for the minimize button */
 .over { 
-position:absolute; 
-top:20px; 
-left:20px;  
+  position:absolute; 
+  top:20px; 
+  left:20px;  
 }
