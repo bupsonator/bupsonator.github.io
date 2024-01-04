@@ -134,6 +134,9 @@
             <b>&lt;button&gt;</b> - This tag creates a button, which the user can click. When paired with
             javascript, buttons can be a helpful part in making your website interactive.<br>
             <br>
+            <b>&lt;button&gt;</b> - This tag allows you to add javascript to HTML sites. You can either code
+            in between the tags, or use src to link a .js file to your site.<br>
+            <br>
             <b>&lt;Semantic Tags&gt;</b> - These tags can include header, main, footer, etc. They are to
             separate content for web browsers, and they can format the page in certain ways.<br>
             <br></br>
@@ -242,7 +245,28 @@
         <button class="collapsible">&gt; javascript</button>
         <div class="content">
         <p>
-            coming soon
+          <b>console.log();</b> - This command will print something to the console for the programmer to see,
+          to make debugging easier.<br>
+          <br>
+          <b>prompt();</b> - This command will send the user a prompt dialog from their browser.<br>
+          <br>
+          <b>alert();</b> - This command will send the user an alert dialog from their browser.<br>
+          <br>
+          <b>document. ();</b> - This command allows you to access the contents of an HTML element
+          by putting said element between the . and the (. The problem is, it cannot access elements
+          like p, div, or h. So, we can use the next two commands to do so.<br>
+          <br>
+          <b>document.getElementByID();</b> - This command will allow you alter an element by ID, so you
+          can alter the website itself.<br>
+          <br>
+          <b>document.getElementsByTagName();</b> - This command is like the above, but it targets a much
+          broader scope of elements. It will return a list of all elements, which is annoying, so we can
+          index it by using the command and storing it into a var. Then, we can use console.log(); followed
+          by [#], with # being the index of the tag we want to access.<br>
+          <br>
+          <b>document.innerHTML();</b> - This function can allow you to change the innards of an HTML
+          element, & is usually used with .getElementByID or .getElementsByName<br>
+          <br>
         </p>
         </div>
         <br>
