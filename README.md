@@ -33,8 +33,7 @@ Here's what I've got so far:
 ## Javer, Pyton & Other Funnies
 - Javersite:
     This is a website where I embedded my Java project in CodeHS so that you can mess with it.
-- Pythings:
-    Basically Javersite, but in Pyton instead.
+    Java is my language of choice for programming random things that do stuff.
 - Blinkers:
     It's a thing where I coded Karel to be blinkers infinitely in Java, so I recorded a video
     of it and it's on the internet now.
