@@ -1,0 +1,149 @@
+<!--- Use image filters to make the spines look different -->
+<!-- Give each book div a unique ID, the first one is given as an example -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aesop's Fables</title>
+    <style>
+        /*
+    For each book, use the id to create a CSS rule to apply a filter
+    so that each book looks different 
+*/
+#lark {
+    filter: brightness(1%);
+}
+
+#nightingale {
+    filter: blur(25px);
+}
+
+#lionmouse {
+    filter: hue-rotate(95deg);
+}
+
+#lioness {
+    filter: saturate(500) hue-rotate(-105deg);
+}
+
+#fortune {
+    filter: grayscale(70%);
+}
+
+#donkey {
+    filter: invert(80%);
+}
+.book:hover {
+    transition: 2s;
+    width: 300px;
+    height: 400px;
+    background-image:url("https://codehs.com/uploads/92c3950f9fa0a4b3510bae4dcc8bc95c");
+}
+
+/* Put your styles ABOVE this line */
+/* Pre-built styles that you don't need to worry about. Don't change 
+these*/
+.book{
+    transition: 2s;
+    position:relative;
+    background-size:100% 100%;
+    height:200px;
+    width:100px;
+    background-image:url("https://codehs.com/uploads/0b245f08d2896b7a0142c7085f186963");
+}
+.text{
+    position: fixed;
+    text-align:left;
+    visibility:hidden; /* hide the text for now */
+    font-size:16px;
+}
+
+.bookcase{
+    border: 20px solid brown;
+    padding: 50px 20px;
+    width:90%;
+    text-align:center;
+}
+
+ul{
+    list-style-type:none;  /* remove bullets */
+}
+
+li{
+    display:inline-flex; /* force list items to be in one line */
+			 
+}
+
+body{
+    background-color: tan;
+}
+    </style>
+    
+  </head>
+  <body>
+    <h1> Aesop's Fables </h1>
+    <a href="index.html">Back to homepage</a>
+    <br><br>
+    <div class="bookcase">
+        <ul>
+            <li>
+                <div class="book" id="lark">
+                    <p class="text">
+                        Title: The Lark and Her Young Ones
+                        <br>
+                        Moral:Self-help is the best help.  
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="book" id="nightingale">
+                    <p class="text">
+                        Title: The Labourer and the Nightingale
+                        <br>
+                        Moral: Sorrow not over what is lost forever
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="book" id="lionmouse">
+                    <p class="text">
+                        Title: The Lion and the Mouse
+                        <br>
+                        Moral: No act of kindness, no matter how small, is ever wasted
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <ul>
+        	<li >
+        	  <div class="book" id="lioness">
+        	    <p class="text">
+        	      Title: The Lioness
+        	      <br>
+        	      Moral: The value is in the worth, not in the number
+        	    </p>
+        	  </div>
+        	</li>
+        	<li >
+        	  <div class="book" id="fortune">
+        	    <p class="text">
+        	      Title:The Little Boy and Fortune
+        	      <br>
+        	      Moral: Every one is more or less master of his own fate
+        	    </p>
+        	  </div>
+        	</li>
+        	<li >
+        	  <div class="book" id="donkey">
+        	    <p class="text">
+        	      Title: The Man the Boy and the Donkey
+        	      <br>
+        	      Moral: Please all, and you will please none
+        	    </p>
+        	    
+        	  </div>
+        	</li>
+          </ul>
+
+    </div>
+  </body>
+</html>

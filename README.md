@@ -26,6 +26,9 @@ Here's what I've got so far:
 - Endangered Animals:
     This is a CodeHS project that I decided to publish because of the amount of work they made
     me put into it. It describes a few endangered animals.
+- Aesop's Fables:
+    It has nothing to do with Aesop, or fables. It's just me learning CSS interaction and
+    animation stuff.
 
 ## Javer, Pyton & Other Funnies
 - Javersite:
