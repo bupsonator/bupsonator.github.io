@@ -202,7 +202,7 @@
                 <!-- pacman --><button onclick="newSrc();" value="/ymg/gamesauce/pacman.html" style="background-image:url(https://th.bing.com/th/id/OIP.v1TBqEIEo8aSMIISGhINoQHaEo?rs=1&pid=ImgDetMain)">
                     &emsp;
                 </button>
-                <a href="/ymg/papas/index.html"><div class="item" style="background-image:url(https://th.bing.com/th/id/OIP.O4g1KXMYM4RgTAhLN4PrbAHaEK?rs=1&pid=ImgDetMain)">
+                <a href="/ymg/multigame/papas.html"><div class="item" style="background-image:url(https://th.bing.com/th/id/OIP.O4g1KXMYM4RgTAhLN4PrbAHaEK?rs=1&pid=ImgDetMain)">
                     &emsp;
                 </div></a>
                 <!-- paper --><button onclick="newSrc();" value="https://google-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@b8b8a03997f38305098c2f2f5fe14907463cd23b/build/ppo2/ppo2.xml" style="background-image:url(https://th.bing.com/th/id/OIP.lsg1_qCKgksRdVxhk1WCsgHaCH?rs=1&pid=ImgDetMain)">
@@ -303,29 +303,7 @@
         <audio controls autoplay hidden>
             <source src="/media/sneaky.mp3" type="audio/mpeg">
         </audio>
-        <script>
-            var gridChildren = document.getElementById("asdf").children;
-            const grid = document.getElementById('asdf');
-            console.log("grid children " + gridChildren);
-            var index = 0;
-            for (let i = 0, len = grid.children.length; i < len; i++)
-                {
-                    grid.children[i].onclick = function()
-                    {
-                    index = i;
-                    console.log("index of clicked: " + index);
-                    newSrc();
-                    }
-                }
-            function newSrc() {
-                index = gridChildren[index];
-                var newSrc = index.value;
-                document.getElementById("frm").src = newSrc;
-                document.getElementById("fs").href = newSrc;
-                document.getElementById("window").style.display="block";
-                document.getElementById("menu").style.display="none";
-            }
-        </script>
+        <script src="/ymg/java.js"></script>
         <br>
     </body>
 </html>
