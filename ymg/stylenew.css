@@ -8,6 +8,10 @@ html, body {
   background: #282828;
 }
 
+/* hiding game id*/
+#window {
+  display: none;
+}
 /* text styling */
 h1, h2, h3, h4, h5, h6, p {
   color: white;
@@ -38,11 +42,11 @@ a:hover {
 }
 .oddgrid {
   display: grid;
-  grid-template-columns: 185px 185px 185px 185px 185px;
+  grid-template-columns: 185px 185px 185px 185px 185px
 }
 
 /* the default grid item and its hover style */
-.item {
+.item, button {
   border: 0.5px solid black;
   border-radius: 10px;
   padding: 22px;
@@ -55,14 +59,16 @@ a:hover {
   background-size: 147px 70px;
   box-shadow: black 1px 0 10px;
   text-shadow: 4px 4px 4px black;
+  font-family: comfortaa;
 }
-.item:hover {
+.item:hover, button:hover {
   margin: 17px;
   padding: 23px;
   transition: .1s;
   box-shadow: black 2px 0 17px;
   font-size: 23px;
   background-size: 152px 75px;
+  font-family: comfortaa;
 }
 
 /* adjusts .item so it's the same size when it has two lines of text */
@@ -82,6 +88,18 @@ a:hover {
   background-color: #1C2443;
 }
 .topitem:hover {
+  margin: 8px;
+  padding: 9px;
+  box-shadow: black 2px 0 15px;
+  font-size: 23px;
+}
+
+/* gray top items */
+.gtop {
+  padding: 8px;
+  margin: 10px;
+}
+.gtop:hover {
   margin: 8px;
   padding: 9px;
   box-shadow: black 2px 0 15px;
