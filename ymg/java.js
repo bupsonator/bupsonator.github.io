@@ -18,10 +18,11 @@ for (let i = 0, len = buttons.length; i < len; i++)
     }
 }
 
-// assign the button's value to the frm's src, then clear the menu, and display the window
+// assign the button's value to the frm's src, then shut up audio, then clear the menu, and display the window
 function newSrc() {
     index = buttons[index];
     var newSrc = index.value;
+    document.getElementById("sneaky").muted = true;
     document.getElementById("frm").src = newSrc;
     document.getElementById("fs").href = newSrc;
     document.getElementById("window").style.display="block";
