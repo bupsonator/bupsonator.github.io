@@ -1,0 +1,8 @@
+Classes:
+index (used for body)
+grid (grid container)
+oddgrid (odd grid container)
+
+IDs:
+menu (the main menu)
+main (the main grid within the main menu)
