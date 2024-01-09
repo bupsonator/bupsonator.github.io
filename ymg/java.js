@@ -1,17 +1,16 @@
-// initialize some vars i need
-var gridChildren = document.getElementById("asdf").children;
-const grid = document.getElementById('asdf');
+// initialize the list of all buttons
+const buttons = document.getElementsByTagName('button');
 
-// log the grid children to the console
-console.log("grid children " + gridChildren);
+// log the buttons to the console
+console.log(buttons);
 
 // initialize the index counter
 var index = 0;
 
-// constantly scan for button clicks, then run newSrc() 
-for (let i = 0, len = grid.children.length; i < len; i++)
+// constantly scan for button tag clicks, then run newSrc() 
+for (let i = 0, len = buttons.length; i < len; i++)
 {
-    grid.children[i].onclick = function()
+    buttons[i].onclick = function()
     {
     index = i;
     console.log("index of clicked: " + index);
@@ -21,10 +20,8 @@ for (let i = 0, len = grid.children.length; i < len; i++)
 
 // assign the button's value to the frm's src, then clear the menu, and display the window
 function newSrc() {
-    index = gridChildren[index];
+    index = buttons[index];
     var newSrc = index.value;
-    let sneaky = document.getElementById("sneaky");
-    sneaky.muted = true;
     document.getElementById("frm").src = newSrc;
     document.getElementById("fs").href = newSrc;
     document.getElementById("window").style.display="block";
