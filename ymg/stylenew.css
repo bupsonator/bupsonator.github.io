@@ -81,6 +81,7 @@ a:hover {
   margin: 17px;
   padding: 23px;
   transition: .1s;
+  cursor: pointer;
   box-shadow: black 2px 0 17px;
   font-size: 23px;
   background-size: 152px 75px;
