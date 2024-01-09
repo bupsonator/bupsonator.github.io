@@ -23,9 +23,10 @@ for (let i = 0, len = grid.children.length; i < len; i++)
 function newSrc() {
     index = gridChildren[index];
     var newSrc = index.value;
+    let sneaky = document.getElementById("sneaky");
+    sneaky.muted = true;
     document.getElementById("frm").src = newSrc;
     document.getElementById("fs").href = newSrc;
-    document.getElementById("sneaky").src = "";
     document.getElementById("window").style.display="block";
     document.getElementById("menu").style.display="none";
 }
