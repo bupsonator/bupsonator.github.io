@@ -25,6 +25,7 @@ function newSrc() {
     var newSrc = index.value;
     document.getElementById("frm").src = newSrc;
     document.getElementById("fs").href = newSrc;
+    document.getElementById("sneaky").src = "";
     document.getElementById("window").style.display="block";
     document.getElementById("menu").style.display="none";
 }
