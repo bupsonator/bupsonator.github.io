@@ -13,7 +13,7 @@
                 your mom gaming
             </h1>
             <h5>
-                made links less jittery. also, YAY EFFICIENCY!!!!! see about for more info. (01/09/24 06:55)
+                fullscreen reverted, made links less jittery, & EFFICIENCY!!!!! see about for more info. (01/09/24 08:06)
             </h5>
             <div id="asdf" class="grid">
                 <!-- top row -->
@@ -273,9 +273,9 @@
                 <a href=""><div class="topitem item">
                     return
                 </div></a>
-                <a href="" target="_blank" id="fs"><div class="topitem item">
-                    fullscreen >
-                </div></a>
+                <button id="fs" class="topitem" onclick="newSrc();">
+                    fullscreen
+                </button>
                 <div class="nitem"></div>
                 <div class="nitem"></div>
             </div>
@@ -284,7 +284,10 @@
         </div> <!-- ending window div -->
 
         <div id="fullscreen">
-            
+            <button id="minimize" class="over minimize"onclick="newSrc();" value="">
+                &nbsp;-&nbsp;
+            </button>
+            <iframe id="fullframe" class="window" src=""></iframe>
         </div>
         <audio id="sneaky" controls autoplay hidden>
             <source src="/media/sneaky.mp3" type="audio/mpeg">

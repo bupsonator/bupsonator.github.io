@@ -1,5 +1,6 @@
 // initialize the list of all buttons
 const buttons = document.getElementsByTagName('button');
+const fsButton = document.getElementById("fs");
 
 // log the buttons to the console
 console.log(buttons);
@@ -10,11 +11,14 @@ var index = 0;
 // constantly scan for button tag clicks, then run newSrc() 
 for (let i = 0, len = buttons.length; i < len; i++)
 {
-    buttons[i].onclick = function()
-    {
+    buttons[i].onclick = function() {
     index = i;
     console.log("index of clicked: " + index);
     openGame();
+    }
+    
+    fsButton.onclick = function() {
+    fullScreen();
     }
 }
 
@@ -22,9 +26,18 @@ for (let i = 0, len = buttons.length; i < len; i++)
 function openGame() {
     index = buttons[index];
     var newSrc = index.value;
-    document.getElementById("sneaky").muted = true;
+    // document.getElementById("sneaky").muted = true;
+    document.getElementById("fullframe").src = newSrc;
     document.getElementById("frm").src = newSrc;
-    document.getElementById("fs").href = newSrc;
+    document.getElementById("minimize").value = newSrc;
     document.getElementById("window").style.display="block";
+    document.getElementById("fullscreen").style.display ="none";
+    document.getElementById("menu").style.display="none";
+}
+
+// set all but fullscreen divs to no display.
+function fullScreen() {
+    document.getElementById("window").style.display="none";
+    document.getElementById("fullscreen").style.display ="block";
     document.getElementById("menu").style.display="none";
 }

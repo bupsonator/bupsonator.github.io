@@ -9,8 +9,24 @@ html, body {
 }
 
 /* hiding game id*/
+#menu {
+  display: block;
+}
 #window {
   display: none;
+}
+#fullscreen {
+  display: none;
+}
+
+/* fullscren style*/
+#fullframe {
+  display: block;  /* iframes are inline by default */   
+      height: 100vh;  /* Set height to 100% of the viewport height */   
+      width: 100vw;  /* Set width to 100% of the viewport width */     
+      border: none; /* Remove default border */
+      background: lightyellow; /* Just for styling */
+      margin: 0px;
 }
 /* text styling */
 h1, h2, h3, h4, h5, h6, p {
