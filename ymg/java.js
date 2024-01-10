@@ -27,7 +27,7 @@ function openGame() {
     index = buttons[index];
     var newSrc = index.value;
     var gameTitle = index.name;
-    // document.getElementById("sneaky").muted = true;
+    document.getElementById("sneaky").muted = true;
     document.getElementById("gameheader").innerHTML = gameTitle;
     document.getElementById("fullframe").src = newSrc;
     document.getElementById("frm").src = newSrc;
