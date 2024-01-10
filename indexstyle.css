@@ -1,0 +1,101 @@
+.social a:link, .social a:visited {
+  color: #0BB;
+  text-decoration: none;
+  transition: 0.1s;
+}
+.social a:hover {
+  color: cyan;
+  text-decoration: none;
+  transition: 0.1s;
+}
+.social a:active {
+  color: yellow;
+  text-decoration: none;
+  transition: 0.1s;
+}
+::selection {
+  background-color:white;
+  color: black;
+}
+a, button {
+  font-family: 'Montserrat';
+  color: #DADADA;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.1s;
+}
+a:link, a:visited {
+  color: #C0A;
+  text-decoration: none;
+  transition: 0.1s;
+}
+a:hover {
+  color: red;
+  text-decoration: none;
+  transition: 0.1s;
+  font-size: 16px;
+}
+a:active {
+  color: yellow;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+
+
+
+/* h, a, p tag style */
+h1, h2, h3, h4, h5, h6, p, ol, ul, li, span, div{
+  font-family: 'Montserrat';
+  color: white;
+  transition: 0.1s;
+}
+
+button a {
+    color:#0bb;
+    transition: 0.1s;
+}
+button a:hover {
+    color:cyan;
+    transition: 0.1s;
+}
+
+/* table style */
+table, th, td {
+    border: 1px dotted;
+    border-color: white;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+/* the rest of the style for the site */
+body {
+  margin: 20px;
+  background: rgb(20, 20, 20);
+}
+
+/* New Style 4 collapsibles */
+.collapsible {
+  background-color: rgb(20, 20, 20);
+  font-family: 'Montserrat';
+  color: #C0A;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+}
+.content {
+  padding: 0 18px;
+  font-family: 'Montserrat';
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(20, 20, 20)
+}
+
+.active, .collapsible:hover {
+  color:red;
+  font-family: 'Montserrat';
+  transition: 0.1s;
+  font-size: 16px;
+}
