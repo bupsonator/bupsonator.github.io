@@ -1,0 +1,57 @@
+/* style for the whole site */
+body {
+    font-family: Raleway;
+    background-color: #111611;
+    color: #EFE;
+    margin: 20px;
+    text-align: center;
+}
+
+/* semantic styles */
+header, main {
+    padding: 10px 40px 40px 40px;
+    margin: 40px;
+    background-color: #113711;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+
+div {
+    display: none;
+}
+main {
+    padding: 25px 40px 25px 40px !important;
+    background-color: #112611;
+    border: 1px solid #050;
+}
+
+/* when user highlights text */
+::selection {
+    background-color: #EFE;
+    color: #111611;
+}
+
+/* anchor link style */
+a:link, a:visited {
+    color: #DFD;
+}
+a:hover {
+    color: lime;
+}
+
+/* button style */
+button {
+    font-family: Raleway;
+    padding: 20px;
+    background-color: #113611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+button:active {
+    font-family: Raleway;
+    background-color: #114611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
