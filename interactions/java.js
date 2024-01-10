@@ -12,7 +12,7 @@ function first() {
 }
 
 // dark mode
-var current = 0; // counter for each display mode
+var current = 1; // counter for each display mode
 function darkMode() {
     // 0 means light, 1 means dark
     if (current == 0) {
