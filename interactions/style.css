@@ -24,6 +24,24 @@ main {
     background-color: #112611;
     border: 1px solid #050;
 }
+#hovButton::before {
+    content:"hover over this";
+    transition: 0.2s;
+}
+#hovButton:hover::before {
+    content:"click to continue";
+    transition: 0.2s;
+}
+#hovButton:hover {
+    font-family: Raleway;
+    padding: 30px;
+    transition: 0.2s;
+    background-color: #113611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+
 
 /* when user highlights text */
 ::selection {
@@ -43,6 +61,7 @@ a:hover {
 button {
     font-family: Raleway;
     padding: 20px;
+    transition: 0.2s;
     background-color: #113611;
     border: 1px solid #EFE;
     border-radius: 20px;

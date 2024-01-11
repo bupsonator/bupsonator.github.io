@@ -13,17 +13,30 @@
         </header>
         <main>
             <div id="first" style="display:block">
-                <button onclick="first();">click me</button>
+                <button id="displayMode" onclick="darkMode();">light mode</button>
+                &emsp;&emsp;
+                <button onclick="first();">click me to begin</button>
             </div>
             <div id="second">
-                <button id="displayMode" onclick="darkMode();">light mode</button>
-                <button onclick="second();">continue &gt;</button>
+                <button id="hovButton" onclick="second();"></button>
             </div>
             <div id="third">
-                <p id="highlight">highlight this text, then click</p>
+                <p id="highlight">highlight this text, then click 'submit'</p>
                 <button onclick="third();">submit &gt;</button>
             </div>
             <div id="fourth">
+                <p id="quiz">
+                    highlight the wrong answer, then click 'submit'
+                </p>
+                <p>
+                    a) incorrect<br>
+                    b) wrong<br>
+                    c) correct<br>
+                    d) bad
+                </p>
+                <button onclick="fourth();">submit</button>
+            </div>
+            <div id="fifth">
                 that's all for now! come back later to see if there's more thingies<br>
                 <br><a href="">or restart</a>
             </div>
