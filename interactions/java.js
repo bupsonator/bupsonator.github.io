@@ -26,7 +26,6 @@ function darkMode() {
     else if (current == 1) {
         current = 0;
         document.body.style.backgroundColor="#EFE";
-        document.body.style.color="#111611";
         header.style.backgroundColor = "#448744";
         main.style.backgroundColor = "#337633";
         document.getElementById("displayMode").innerHTML = "dark mode";
