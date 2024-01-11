@@ -8,7 +8,7 @@ body {
 }
 
 /* semantic styles */
-header, main {
+header, main, nav {
     padding: 10px 40px 40px 40px;
     margin: 40px;
     background-color: #113711;
@@ -23,6 +23,11 @@ main {
     padding: 25px 40px 25px 40px !important;
     background-color: #112611;
     border: 1px solid #050;
+}
+nav {
+    padding: 25px 40px 25px 40px !important;
+    background-color: #113011;
+    border: 1px solid #060;
 }
 #hovButton::before {
     content:"hover over this";

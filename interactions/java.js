@@ -1,13 +1,14 @@
 // semantic tags into vars
-var header = document.getElementsByTagName("header");
-header = header[0];
-var main = document.getElementsByTagName("main");
-main = main[0];
+var header = document.getElementsByTagName("header")[0];
+var main = document.getElementsByTagName("main")[0];
+var nav = document.getElementsByTagName("nav")[0];
+var counter = document.getElementById("counter");
 
 // the first interaction
 function first() {
     document.getElementById("first").style.display="none";
     document.getElementById("second").style.display="block";
+    counter.innerHTML = "1";
     console.log("first function");
 }
 
@@ -21,6 +22,7 @@ function darkMode() {
         document.body.style.color="#EFE";
         header.style.backgroundColor = "#113711";
         main.style.backgroundColor = "#112611";
+        nav.style.backgroundColor = "#113011";
         document.getElementById("displayMode").innerHTML = "light mode";
     }
     else if (current == 1) {
@@ -28,6 +30,7 @@ function darkMode() {
         document.body.style.backgroundColor="#EFE";
         header.style.backgroundColor = "#448744";
         main.style.backgroundColor = "#337633";
+        nav.style.backgroundColor = "#388138"
         document.getElementById("displayMode").innerHTML = "dark mode";
     }
 }
@@ -36,6 +39,7 @@ function darkMode() {
 function second() {
     document.getElementById("second").style.display="none";
     document.getElementById("third").style.display="block";
+    counter.innerHTML = "2";
     console.log("second function");
 }
 
@@ -50,6 +54,7 @@ function third() {
     {
         document.getElementById("third").style.display="none";
         document.getElementById("fourth").style.display="block";
+        counter.innerHTML = "3";
     }
     else 
     {
@@ -67,6 +72,11 @@ function fourth() {
     {
         document.getElementById("fourth").style.display="none";
         document.getElementById("fifth").style.display="block";
+        counter.innerHTML = "4";
+    }
+    else if (selection == "a) incorrect" || selection == "c) correct" || selection == "d) bad")
+    {
+        document.getElementById("quiz").innerHTML = "that wasn't correct. highlight the wrong answer, then click 'submit'";
     }
     else
     {
