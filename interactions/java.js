@@ -4,7 +4,7 @@ var main = document.getElementsByTagName("main")[0];
 var nav = document.getElementsByTagName("nav")[0];
 var counter = document.getElementById("counter");
 
-// the first interaction
+// 1st interaction (display mode, begin button)
 function first() {
     document.getElementById("first").style.display="none";
     document.getElementById("second").style.display="block";
@@ -12,7 +12,7 @@ function first() {
     console.log("first function");
 }
 
-// dark mode
+// display mode
 var current = 1; // counter for each display mode
 function darkMode() {
     // 0 means light, 1 means dark
@@ -35,7 +35,7 @@ function darkMode() {
     }
 }
 
-// the second interaction
+//  2nd interaction (hover over me to continue)
 function second() {
     document.getElementById("second").style.display="none";
     document.getElementById("third").style.display="block";
@@ -43,7 +43,7 @@ function second() {
     console.log("second function");
 }
 
-// the third interaction
+// 3rd interaction (highlight text, click submit)
 function third() {
     let selection = window.getSelection();
     if (selection == "")
@@ -62,6 +62,7 @@ function third() {
     }
 }
 
+// 4th interaction (highlight wrong answer)
 function fourth() {
     let selection = window.getSelection();
     if (selection == "")
@@ -83,4 +84,20 @@ function fourth() {
         document.getElementById("quiz").innerHTML = "make sure to be precise in your highlighting pleeeease";
     }
     
+}
+
+// 5th interaction (calculator one)
+function calcExit() {
+        document.getElementById("fifth").style.display="none";
+        document.getElementById("sixth").style.display="block";
+        counter.innerHTML = "5";
+    }
+function fifth() {
+    let first = Number(prompt("enter a number:"));
+    let second = Number(prompt("enter another number:"));
+    let result = first + second;
+    document.getElementById("calcResult").innerHTML = first + " + " + second + " = " + (result);
+    document.getElementById("calcPrompt").innerHTML = "click the same button to continue";
+    document.getElementById("calcButton").style.display = "none"
+    document.getElementById("calcExit").style.display = "inline";
 }
