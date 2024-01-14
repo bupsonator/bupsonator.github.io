@@ -4,6 +4,28 @@ var main = document.getElementsByTagName("main")[0];
 var nav = document.getElementsByTagName("nav")[0];
 var counter = document.getElementById("counter");
 
+// initialize the clock for num 6
+function Time() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+    hour = fixTime(hour);
+    minute = fixTime(minute);
+    second = fixTime(second);
+    document.getElementById("clock").innerHTML = "Time: " + hour + " : " + minute + " : " + second;
+    setTimeout(Time, 1000);
+}
+function fixTime(t) {
+    if (t < 10) {
+        return "0" + t;
+    }
+    else {
+        return t;
+    }
+}
+Time();
+
 // 1st interaction (display mode, begin button)
 function first() {
     document.getElementById("first").style.display="none";
@@ -100,4 +122,20 @@ function fifth() {
     document.getElementById("calcPrompt").innerHTML = "click the same button to continue";
     document.getElementById("calcButton").style.display = "none"
     document.getElementById("calcExit").style.display = "inline";
+}
+
+
+function sixth() {
+    let date = new Date();
+    let secs = Number(date.getSeconds());
+    if (secs == 0 || secs == 10 || secs == 20 || secs == 30 || secs == 40 || secs == 50)
+    {
+        document.getElementById("sixth").style.display="none";
+        document.getElementById("seventh").style.display="block";
+        counter.innerHTML = "6";
+    }
+    else
+    {
+        document.getElementById("clockPrompt").innerHTML = "that wasn't it. make sure you hit submit only when the seconds portion of the clock is a multiple of 10."
+    }
 }
