@@ -112,6 +112,7 @@ function fourth() {
 function calcExit() {
         document.getElementById("fifth").style.display="none";
         document.getElementById("sixth").style.display="block";
+        document.getElementById("clock").style.display="block";
         counter.innerHTML = "5";
     }
 function fifth() {
@@ -131,6 +132,7 @@ function sixth() {
     if (secs == 0 || secs == 10 || secs == 20 || secs == 30 || secs == 40 || secs == 50)
     {
         document.getElementById("sixth").style.display="none";
+        document.getElementById("clock").style.display="none";
         document.getElementById("seventh").style.display="block";
         counter.innerHTML = "6";
     }
