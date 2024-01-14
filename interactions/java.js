@@ -13,7 +13,7 @@ function Time() {
     hour = fixTime(hour);
     minute = fixTime(minute);
     second = fixTime(second);
-    document.getElementById("clock").innerHTML = "Time: " + hour + " : " + minute + " : " + second;
+    document.getElementById("clock").innerHTML = "<br><br>Time: " + hour + " : " + minute + " : " + second;
     setTimeout(Time, 1000);
 }
 function fixTime(t) {
