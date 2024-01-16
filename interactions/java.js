@@ -13,7 +13,7 @@ function Time() {
     hour = fixTime(hour);
     minute = fixTime(minute);
     second = fixTime(second);
-    document.getElementById("clock").innerHTML = "<br><br>Time: " + hour + " : " + minute + " : " + second;
+    document.getElementById("clock").innerHTML = "Time: " + hour + " : " + minute + " : " + second;
     setTimeout(Time, 1000);
 }
 function fixTime(t) {
@@ -112,12 +112,19 @@ function fourth() {
 function calcExit() {
         document.getElementById("fifth").style.display="none";
         document.getElementById("sixth").style.display="block";
-        document.getElementById("clock").style.display="block";
         counter.innerHTML = "5";
     }
 function fifth() {
     let first = Number(prompt("enter a number:"));
+    while (isNaN(first))
+    {
+        first = Number(prompt("Only enter numbers. Enter a number again."));
+    }
     let second = Number(prompt("enter another number:"));
+    while (isNaN(second))
+    {
+        second = Number(prompt("Only enter numbers. Enter another number again."))
+    }
     let result = first + second;
     document.getElementById("calcResult").innerHTML = first + " + " + second + " = " + (result);
     document.getElementById("calcPrompt").innerHTML = "click the same button to continue";
@@ -132,7 +139,6 @@ function sixth() {
     if (secs == 0 || secs == 10 || secs == 20 || secs == 30 || secs == 40 || secs == 50)
     {
         document.getElementById("sixth").style.display="none";
-        document.getElementById("clock").style.display="none";
         document.getElementById("seventh").style.display="block";
         counter.innerHTML = "6";
     }
