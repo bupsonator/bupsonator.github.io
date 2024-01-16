@@ -112,6 +112,7 @@ function fourth() {
 function calcExit() {
         document.getElementById("fifth").style.display="none";
         document.getElementById("sixth").style.display="block";
+        document.getElementById("clock").style.display="block";
         counter.innerHTML = "5";
     }
 function fifth() {
@@ -140,6 +141,7 @@ function sixth() {
     {
         document.getElementById("sixth").style.display="none";
         document.getElementById("seventh").style.display="block";
+        document.getElementById("clock").style.display="none";
         counter.innerHTML = "6";
     }
     else
