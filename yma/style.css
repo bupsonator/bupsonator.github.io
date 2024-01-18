@@ -8,33 +8,13 @@ html, body {
   justify-content: center;
   align-items: center;
   font-family: 'Comfortaa';
-  background: #282828;
+  background: #292729;
 }
 
 /* setting default display for the three main divs */
-#menu {
-  display: block;
-}
-#window {
-  display: none;
-}
-#fullscreen {
-  display: none;
-}
-
 #homepage { 
   font-size: 20px;
   padding: 9px;
-}
-
-/* fullscren style*/
-#fullframe {
-  display: block;  /* iframes are inline by default */   
-  height: 100vh;  /* Set height to 100% of the viewport height */   
-  width: 100vw;  /* Set width to 100% of the viewport width */     
-  border: none; /* Remove default border */
-  border-radius: 0px;
-  margin: 0px;
 }
 
 /* text styling */
@@ -51,13 +31,6 @@ a:link, a:visited {
 a:hover {
   color: #18D;
   text-decoration: none;
-}
-
-/* style for iframes on the windowed game pages */
-.window {
-  margin: 0px 0px 0px 50px;
-  border: 5px solid #2D3554;
-  border-radius: 5px;
 }
 
 /* grid and odd grid class for grid layout */
@@ -111,7 +84,7 @@ a:hover {
 .topitem {
   padding: 8px;
   margin: 10px;
-  background-color: #1C2443;
+  background-color: #2A112A;
 }
 .topitem:hover {
   margin: 8px;
@@ -119,46 +92,6 @@ a:hover {
   box-shadow: black 2px 0 15px;
   font-size: 23px;
 }
-
-/* gray top items */
-.gtop {
-  padding: 8px;
-  margin: 10px;
-}
-.gtop:hover {
-  margin: 8px;
-  padding: 9px;
-  box-shadow: black 2px 0 15px;
-  font-size: 23px;
-}
-
-/* style for the minimize button on fullscreen files */
-.minimize {
-  padding: 3px;
-  margin: 10px;
-  background-color: #515111;
-  border-radius: 500px;
-}
-.minimize:hover {
-  margin: 8px;
-  padding: 4px;
-  background-color: #818111;
-  box-shadow: black 2px 0 15px;
-  font-size: 23px;
-}
-
-/* featured game style */
-.featured {
-  font-style: italic;
-  border: solid 1px white;
-  box-shadow: gray 3px 0 17px;
-}
-.featured:hover {
-  border: solid 1px #18D;
-  font-style: italic;
-  box-shadow: 3px 0 20px #18D;
-}
-
 /* style that makes sure indexes and windows arent broken */
 .index {
   position: absolute;
@@ -171,11 +104,4 @@ a:hover {
 ::selection {
   background-color: white;
   color: black;
-}
-
-/* puts stuff over other stuff, used for the minimize button */
-.over { 
-  position:absolute; 
-  top:20px; 
-  left:20px;  
 }
