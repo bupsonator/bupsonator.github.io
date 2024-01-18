@@ -1,6 +1,7 @@
 // initialize the list of all buttons
 const buttons = document.getElementsByTagName('button');
 const fsButton = document.getElementById("fs");
+var audio = document.createElement("audio");
 
 // log the buttons to the console
 console.log(buttons);
@@ -21,6 +22,6 @@ for (let i = 0, len = buttons.length; i < len; i++)
 // assign the button's value to the frm's src, then shut up audio, then clear the menu, and display the window
 function playSounds() {
     index = buttons[index];
-    let audio = new Audio(index.value);
+    audio.src = index.value;
     audio.play();
 }
