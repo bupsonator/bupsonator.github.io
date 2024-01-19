@@ -1,0 +1,41 @@
+body {
+    font-family: Montserrat;
+    background-color: #227;
+    color: #DADADA;
+    margin: 20px;
+}
+button {
+    padding: 5px 10px;
+    font-family: Montserrat;
+    border: 1px solid #050530;
+    border-radius: 5px;
+    background-color: #116;
+    color: white;
+    font-size: 15px;
+    margin: 3px;
+    transition: 0.2s;
+}
+button:hover, #clear:hover {
+    padding: 6px 11px;
+    font-size: 16px;
+    margin: 1px;
+    transition: 0.2s;
+}
+a:link, a:visited {
+    color: #88D;
+}
+a:hover {
+    color: #99E;
+}
+#terminal {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Source Code Pro;
+}
+#clear {
+    border: 1px solid #300505;
+    background-color: #611;
+}
