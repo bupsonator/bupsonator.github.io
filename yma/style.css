@@ -12,6 +12,7 @@ html, body {
 }
 
 /* setting default display for the three main divs */
+
 #homepage { 
   font-size: 20px;
   padding: 9px;
@@ -87,6 +88,18 @@ a:hover {
   background-color: #2A112A;
 }
 .topitem:hover {
+  margin: 8px;
+  padding: 9px;
+  box-shadow: black 2px 0 15px;
+  font-size: 23px;
+}
+.gtop {
+  padding: 8px;
+  margin: 10px;
+  background-color: #212121;
+}
+.gtop:hover {
+  background-color: #212121;
   margin: 8px;
   padding: 9px;
   box-shadow: black 2px 0 15px;
