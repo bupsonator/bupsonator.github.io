@@ -57,3 +57,19 @@ function stringTraversal()
         print(straverse.substring(i, i+1));
     }
 }
+function mathSqrting()
+{
+    let sixteenInstead = 16;
+    let dumber = sixteenInstead;
+    let somethingStupid = dumber;
+    let allOverThePlace = somethingStupid;
+    let Public = Math.sqrt(allOverThePlace);
+        
+    print("math is really sqrting all over the place in public<br>");
+    print("<i style='color:cyan'>let</i> sixteenInstead <span style='color:red'>=</span> 16;");
+    print("<i style='color:cyan'>let</i> dumber <span style='color:red'>=</span> sixteenInstead;");
+    print("<i style='color:cyan'>let</i> somethingStupid <span style='color:red'>=</span> dumber;");
+    print("<i style='color:cyan'>let</i> allOverThePlace <span style='color:red'>=</span> somethingStupid;");
+    print("<i style='color:cyan'>let</i> Public <span style='color:red'>=</span> <span style='color:lime'>Math</span>.<span style='color:cyan'>sqrt</span>(allOverThePlace);<br>");
+    print("Math, sqrting allOverThePlace in Public: " + Public);
+}
