@@ -32,6 +32,7 @@ function openGame() {
     document.getElementById("fullframe").src = newSrc;
     document.getElementById("frm").src = newSrc;
     document.getElementById("minimize").value = newSrc;
+    document.getElementById("minimize").name = gameTitle;
     document.getElementById("window").style.display="block";
     document.getElementById("fullscreen").style.display ="none";
     document.getElementById("menu").style.display="none";
