@@ -89,7 +89,7 @@ a:hover {
   background-size: 147px 70px;
   box-shadow: black 1px 0 10px;
   text-shadow: 4px 4px 4px black;
-  font-family: comfortaa;
+  font-family: 'BIZ UDPGothic';
 }
 .item:hover, button:hover {
   margin: 17px;
@@ -99,7 +99,7 @@ a:hover {
   box-shadow: black 2px 0 17px;
   font-size: 23px;
   background-size: 152px 75px;
-  font-family: comfortaa;
+  font-family: 'BIZ UDPGothic';
 }
 
 /* adjusts .item so it's the same size when it has two lines of text */
