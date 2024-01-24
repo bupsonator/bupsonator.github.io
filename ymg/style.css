@@ -4,11 +4,16 @@
 /* style for the entire site */
 html, body {
   height: 100%;
-  margin: 0;
   justify-content: center;
+  font-family: 'BIZ UDPGothic';
+  background-color: rgb(77, 170, 216);
+  text-align: right;
+  /* og style
+  margin: 0;
   align-items: center;
   font-family: 'Comfortaa';
   background: #282828;
+  */
 }
 
 /* setting default display for the three main divs */
