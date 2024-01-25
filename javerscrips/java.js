@@ -200,3 +200,67 @@ function quizGame()
         });
     }
 }
+function bandCYOA()
+{
+    resetTerm();
+    let fChoice;
+    let sChoice;
+        
+        // Intro
+        print("<br>So, you want to be in band.<br>Coolio, time to pick your first instrument.");
+        
+        // First Choice: Brass or Woodwind
+        print("Do you want a [b]rass or [w]oodwind instrument?");
+        createInput("'b' or 'w'", "BorW");
+        BorW.addEventListener('submit', function(e) {
+            e.preventDefault();
+            BorW.style.display = "none";
+            if (document.getElementById("BorWinput").value == "b")
+            {
+                print("<br>Ooh, nice! You'll be a nice and loud player right from the start.<br>Would you like to play a [tru]mpet or a [tro]mbone to start off?");
+                createInput("'tru' or 'tro'", 'brass');
+                brass.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    brass.style.display = "none";
+                    if (document.getElementById("brassinput").value == "tru")
+                    {
+                        print("<br>Oh dear. Just, please don't deafen somebody either intentionally<br>or unintentionally, thanks!");
+                    }
+                    else if (document.getElementById("brassinput").value == "tro")
+                    {
+                        print("<br>OOh, the sliding trumpet! You're gonna look very cool, no matter<br>your skill level.");
+                    }
+                    else
+                    {
+                        print("<span style='color:red'>not a valid input, please restart</span>");
+                    }
+                });
+                
+            }
+            else if (document.getElementById("BorWinput").value == "w")
+            {
+                print("<br>Good choice. You'll be quieter, but eventually you'll be better<br>and more technical than the brass crowd because of your buttons.<br>Would you like to play a [c]larinet or a [f]lute to start off?");
+                createInput("'c' or 'f'", 'ww');
+                ww.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    ww.style.display = "none";
+                    if (document.getElementById("wwinput").value == "c")
+                    {
+                        print("<br>Good, good. It'll only be a matter of time until you harass<br>the whole band with Jungle Dance.")
+                    }
+                    else if (document.getElementById("wwinput").value == "f")
+                    {
+                        print("<br>Ah, a flute. A quiet instrument. I'm sure you'll do very well with<br>it, even though we're always gonna tell you to be louder.")
+                    }
+                    else
+                    {
+                        print("<span style='color:red'>not a valid input, please restart</span>");
+                    }
+                });
+            }
+            else
+            {
+                print("<span style='color:red'>not a valid input, please restart</span>");
+            }
+        });
+}
