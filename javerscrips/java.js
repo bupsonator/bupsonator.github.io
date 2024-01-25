@@ -264,3 +264,112 @@ function bandCYOA()
             }
         });
 }
+function flippydo()
+{
+    resetTerm();
+    print('');
+    let result = 0;
+    // asking user for their binary num
+    let binary = String(prompt('enter a 4 or 8 digit binary number'));
+    
+    // testing if the input is valid
+    if(binary.length < 4 || binary.length < 8 && binary.length > 4 || binary.length > 8)
+    {
+        print("<span style='color:red'>Invalid input. It must be either 4 or 8 digits long.</span>");
+    }
+    
+    // input is valid, now converting
+    else if(binary.length == 4)
+    {
+        for(let i = 0; i < binary.length; i++)
+        {
+            let substr = binary.substring(i, i + 1);
+            // if it can't find an index, then the character isn't valid
+            
+            if(substr === "1")
+            {
+                if(i == 0)
+                {
+                    result += 8;
+                }
+                if(i == 1)
+                {
+                    result += 4;
+                }
+                if(i == 2)
+                {
+                    result += 2;
+                }
+                if(i == 3)
+                {
+                    result += 1;
+                }
+            }
+            else if(substr === "0")
+            {
+                continue;
+            }
+            else if(!(substr === "1") || !(substr === "0"))
+            {
+                print("<span style='color:red'>Looks like your binary number has a non-zero or one digit.</span>");
+                return;
+            }
+            
+        }
+            print("<span style='color:lime'>4 digit binary conversion --&gt;</span> " + result);
+    }
+    else
+    {
+        for(let i = 0; i < binary.length; i++)
+        {
+            let substr = binary.substring(i, i + 1);
+            // if it can't find an index, then the character isn't valid
+            
+            if(substr === "1")
+            {
+                if(i == 0)
+                {
+                    result += 128;
+                }
+                if(i == 1)
+                {
+                    result += 64;
+                }
+                if(i == 2)
+                {
+                    result += 32;
+                }
+                if(i == 3)
+                {
+                    result += 16;
+                }
+                if(i == 4)
+                {
+                    result += 8;
+                }
+                if(i == 5)
+                {
+                    result += 4;
+                }
+                if(i == 6)
+                {
+                    result += 2;
+                }
+                if(i == 7)
+                {
+                    result += 1;
+                }
+            }
+            else if(substr === "0")
+            {
+                continue;
+            }
+            else if(!(substr === "1") || !(substr === "0"))
+            {
+                print("<span style='color:red'>Looks like your binary number has a non-zero or one digit.</span>");
+                return;
+            }
+        }
+        print("<span style='color:lime'>8 digit binary conversion --&gt;</span> " + result);
+    }
+}
