@@ -266,110 +266,57 @@ function bandCYOA()
 }
 function flippydo()
 {
+    // reset site terminal
     resetTerm();
-    print('');
+    
+    // initialize the let to store the end result
     let result = 0;
+    
+    // a list of the int values 
+    const binVals = [1, 2, 4, 8, 16, 32, 64, 128];
+    
     // asking user for their binary num
-    let binary = String(prompt('enter a 4 or 8 digit binary number'));
+    let binary = String(prompt("enter a binary number that's 1-8 digits long"));
     
-    // testing if the input is valid
-    if(binary.length < 4 || binary.length < 8 && binary.length > 4 || binary.length > 8)
-    {
-        print("<span style='color:red'>Invalid input. It must be either 4 or 8 digits long.</span>");
-    }
+    // reversing the string
+    binary = binary.split('').reverse().join('');
     
-    // input is valid, now converting
-    else if(binary.length == 4)
+    // if input is valid, convert
+    if(binary.length <= 8 && binary.length >= 1)
     {
+        // traversing the binary string
         for(let i = 0; i < binary.length; i++)
         {
+            // the char to check
             let substr = binary.substring(i, i + 1);
-            // if it can't find an index, then the character isn't valid
             
+            // if substr is 1, add the appropriate value to result
             if(substr === "1")
             {
-                if(i == 0)
-                {
-                    result += 8;
-                }
-                if(i == 1)
-                {
-                    result += 4;
-                }
-                if(i == 2)
-                {
-                    result += 2;
-                }
-                if(i == 3)
-                {
-                    result += 1;
-                }
+                result += binVals[i];
             }
+            
+            // if substr is 0, carry on
             else if(substr === "0")
             {
                 continue;
             }
-            else if(!(substr === "1") || !(substr === "0"))
+            
+            // if character is invalid, tell the user they suck
+            else
             {
-                print("<span style='color:red'>Looks like your binary number has a non-zero or one digit.</span>");
+                print("<br><span style='color:red'>The only valid characters are '0' and '1', please try again.</span>");
                 return;
             }
             
         }
-            print("<span style='color:lime'>4 digit binary conversion --&gt;</span> " + result);
+        // print the final result if an error didn't stop the function
+        print("<br><span style='color:lime'>binary to int conversion --&gt;</span> " + result);
     }
+    
+    // if input isn't a valid length, tell the user to be better
     else
     {
-        for(let i = 0; i < binary.length; i++)
-        {
-            let substr = binary.substring(i, i + 1);
-            // if it can't find an index, then the character isn't valid
-            
-            if(substr === "1")
-            {
-                if(i == 0)
-                {
-                    result += 128;
-                }
-                if(i == 1)
-                {
-                    result += 64;
-                }
-                if(i == 2)
-                {
-                    result += 32;
-                }
-                if(i == 3)
-                {
-                    result += 16;
-                }
-                if(i == 4)
-                {
-                    result += 8;
-                }
-                if(i == 5)
-                {
-                    result += 4;
-                }
-                if(i == 6)
-                {
-                    result += 2;
-                }
-                if(i == 7)
-                {
-                    result += 1;
-                }
-            }
-            else if(substr === "0")
-            {
-                continue;
-            }
-            else if(!(substr === "1") || !(substr === "0"))
-            {
-                print("<span style='color:red'>Looks like your binary number has a non-zero or one digit.</span>");
-                return;
-            }
-        }
-        print("<span style='color:lime'>8 digit binary conversion --&gt;</span> " + result);
+        print("<br><span style='color:red'>Your input can only be 1-8 digits long.</span>");
     }
 }
