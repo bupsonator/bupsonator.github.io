@@ -4,22 +4,29 @@ body {
     color: #DADADA;
     margin: 20px;
 }
+.grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
 button {
-    padding: 5px 10px;
+    padding: 10px 20px 10px 20px;
     font-family: Montserrat;
     border: 1px solid #050530;
     border-radius: 5px;
     background-color: #116;
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     margin: 3px;
     transition: 0.2s;
 }
-button:hover, #clear:hover {
-    padding: 6px 11px;
-    font-size: 16px;
+button:hover {
+    padding: 11px 21px 11px 21px;
+    font-size: 18px;
     margin: 1.6px;
     transition: 0.2s;
+}
+button:active {
+    background-color: #228;
 }
 input {
     font-family: Source Code Pro;
@@ -46,4 +53,16 @@ a:hover {
 #clear {
     border: 1px solid #300505;
     background-color: #611;
+    width: 24.5%;
+    margin: 1.5px 1.5px 1.5px 2px;
+    
+}
+#clear:hover {
+    padding: 11px 22px 11px 22px;
+    font-size: 18px;
+    margin: 0px;
+    transition: 0.2s;
+}
+#clear:active {
+    background-color: #722;
 }
