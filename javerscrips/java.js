@@ -1,14 +1,12 @@
-// terminal var for ease of use for me
-var terminal = document.getElementById("terminal");
 // clear the terminal in the site
 function clear()
 {
-    terminal.innerHTML = "<b><u>The Terminal</u></b><br>";
+    document.getElementById("terminal").innerHTML = "<b><u>The Terminal</u></b><br>";
 }
 // print text to the terminal per-line, like in Python
 function print(input)
 {
-    terminal.innerHTML += input + "<br>";
+    document.getElementById("terminal").innerHTML += input + "<br>";
 }
 // create input box 
 function createInput(placeholder, id, theFunction)
@@ -258,10 +256,9 @@ function flippydo()
     
     // asking user for their binary num
     createInput("enter them here", 'binary', function(){
-        let binary = getInput('binary');
         
-        // reversing the string
-        binary = binary.split('').reverse().join('');
+        // get the input and reverse it so the program works right
+        const binary = getInput('binary').split('').reverse().join('');
         
         // if input is valid, convert
         if(binary.length <= 8 && binary.length >= 1)
@@ -303,6 +300,3 @@ function flippydo()
         }
     });
 }
-// ------------------------------------------------------------------
-// |                    THE TEST JAVA BEGINS HERE                   |
-// ------------------------------------------------------------------
