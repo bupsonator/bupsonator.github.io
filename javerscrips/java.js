@@ -10,20 +10,7 @@ function print(input)
 {
     terminal.innerHTML += input + "<br>";
 }
-// prompts the user for input so that I can use it in my applets
-function input(question)
-{
-    let intput = prompt(question);
-    if (intput != null) {
-        print("<span style='color:lime'>&gt;  input - " + intput + "</span>");
-    }
-    else {
-        print("<span style='color:red'>&gt; input cancelled by user</span>");
-        return null;
-    }
-    return intput;
-}
-// create input box
+// create input box 
 function createInput(placeholder, id, theFunction)
 {
     // create a form
@@ -39,9 +26,10 @@ function createInput(placeholder, id, theFunction)
     let textBox = document.createElement("input");
     document.getElementById(form.id).appendChild(textBox);
     
-    // set the placeholder argument to the input
+    // set the placeholder argument to the input & disable autofill
     textBox.id = id + "input";
     textBox.placeholder = placeholder;
+    textBox.autocomplete = 'off';
     
     // onclick
     form.addEventListener('submit', function(e) {
@@ -50,12 +38,19 @@ function createInput(placeholder, id, theFunction)
         theFunction(); // run the function argument
     });
 }
+function getInput(theID)
+{
+    return document.getElementById(theID + 'input').value;
+}
 // ------------------------------------------------------------------
 // |                 THE APPLETS THEMSELVES BEGIN HERE              |
 // ------------------------------------------------------------------
 function printSomething()
 {
-    print(prompt("enter something to print"));
+    clear();
+    createInput("enter something!", 'printThings', function(){ 
+        print("<br>" + getInput('printThings'));
+    });
 }
 function manyNumbers()
 {
@@ -71,16 +66,19 @@ function stringTraversal()
 {
     clear();
     let index = 1;
-    print("");
-    let straverse = input("enter any string of characters your heart desires.");
-    if (straverse != null)
-    {
-        print("now printing each character of that string line-by-line:<br>");
-    }
-    for(i = 0; i < straverse.length; i++)
-    {
-        print(straverse.substring(i, i+1));
-    }
+    print("<br>enter a string to get printed line-by-line, character-by-character");
+    createInput("enter something!", 'straverse', function() {
+        let straverse = String(getInput('straverse'));
+        if (straverse != null)
+        {
+            print("<span style='color:lime'>now printing each character of </span>" + straverse + " <span style='color:lime'>line-by-line:</span><br>");
+        }
+        for(i = 0; i < straverse.length; i++)
+        {
+            print(straverse.substring(i, i+1));
+        }
+    });
+    
 }
 function mathSqrting()
 {
@@ -110,7 +108,7 @@ function quizGame()
     // question one
     print("<i>What is the java equivalent of print()?</i><br>a) System.out.println();<br>b) println();<br>c) std::cout <<;<br>d) printf();")
     createInput("enter answer here", "q1", function(){
-        if (document.getElementById("q1input").value == "a")
+        if (getInput("q1") == "a")
         {
             print("<span style='color:lime'>correct!</span>");
             counter++;
@@ -127,7 +125,7 @@ function quizGame()
     {
         print("<br><i>2. What does Java use instead of functions?</i><br>a) Classes<br>b) Div's<br>c) Java uses functions.<br>d) Methods");
         createInput("enter answer here", "q2", function() {
-            if (document.getElementById("q2input").value == "d")
+            if (getInput("q2") == "d")
             {
                 print("<span style='color:lime'>correct!</span>");
                 counter++;
@@ -145,7 +143,7 @@ function quizGame()
     {
         print("<br><i>3. What is the Java if/elif/else equivalent?</i><br>a) if/elif/otherwise<br>b) try/catch<br>c) if/else if/else<br>d) look/elseif/else");
         createInput("enter answer here", "q3", function() {
-            if (document.getElementById("q3input").value == "c")
+            if (getInput("q3") == "c")
             {
                 print("<span style='color:lime'>correct!</span>");
                 counter++;
@@ -162,7 +160,7 @@ function quizGame()
     {
         print("<br><i>4. How do you declare a variable in Java?</i><br>a) name = value;<br>b) type name = value<br>c) name type = value<br>d) value = type name");
         createInput("enter answer here", "q4", function() {
-            if (document.getElementById("q4input").value == "b")
+            if (getInput("q4") == "b")
             {
                 print("<span style='color:lime'>correct!</span>");
                 counter++;
@@ -179,7 +177,7 @@ function quizGame()
     {
         print("<br><i>5. After importing the correct utility, what command lets you take user input in Java?</i><br>a) Create a variable, and set the value to input.nextInt,Double, or Line.<br>b) variable = System.in();<br>c) std::cin <<;<br>d) userIn()");
         createInput("enter answer here", "q5", function(){
-            if (document.getElementById("q5input").value == "a")
+            if (getInput("q5") == "a")
             {
                 print("<span style='color:lime'>correct!</span>");
                 counter++;
@@ -205,15 +203,15 @@ function bandCYOA()
         // First Choice: Brass or Woodwind
         print("Do you want a [b]rass or [w]oodwind instrument?");
         createInput("'b' or 'w'", "BorW", function(){
-            if (document.getElementById("BorWinput").value == "b")
+            if (getInput("BorW") == "b")
             {
                 print("<br>Ooh, nice! You'll be a nice and loud player right from the start.<br>Would you like to play a [tru]mpet or a [tro]mbone to start off?");
                 createInput("'tru' or 'tro'", 'brass', function(){
-                    if (document.getElementById("brassinput").value == "tru")
+                    if (getInput("brass") == "tru")
                     {
                         print("<br>Oh dear. Just, please don't deafen somebody either intentionally<br>or unintentionally, thanks!");
                     }
-                    else if (document.getElementById("brassinput").value == "tro")
+                    else if (getInput("brass") == "tro")
                     {
                         print("<br>OOh, the sliding trumpet! You're gonna look very cool, no matter<br>your skill level.");
                     }
@@ -223,15 +221,15 @@ function bandCYOA()
                     }
                 });
             }
-            else if (document.getElementById("BorWinput").value == "w")
+            else if (getInput("BorW") == "w")
             {
                 print("<br>Good choice. You'll be quieter, but eventually you'll be better<br>and more technical than the brass crowd because of your buttons.<br>Would you like to play a [c]larinet or a [f]lute to start off?");
                 createInput("'c' or 'f'", 'ww', function() {
-                    if (document.getElementById("wwinput").value == "c")
+                    if (getInput("wwinput") == "c")
                     {
                         print("<br>Good, good. It'll only be a matter of time until you harass<br>the whole band with Jungle Dance.")
                     }
-                    else if (document.getElementById("wwinput").value == "f")
+                    else if (getInput("wwinput") == "f")
                     {
                         print("<br>Ah, a flute. A quiet instrument. I'm sure you'll do very well with<br>it, even though we're always gonna tell you to be louder.")
                     }
@@ -251,7 +249,7 @@ function flippydo()
 {
     // reset site terminal
     clear();
-    print('');
+    print('<br>enter 1-8 binary digits (0 or 1) to convert to an integer');
     // initialize the let to store the end result
     let result = 0;
     
@@ -259,47 +257,52 @@ function flippydo()
     const binVals = [1, 2, 4, 8, 16, 32, 64, 128];
     
     // asking user for their binary num
-    let binary = String(input("enter a binary number that's 1-8 digits long"));
-    
-    // reversing the string
-    binary = binary.split('').reverse().join('');
-    
-    // if input is valid, convert
-    if(binary.length <= 8 && binary.length >= 1)
-    {
-        // traversing the binary string
-        for(let i = 0; i < binary.length; i++)
+    createInput("enter them here", 'binary', function(){
+        let binary = getInput('binary');
+        
+        // reversing the string
+        binary = binary.split('').reverse().join('');
+        
+        // if input is valid, convert
+        if(binary.length <= 8 && binary.length >= 1)
         {
-            // the char to check
-            let substr = binary.substring(i, i + 1);
-            
-            // if substr is 1, add the appropriate value to result
-            if(substr === "1")
+            // traversing the binary string
+            for(let i = 0; i < binary.length; i++)
             {
-                result += binVals[i];
+                // the char to check
+                let substr = binary.substring(i, i + 1);
+                
+                // if substr is 1, add the appropriate value to result
+                if(substr === "1")
+                {
+                    result += binVals[i];
+                }
+                
+                // if substr is 0, carry on
+                else if(substr === "0")
+                {
+                    continue;
+                }
+                    
+                // if character is invalid, tell the user they suck
+                else
+                {
+                    print("<br><span style='color:red'>The only valid characters are '0' and '1', please try again.</span>");
+                    return;
+                }
+                
             }
-            
-            // if substr is 0, carry on
-            else if(substr === "0")
-            {
-                continue;
-            }
-            
-            // if character is invalid, tell the user they suck
-            else
-            {
-                print("<br><span style='color:red'>The only valid characters are '0' and '1', please try again.</span>");
-                return;
-            }
-            
+            // print the final result if an error didn't stop the function
+            print("<br><span style='color:lime'>binary to int conversion --&gt;</span> " + result);
         }
-        // print the final result if an error didn't stop the function
-        print("<br><span style='color:lime'>binary to int conversion --&gt;</span> " + result);
-    }
-    
-    // if input isn't a valid length, tell the user to be better
-    else
-    {
-        print("<br><span style='color:red'>Your input can only be 1-8 digits long.</span>");
-    }
+        
+        // if input isn't a valid length, tell the user to be better
+        else
+        {
+            print("<br><span style='color:red'>Your input can only be 1-8 digits long.</span>");
+        }
+    });
 }
+// ------------------------------------------------------------------
+// |                    THE TEST JAVA BEGINS HERE                   |
+// ------------------------------------------------------------------
