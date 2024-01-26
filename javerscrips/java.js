@@ -67,7 +67,10 @@ function stringTraversal()
     let index = 1;
     print("");
     let straverse = input("enter any string of characters your heart desires.");
-    print("now printing each character of that string line-by-line:<br>")
+    if (straverse != null)
+    {
+        print("now printing each character of that string line-by-line:<br>");
+    }
     for(i = 0; i < straverse.length; i++)
     {
         print(straverse.substring(i, i+1));
@@ -268,7 +271,7 @@ function flippydo()
 {
     // reset site terminal
     resetTerm();
-    
+    print('');
     // initialize the let to store the end result
     let result = 0;
     
@@ -276,7 +279,7 @@ function flippydo()
     const binVals = [1, 2, 4, 8, 16, 32, 64, 128];
     
     // asking user for their binary num
-    let binary = String(prompt("enter a binary number that's 1-8 digits long"));
+    let binary = String(input("enter a binary number that's 1-8 digits long"));
     
     // reversing the string
     binary = binary.split('').reverse().join('');
