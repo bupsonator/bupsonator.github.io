@@ -5,14 +5,10 @@ const fsButton = document.getElementById("fs");
 // log the buttons to the console
 console.log(buttons);
 
-// initialize the index counter
-var index = 0;
-
 // constantly scan for button tag clicks, then run newSrc() 
 for (let i = 0, len = buttons.length; i < len; i++)
 {
     buttons[i].onclick = function() {
-    index = i;
     console.log("index of clicked: " + index);
     openGame();
     }
@@ -24,9 +20,8 @@ for (let i = 0, len = buttons.length; i < len; i++)
 
 // assign the button's value to the frm's src, then shut up audio, then clear the menu, and display the window
 function openGame() {
-    index = buttons[index];
-    var newSrc = index.value;
-    var gameTitle = index.name;
+    var newSrc = this.value;
+    var gameTitle = this.name;
     document.getElementById("sneaky").muted = true;
     document.getElementById("gameheader").innerHTML = gameTitle;
     document.getElementById("fullframe").src = newSrc;
