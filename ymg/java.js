@@ -8,9 +8,11 @@ console.log(buttons);
 // constantly scan for button tag clicks, then run newSrc() 
 for (let i = 0, len = buttons.length; i < len; i++)
 {
-    buttons[i].addEventListener('click', openGame);
-    
-    fsButton.addEventListener('click', fullScreen);
+    if (buttons[i].getAttribute('id') != 'fs')
+    {
+        buttons[i].addEventListener('click', openGame);
+    }
+    else fsButton.addEventListener('click', fullScreen);
 }
 
 // assign the button's value to the frm's src, then shut up audio, then clear the menu, and display the window
