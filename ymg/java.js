@@ -8,26 +8,19 @@ console.log(buttons);
 // constantly scan for button tag clicks, then run newSrc() 
 for (let i = 0, len = buttons.length; i < len; i++)
 {
-    buttons[i].onclick = function() {
-    console.log("index of clicked: " + index);
-    openGame();
-    }
+    buttons[i].addEventListener('click', openGame);
     
-    fsButton.onclick = function() {
-    fullScreen();
-    }
+    fsButton.addEventListener('click', fullScreen);
 }
 
 // assign the button's value to the frm's src, then shut up audio, then clear the menu, and display the window
 function openGame() {
-    var newSrc = this.value;
-    var gameTitle = this.name;
     document.getElementById("sneaky").muted = true;
-    document.getElementById("gameheader").innerHTML = gameTitle;
-    document.getElementById("fullframe").src = newSrc;
-    document.getElementById("frm").src = newSrc;
-    document.getElementById("minimize").value = newSrc;
-    document.getElementById("minimize").name = gameTitle;
+    document.getElementById("gameheader").innerHTML = this.name;
+    document.getElementById("fullframe").src = this.value;
+    document.getElementById("frm").src = this.value;
+    document.getElementById("minimize").value = this.value;
+    document.getElementById("minimize").name = this.name;
     document.getElementById("window").style.display="block";
     document.getElementById("fullscreen").style.display ="none";
     document.getElementById("menu").style.display="none";
