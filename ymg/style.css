@@ -12,16 +12,15 @@ html, body {
 }
 
 /* setting default display for the three main divs */
+ #window, #fullscreen, #aboutIndex {
+    display: none;
+}
 #menu {
-  display: block;
+    display: block;
 }
-#window {
-  display: none;
+.multiIndex {
+    display:none;
 }
-#fullscreen {
-  display: none;
-}
-
 #homepage { 
   font-size: 20px;
   padding: 9px;
