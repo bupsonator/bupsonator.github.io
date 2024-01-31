@@ -50,8 +50,14 @@ function openGame() {
     {
         indices[i].style.display = 'none';
     }
+    if (this.getAttribute('data-isVertical') == 'true')
+    {
+        document.getElementById("frm").style.width = '350px';
+        document.getElementById("frm").style.margin = '0px 0px 0px 375px';
+    }
 }
 function returnToIndex() {
+    document.getElementById("sneaky").muted = false;
     document.getElementById("window").style.display="none";
     let indices = document.getElementsByClassName('multiIndex');
     for (let i = 0; i < indices.length; i++)
