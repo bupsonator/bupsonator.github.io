@@ -83,6 +83,8 @@ function returnToIndex() {
     }
     document.getElementById("fullframe").src = '';
     document.getElementById("frm").src = '';
+    document.getElementById("frm").style.width = '1000px';
+    document.getElementById("frm").style.margin = '0px 0px 0px 50px';
 }
 function openIndex() {
     let theValue = Number(this.getAttribute('value'));
@@ -115,4 +117,5 @@ function outOfIndex() {
     document.getElementById("window").style.display="none";
     document.getElementById("fullscreen").style.display ="none";
     document.getElementById("menu").style.display="block";
+    document.getElementById('gameReturn').value = '-1';
 }
