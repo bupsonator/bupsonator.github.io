@@ -270,16 +270,10 @@ function flippydo()
                 let substr = binary.substring(i, i + 1);
                 
                 // if substr is 1, add the appropriate value to result
-                if(substr === "1")
-                {
-                    result += binVals[i];
-                }
+                if(substr === "1") result += binVals[i];
                 
                 // if substr is 0, carry on
-                else if(substr === "0")
-                {
-                    continue;
-                }
+                else if(substr === "0") continue;
                     
                 // if character is invalid, tell the user they suck
                 else
@@ -300,3 +294,28 @@ function flippydo()
         }
     });
 }
+function loopPrint()
+{
+    clear();
+    print("<br><span style='color:lime'>enter a string of characters to be repeatedly printed:</span>");
+    createInput('enter here', 'loopStr', function() {
+        let loopInput = getInput('loopStr');
+        print("<br>now enter how many times you want <span style='color:lime'>" + loopInput + "</span> printed (must be less than 3000):");
+        createInput('enter here', 'loopAmt', function() {
+            let loopAmt = Number(getInput('loopAmt'));
+            print(' ');
+            if (loopAmt < 3000)
+            {
+                for (let i = 0; i < loopAmt; i++)
+                {
+                    print(loopInput);
+                }
+            }
+            else print("<span style='color:red'>invalid input (too high, or not a number)</span>");
+            
+        });
+    });
+}
+// ------------------------------------------------------------------
+// |                    THE TEST JAVA BEGINS HERE                   |
+// ------------------------------------------------------------------
