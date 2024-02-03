@@ -47,7 +47,11 @@ function printSomething()
 {
     clear();
     createInput("enter something!", 'printThings', function(){ 
-        print("<br>" + getInput('printThings'));
+        if (getInput('printThings') == 'something!' || getInput('printThings') == 'something')
+        {
+            print("<span style='color:red'>you're so funny and cool.</span>")
+        }
+        else print("<br>" + getInput('printThings'));
     });
 }
 function manyNumbers()
@@ -304,18 +308,30 @@ function loopPrint()
         createInput('enter here', 'loopAmt', function() {
             let loopAmt = Number(getInput('loopAmt'));
             print(' ');
-            if (loopAmt < 3000)
+            if (loopAmt < 1000)
             {
                 for (let i = 0; i < loopAmt; i++)
                 {
                     print(loopInput);
                 }
             }
+            else if (loopAmt <= 3000)
+            {
+                print("Are you sure? Printing over 1000 times may crash your browser. (y/n)");
+                createInput("'y' or 'n'", 'loopConfirm', function() {
+                    let confirm = getInput('loopConfirm');
+                    print('');
+                    if (confirm == 'y')
+                    {
+                        for (let i = 0; i < loopAmt; i++)
+                        {
+                            print(loopInput);
+                        }
+                    }
+                });
+            }
             else print("<span style='color:red'>invalid input (too high, or not a number)</span>");
             
         });
     });
 }
-// ------------------------------------------------------------------
-// |                    THE TEST JAVA BEGINS HERE                   |
-// ------------------------------------------------------------------
