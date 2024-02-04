@@ -39,8 +39,10 @@ function openGame() {
     
     // prepare the window page with the button's data
     document.getElementById("gameheader").innerHTML = this.name;
-    document.getElementById("fullframe").src = this.value;
     document.getElementById("frm").src = this.value;
+
+    // prepare fullscreen iframe 
+    document.getElementById("fullframe").src = this.value;
     
     // prepare the minimize button with the button's data
     document.getElementById("minimize").value = this.value;
@@ -76,8 +78,7 @@ function returnToIndex() {
     // if value is -1, the div needed is the main menu
     if (this.getAttribute('value') == '-1') document.getElementById("menu").style.display="block";
     
-    // else, get the value stored in the button, and open the multiIndex at the 
-    // index of the same value
+    // else, get the value stored in the button, and open the multiIndex at the index of the same value
     else
     {
         let num = Number(this.getAttribute('value'));
@@ -103,8 +104,7 @@ function openIndex() {
     document.getElementById("menu").style.display="none";
     document.getElementById('aboutIndex').style.display='none';
     
-    // store the value in gameReturn so that the appropriate index is opened
-    // when the game is closed
+    // store the value in gameReturn so that the appropriate index is opened when the game is closed
     document.getElementById('gameReturn').value = theValue;
     
     // show the appropriate index
