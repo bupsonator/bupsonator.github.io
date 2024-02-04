@@ -3,24 +3,22 @@
 
 /* style for the entire site */
 html, body {
-  height: 100%;
-  justify-content: center;
+  display: flex;
   margin: 0;
-  align-items: center;
   font-family: 'Comfortaa';
   background: #282828;
+  color: white;
+  text-align: center;
+  justify-content: center;
 }
-
+div {
+    justify-content: center;
+}
 /* setting default display for the three main divs */
- #window, #fullscreen, #aboutIndex {
+ #window, #fullscreen, #aboutIndex, .multiIndex {
     display: none;
 }
-#menu {
-    display: block;
-}
-.multiIndex {
-    display:none;
-}
+
 #homepage { 
   font-size: 20px;
   padding: 9px;
@@ -32,45 +30,34 @@ html, body {
   height: 100vh;  /* Set height to 100% of the viewport height */   
   width: 100vw;  /* Set width to 100% of the viewport width */     
   border: none; /* Remove default border */
-  border-radius: 0px;
-  margin: 0px;
-}
-
-/* text styling */
-h1, h2, h3, h4, h5, h6, p {
-  color: white;
-  text-align: center;
 }
 
 /* a link style for the about page */
 a:link, a:visited {
   color: #DDF;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 a:hover {
   color: #18D;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 /* style for iframes on the windowed game pages */
-.window {
-  margin: 0px 0px 0px 50px;
+#frm {
   border: 5px solid #2D3554;
   border-radius: 5px;
 }
 
-/* grid and odd grid class for grid layout */
-.grid {
-  display: grid;
-  grid-template-columns: 185px 185px 185px 185px 185px 185px;
-}
-.oddgrid {
-  display: grid;
-  grid-template-columns: 185px 185px 185px 185px 185px
-}
+/* grids!!! */
+.sixColumnGrid {display:grid; grid-template-columns: 185px 185px 185px 185px 185px 185px;}
+.fiveColumnGrid {display:grid; grid-template-columns: 185px 185px 185px 185px 185px;}
+.fourColumnGrid {display:grid; grid-template-columns: 185px 185px 185px 185px;}
+.threeColumnGrid {display:grid; grid-template-columns: 185px 185px 185px;}
+.twoColumnGrid {display:grid; grid-template-columns: 185px 185px;}
+.listGrid {display:grid; grid-template-columns: 185px;}
 
 /* the default grid item and its hover style, as well as button style */
-.item, button {
+button {
   border: 0.5px solid black;
   border-radius: 10px;
   padding: 22px;
@@ -85,7 +72,7 @@ a:hover {
   text-shadow: 4px 4px 4px black;
   font-family: 'Comfortaa';
 }
-.item:hover, button:hover {
+button:hover {
   margin: 17px;
   padding: 23px;
   transition: .1s;
@@ -144,26 +131,6 @@ a:hover {
   background-color: #818111;
   box-shadow: black 2px 0 15px;
   font-size: 23px;
-}
-
-/* featured game style */
-.featured {
-  font-style: italic;
-  border: solid 1px white;
-  box-shadow: gray 3px 0 17px;
-}
-.featured:hover {
-  border: solid 1px #18D;
-  font-style: italic;
-  box-shadow: 3px 0 20px #18D;
-}
-
-/* style that makes sure indexes and windows arent broken */
-.index {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* style for selected text */
