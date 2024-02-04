@@ -3,44 +3,40 @@ This is what happens when you tell me how to use HTML, CSS, and Javascript. I ma
 stupid stuff and put it on the Internet. It all started with a game website, and it quickly
 expanded into the chaos that this website is today. Enjoy.
 
-Here's what I've got so far:
-## Games & Internet Simulator
-- Your Mom Gaming:
-    This is the website that started my obsession with making websites in raw code, and the
-    website that caused me to move from CodeHS to GitHub for my web dev endeavors. Read the
-    "About" page on the site to see credits, disclaimer, and what's new!
-- Spooky X3M:
-    A spooky moto x3m that happened. That's all it is.
-- Internet Simulator:
-    In my AP Computer Science class that I'm learning Java in, we are in the corner learning at
-    our own pace while the teacher teaches Computer Science Principles to everyone else. I
-    overheard that they were using an "internet simulator" to simulate the internet for some
-    reason, so I used a code AI to create an internet simulator, and then proceeced to make it
-    extremely unfunny. 
-
-## Educational Sites
-- Web Dev Notes:
-    Me, being in a web development class, thought it'd be super duper funny to put all of my
-    notes on a website, and code it in the languages I'm actively learning. That's really it.
-- Homebrew Info:
-    This is a CodeHS project that I decided to publish because I'm proud of the CSS work I did
-    with it. It sheds some light on hacking old game console hardware.
-- Endangered Animals:
-    This is a CodeHS project that I decided to publish because of the amount of work they made
-    me put into it. It describes a few endangered animals.
-- Aesop's Fables:
-    It has nothing to do with Aesop, or fables. It's just me learning CSS interaction and
-    animation stuff.
-
-## Javer, Pyton & Other Funnies
-- Javersite:
-    This is a website where I embedded my Java project in CodeHS so that you can mess with it.
-    Java is my language of choice for programming random things that do stuff.
-- Blinkers:
-    It's a thing where I coded Karel to be blinkers infinitely in Java, so I recorded a video
-    of it and it's on the internet now.
-- Bird Blog Website:
-    A CodeHS thing I had to make. It's not a copy of another popular bird-related social platform.
-    It's definitely not in response to Elongated Muskrat ruining Twitter. Never.
+## Here's what I've got so far:
+- aesop's fables: This website was a CodeHS thing. It's funny when the books become big, that's
+  why it's here.
+- ANGER!!!!!!: This website is the result of some 'great' headspace at the time. It has fire!
+- bird blog website: This one is another project I had to do. It was my final HTML/CSS-only website,
+  and it's inspired by the former social media website, Twitter.
+- blinkers: It's Karel blinkers that were made in Java SuperKarel, which I recorded and put on a
+  very basic website.
+- endangered animals: This was a CodeHS project. It has a few animals with funny names that are
+  either endangered or threatened.
+- homebrew info: This is another CSS project I had to do. It has various HTML elements and has
+  some simple facts about the game console homebrew scene.
+- interactions: This was the first big web project I wanted to start after my biggest project,
+  your mom gaming, was starting to finally plateau. It makes you do things, and I use JavaScript
+  to make it work.
+- internet simulator: This is the third website I've ever made, and I didn't even really make it.
+  I used a code AI to make it, and then I styled it and put audio with it.
+- javerscrips: First, there was javersite. Then, there was pythings. Both websites contained some
+  fun console-only programs I made in Java/Python, respectively. Then, I learned how to make
+  JavaScript work with a fake terminal I styled. I now prefer JavaScript over the other two, so I
+  translated the Python and Java programs to a JavaScript/HTML DOM thing, leading to javerscrips.
+- spooky x3m: It's a really bad website with Moto X3M Spooky Land and bats and spiders. Woo hoo.
+- web dev notes: This was the second website I ever made. Me being me, I thought it would be super
+  funny to take my notes with the coding languages I was actively learning. It has been improved
+  significantly, and it's now kind of just really bad documentation.
+- your mom gaming: This was the website that started it all. It all started when I found some very
+  simple HTML games on GitHub about 5 years ago, which I still had. I was in a web dev class, so I
+  made an index to put them all together. One of my friends saw it and they insisted I put it online
+  and give them the link. So I did, and ever since then, I learned more HTML/CSS/JS to make it the
+  empire it is today. To see what it looked like when I first made it, I added YMG Retro a long time
+  ago. It's the button that says YMG Retro, and you should play it.
+- your mom audio: Yet another your mom website, almost a half year after your mom gaming! It's a simple
+  soundboard powered by myinstants.com.
+- x: It's a Python turtle program that draws the X logo while printing the letter X a random amount of
+  times any time the turtle does literally anything.
 
 **AND THERE'S MORE TO COME!**
