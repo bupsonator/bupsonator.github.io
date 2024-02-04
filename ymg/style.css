@@ -11,20 +11,24 @@ html, body {
   text-align: center;
   justify-content: center;
 }
+
+/* center content inside of divs (keeps grids centered) */
 div {
     justify-content: center;
 }
-/* setting default display for the three main divs */
+
+/* not displaying every div except for the main one */
  #window, #fullscreen, #aboutIndex, .multiIndex {
     display: none;
 }
 
-#homepage { 
-  font-size: 20px;
-  padding: 9px;
+/* style for iframes on the windowed game pages */
+#frm {
+  border: 5px solid #2D3554;
+  border-radius: 5px;
 }
 
-/* fullscren style*/
+/* fullscreen iframe style*/
 #fullframe {
   display: block;  /* iframes are inline by default */   
   height: 100vh;  /* Set height to 100% of the viewport height */   
@@ -32,7 +36,7 @@ div {
   border: none; /* Remove default border */
 }
 
-/* a link style for the about page */
+/* a link style for the about page links */
 a:link, a:visited {
   color: #DDF;
   text-decoration-line: none;
@@ -40,12 +44,6 @@ a:link, a:visited {
 a:hover {
   color: #18D;
   text-decoration-line: none;
-}
-
-/* style for iframes on the windowed game pages */
-#frm {
-  border: 5px solid #2D3554;
-  border-radius: 5px;
 }
 
 /* grids!!! */
@@ -56,7 +54,7 @@ a:hover {
 .twoColumnGrid {display:grid; grid-template-columns: 185px 185px;}
 .listGrid {display:grid; grid-template-columns: 185px;}
 
-/* the default grid item and its hover style, as well as button style */
+/* button and button:hover style (creates that signature YMG button) */
 button {
   border: 0.5px solid black;
   border-radius: 10px;
@@ -83,7 +81,7 @@ button:hover {
   font-family: 'Comfortaa';
 }
 
-/* adjusts .item so it's the same size when it has two lines of text */
+/* adjusts buttons so it's the same size when it has two lines of text */
 .twoline {
   padding: 10px !important;
   font-size: 22px;
@@ -118,7 +116,7 @@ button:hover {
   font-size: 23px;
 }
 
-/* style for the minimize button on fullscreen files */
+/* style for the minimize button on fullscreen div */
 .minimize {
   padding: 3px;
   margin: 10px;
