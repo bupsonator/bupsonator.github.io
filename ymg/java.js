@@ -47,6 +47,7 @@ function openGame() {
     // prepare the minimize button with the button's data
     document.getElementById("minimize").value = this.value;
     document.getElementById("minimize").name = this.name;
+    document.getElementById("minimize").setAttribute('data-isVertical', this.getAttribute('data-isVertical'));
     
     // hide all but the window divs
     let indices = document.getElementsByClassName('multiIndex');
