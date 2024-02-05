@@ -303,7 +303,7 @@ function flippydo()
         }
     });
 }
-function loopprintln()
+function loopPrint()
 {
     clear();
     println("<br><span style='color:lime'>enter a string of characters to be repeatedly printed:</span>");
