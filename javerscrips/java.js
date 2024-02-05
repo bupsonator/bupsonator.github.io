@@ -372,3 +372,19 @@ function blobMaker()
         else println('<br><span style="color:red">thats not a valid input</span>');
     });
 }
+function rollDie()
+{
+    clear();
+    println('<br>Enter how many sides you want your imaginary die to have:');
+    createInput('enter an int', 'die', function(){
+        let input = Number(getInput('die'));
+        let result = parseInt(Math.random() * input + 1);
+        console.log(result);
+        println("<br><span style='color:lime'>rolling a die with " + Number(getInput('die')) + " sides...</span><br>")
+        if (String(result) == 'NaN')
+        {
+            println("You rolled: <i style='color:red'>not a number</i>"); 
+        }
+        else println("You rolled: <i style='color:cyan'>" + result + '</i>'); 
+    });
+}
