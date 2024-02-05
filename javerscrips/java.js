@@ -343,7 +343,7 @@ function blobMaker()
         if (getInput('blobType') == 'html')
         {
             print("<br><span style='color:lime'>enter your html blob text:</span>");
-            createInput("enter txt here", "blobText", function(){
+            createInput("enter html here", "blobText", function(){
                 let theBlob = new Blob([getInput('blobText')], {type: "text/html"});
                 let newLink = document.createElement('a');
                 document.getElementById('terminal').appendChild(newLink);
