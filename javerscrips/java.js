@@ -335,3 +335,35 @@ function loopPrint()
         });
     });
 }
+function blobMaker()
+{
+    clear();
+    print('<br><span style="lime">would you like a txt or html blob?</span>');
+    createInput("'html' or 'txt'", 'blobType', function(){
+        if (getInput('blobType') == 'html')
+        {
+            print("<br><span style='color:lime'>enter your html blob text:</span>");
+            createInput("enter txt here", "blobText", function(){
+                let theBlob = new Blob([getInput('blobText')], {type: "text/html"});
+                let newLink = document.createElement('a');
+                document.getElementById('terminal').appendChild(newLink);
+                newLink.href = window.URL.createObjectURL(theBlob);
+                newLink.target = "_blank";
+                newLink.innerHTML = '<br>click this to open your html blob!';
+            });
+        }
+        else if (getInput('blobType') == 'txt')
+        {
+            print("<br><span style='color:lime'>enter your txt blob text:</span>");
+            createInput("enter txt here", "blobText", function(){
+                let theBlob = new Blob([getInput('blobText')], {type: "text/plain"});
+                let newLink = document.createElement('a');
+                document.getElementById('terminal').appendChild(newLink);
+                newLink.href = window.URL.createObjectURL(theBlob);
+                newLink.target = "_blank";
+                newLink.innerHTML = '<br>click this to open your txt blob!';
+            });
+        }
+        else print('<br><span style="color:red">thats not a valid input</span>');
+    });
+}
