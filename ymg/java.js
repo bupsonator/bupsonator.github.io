@@ -84,7 +84,6 @@ function returnToIndex() {
     {
         let num = Number(this.getAttribute('value'));
         indices[num].style.display = 'block';
-        this.setAttribute('value', '-1')
     }
     
     // clear iframe sources for smoothness
