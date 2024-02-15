@@ -30,9 +30,8 @@ data-isLink="true" : makes the button act like a link (regular links don't work 
 
 #about : given to the button that opens the "about" div (see function aboutOpen())
 [ no attributes needed for functionality ]
-*/
 
-// ------------------------------------------- Code ---------------------------------------------------
+---------------------------------------------- Code -------------------------------------------------*/
 
 // initialize the list of all buttons
 const buttons = document.getElementsByTagName('button');
