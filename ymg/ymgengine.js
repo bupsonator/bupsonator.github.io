@@ -1,3 +1,39 @@
+/******************************************************************************************************
+***************************************** THE YMG ENGINE **********************************************
+*******************************************************************************************************
+
+--------------------------------- Button Classes, IDs, & Attributes -----------------------------------
+
+[no class] : normal game
+- value="___" -> link to a game to plug into iframe on window div
+- style="background-image:url(___)" -> link to image to display on button
+- name="___" -> the game's name to display on window div
+
+.multigame : leads user to a div with class multiIndex (see function openIndex())
+- value="#" -> index of multiIndex to lead to (the first div with class multiIndex has index 0)
+- style="background-image:url(___)" -> link to image to display on button
+
+value="return" : takes user out of multiIndex, back to the main menu div (see function outOfIndex())
+[ no attributes needed for functionality ]
+
+data-isLink="true" : makes the button act like a link (regular links don't work well with the grid)
+- data-target="blank" -> only use this if link should open in new tab
+- value="___" -> the url that the button should send the user to
+
+#fs : used on the fullscreen button in the window div; opens a game that fills the whole viewport
+      (see function fullScreen())
+[ no attributes needed for functionality ]
+
+#gameReturn : returns the user to the appropriate index, which is set automatically with functions
+              openIndex() and outOfIndex(). (see function returnToIndex())
+[ no attributes needed for functionality ]
+
+#about : given to the button that opens the "about" div (see function aboutOpen())
+[ no attributes needed for functionality ]
+*/
+
+// ------------------------------------------- Code ---------------------------------------------------
+
 // initialize the list of all buttons
 const buttons = document.getElementsByTagName('button');
 
