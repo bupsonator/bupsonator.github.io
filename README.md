@@ -7,8 +7,6 @@ expanded into the chaos that this website is today. Enjoy.
 - aesop's fables: This website was a CodeHS thing. It's funny when the books become big, that's
   why it's here.
 - ANGER!!!!!!: This website is the result of some 'great' headspace at the time. It has fire!
-- bird blog website: This one is another project I had to do. It was my final HTML/CSS-only website,
-  and it's inspired by the former social media website, Twitter.
 - blinkers: It's Karel blinkers that were made in Java SuperKarel, which I recorded and put on a
   very basic website.
 - endangered animals: This was a CodeHS project. It has a few animals with funny names that are

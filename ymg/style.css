@@ -6,8 +6,8 @@ html, body {
   display: flex;
   margin: 0;
   font-family: 'Comfortaa';
-  background: #282828;
-  color: white;
+  background: black;
+  color: #DADADA;
   text-align: center;
   justify-content: center;
 }
@@ -24,10 +24,13 @@ div {
 
 /* style for iframes on the windowed game pages */
 #frm {
-  border: 5px solid #2D3554;
+  border: 5px solid #0B1332;
   border-radius: 5px;
 }
 
+button {
+    filter: brightness(90%);
+}
 /* fullscreen iframe style*/
 #fullframe {
   display: block;  /* iframes are inline by default */   
@@ -62,14 +65,15 @@ button {
   margin: 19px;
   font-size: 22px;
   text-align: center;
-  color: white;
+  color: #DADADA;
   transition: .1s;
-  background-color: #212121;
+  background-color: #181818;
   background-size: 147px 70px;
   box-shadow: black 1px 0 10px;
   text-shadow: 4px 4px 4px black;
   font-family: 'Comfortaa';
 }
+
 button:hover {
   margin: 17px;
   padding: 23px;
@@ -95,7 +99,7 @@ button:hover {
 .topitem {
   padding: 8px;
   margin: 10px;
-  background-color: #1C2443;
+  background-color: #0B1332;
 }
 .topitem:hover {
   margin: 8px;
