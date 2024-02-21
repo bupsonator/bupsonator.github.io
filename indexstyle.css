@@ -28,6 +28,10 @@ a:link, a:visited {
   color: #C0A;
   text-decoration: none;
   transition: 0.1s;
+  background-color: #202020;
+  border: 0.1px solid #C0A;
+  padding: 2px 5px 2px 4px;
+  border-radius: 8px;
 }
 a:hover {
   color: red;
@@ -41,15 +45,6 @@ a:active {
   transition: 0.1s;
 }
 
-
-
-
-/* h, a, p tag style */
-h1, h2, h3, h4, h5, h6, p, ol, ul, li, span, div{
-  font-family: 'Montserrat';
-  color: white;
-  transition: 0.1s;
-}
 
 button a {
     color:#0bb;
@@ -72,30 +67,18 @@ table, th, td {
 body {
   margin: 20px;
   background: rgb(20, 20, 20);
-}
-
-/* New Style 4 collapsibles */
-.collapsible {
-  background-color: rgb(20, 20, 20);
   font-family: 'Montserrat';
-  color: #C0A;
-  cursor: pointer;
-  border: none;
-  text-align: left;
-  font-size: 15px;
-}
-.content {
-  padding: 0 18px;
-  font-family: 'Montserrat';
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: rgb(20, 20, 20)
-}
-
-.active, .collapsible:hover {
-  color:red;
-  font-family: 'Montserrat';
+  color: white;
   transition: 0.1s;
-  font-size: 16px;
+}
+span {
+    font-size: 15px;
+    color: #705;
+}
+.sub {
+    color: #C9C9C9;
+}
+#small {
+    font-size: 15px;
+    color: white;
 }
