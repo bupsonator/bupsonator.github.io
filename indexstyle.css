@@ -28,10 +28,6 @@ a:link, a:visited {
   color: #C0A;
   text-decoration: none;
   transition: 0.1s;
-  background-color: #202020;
-  border: 0.1px solid #C0A;
-  padding: 2px 5px 2px 4px;
-  border-radius: 8px;
 }
 a:hover {
   color: red;
