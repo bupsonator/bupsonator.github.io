@@ -1,37 +1,6 @@
 /******************************************************************************************************
 ***************************************** THE YMG ENGINE **********************************************
-*******************************************************************************************************
-
---------------------------------- Button Classes, IDs, & Attributes -----------------------------------
-
-[no class] : normal game
-- value="___" -> link to a game to plug into iframe on window div
-- style="background-image:url(___)" -> link to image to display on button
-- name="___" -> the game's name to display on window div
-
-.multigame : leads user to a div with class multiIndex (see function openIndex())
-- value="#" -> index of multiIndex to lead to (the first div with class multiIndex has index 0)
-- style="background-image:url(___)" -> link to image to display on button
-
-value="return" : takes user out of multiIndex, back to the main menu div (see function outOfIndex())
-[ no attributes needed for functionality ]
-
-data-isLink="true" : makes the button act like a link (regular links don't work well with the grid)
-- data-target="blank" -> only use this if link should open in new tab
-- value="___" -> the url that the button should send the user to
-
-#fs : used on the fullscreen button in the window div; opens a game that fills the whole viewport
-      (see function fullScreen())
-[ no attributes needed for functionality ]
-
-#gameReturn : returns the user to the appropriate index, which is set automatically with functions
-              openIndex() and outOfIndex(). (see function returnToIndex())
-[ no attributes needed for functionality ]
-
-#about : given to the button that opens the "about" div (see function aboutOpen())
-[ no attributes needed for functionality ]
-
----------------------------------------------- Code -------------------------------------------------*/
+******************************************************************************************************/
 
 // initialize the list of all buttons
 const buttons = document.getElementsByTagName('button');
@@ -39,18 +8,12 @@ const buttons = document.getElementsByTagName('button');
 // loop through every single button and apply the appropriate event listener
 for (let i = 0, len = buttons.length; i < len; i++)
 {
-    // if button's value is 'return', outOfIndex() runs onclick
-    if (buttons[i].getAttribute('value') == 'return') buttons[i].addEventListener('click', outOfIndex);
-    
     // if button's id is 'fs', fullScreen() runs onclick
-    else if (buttons[i].getAttribute('id') == 'fs') buttons[i].addEventListener('click', fullScreen);
+    if (buttons[i].getAttribute('id') == 'fs') buttons[i].addEventListener('click', fullScreen);
     
     // if button's id is 'gameReturn', returnToIndex() runs onclick
     else if (buttons[i].getAttribute('id') == 'gameReturn') buttons[i].addEventListener('click', returnToIndex);
-    
-    // if button's class is 'multigame', openIndex() runs onclick
-    else if (buttons[i].getAttribute('class') == 'multigame') buttons[i].addEventListener('click', openIndex);
-    
+ 
     // if button's id is 'about', aboutOpen() runs onclick
     else if (buttons[i].getAttribute('id') == 'about') buttons[i].addEventListener('click', aboutOpen);
     
@@ -61,6 +24,9 @@ for (let i = 0, len = buttons.length; i < len; i++)
         // else it'll just send the user to the page in the same tab
         else location.href = this.value;
     });
+    
+    // if button's id is ymggames, don't let the button do anything
+    else if (buttons[i].getAttribute('class') == "dropbtn") console.log("dropdown menu made");
     
     // if the button has none of these, it's a game button, and it'll run openGame() onclick
     else buttons[i].addEventListener('click', openGame);
@@ -85,8 +51,6 @@ function openGame() {
     document.getElementById("minimize").setAttribute('data-isVertical', this.getAttribute('data-isVertical'));
     
     // hide all but the window divs
-    let indices = document.getElementsByClassName('multiIndex');
-    for (let i = 0; i < indices.length; i++) indices[i].style.display = 'none';
     document.getElementById("menu").style.display="none";
     document.getElementById("fullscreen").style.display="none";
     
@@ -104,46 +68,16 @@ function returnToIndex() {
     // unmute the audio
     document.getElementById("sneaky").muted = false;
     
-    // create a list of all multiIndices
-    let indices = document.getElementsByClassName('multiIndex');
-    
-    // hide the divs that don't need to be tested at all
+    // hide the divs
     document.getElementById("window").style.display="none";
     document.getElementById('aboutIndex').style.display='none';
     
-    // if value is -1, the div needed is the main menu
-    if (this.getAttribute('value') == '-1') document.getElementById("menu").style.display="block";
-    
-    // else, get the value stored in the button, and open the multiIndex at the index of the same value
-    else
-    {
-        let num = Number(this.getAttribute('value'));
-        indices[num].style.display = 'block';
-    }
+    // re-show main index
+    document.getElementById("menu").style.display="block";
     
     // clear iframe sources for smoothness
     document.getElementById("fullframe").src = '';
     document.getElementById("frm").src = '';
-}
-
-// when a multiButton is pressed
-function openIndex() {
-    
-    // get the number value stored in the multiButton
-    let theValue = Number(this.getAttribute('value'));
-    
-    // create a list of all multiIndices
-    let indices = document.getElementsByClassName('multiIndex');
-    
-    // hide the divs
-    document.getElementById("menu").style.display="none";
-    document.getElementById('aboutIndex').style.display='none';
-    
-    // store the value in gameReturn so that the appropriate index is opened when the game is closed
-    document.getElementById('gameReturn').value = theValue;
-    
-    // show the appropriate index
-    indices[theValue].style.display = 'block';
 }
 
 // when the fullscreen button on window page is pressed
@@ -164,19 +98,4 @@ function aboutOpen() {
     
     // display aboutIndex div
     document.getElementById('aboutIndex').style.display='block';
-}
-
-// when 'return' button is pressed on a multiGame index
-function outOfIndex() {
-    
-    // hide all multiIndices and about index
-    let indices = document.getElementsByClassName('multiIndex');
-    for (let i = 0; i < indices.length; i++) indices[i].style.display = 'none';
-    document.getElementById('aboutIndex').style.display = 'none';
-    
-    // display main menu div
-    document.getElementById("menu").style.display="block";
-    
-    // set gameReturn button value so that game will return to the right menu
-    document.getElementById('gameReturn').value = '-1';
 }

@@ -18,7 +18,7 @@ div {
 }
 
 /* not displaying every div except for the main one */
- #window, #fullscreen, #aboutIndex, .multiIndex {
+ #window, #fullscreen, #aboutIndex {
     display: none;
 }
 
@@ -51,11 +51,8 @@ a:hover {
 
 /* grids!!! */
 .sixColumnGrid {display:grid; grid-template-columns: 185px 185px 185px 185px 185px 185px;}
-.fiveColumnGrid {display:grid; grid-template-columns: 185px 185px 185px 185px 185px;}
-.fourColumnGrid {display:grid; grid-template-columns: 185px 185px 185px 185px;}
 .threeColumnGrid {display:grid; grid-template-columns: 185px 185px 185px;}
 .twoColumnGrid {display:grid; grid-template-columns: 185px 185px;}
-.listGrid {display:grid; grid-template-columns: 185px;}
 
 /* button and button:hover style (creates that signature YMG button) */
 button {
@@ -146,4 +143,36 @@ button:hover {
   position:absolute; 
   top:20px; 
   left:20px;  
+}
+
+/* dropdowns */
+.dropbtn {
+    width: 90%;
+    margin-left: 18px;
+    margin-right: 400px;
+    background-size: 335px 70px !important;
+}
+.dropbtn:hover {
+    font-size: 22px;
+    margin: 18px;
+    padding: 23px;
+    background-size: 335px 72px !important;
+}
+
+.dropdown {
+    grid-column: span 2;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #181818;
+  min-width: 334px;
+  z-index: 1;
+  margin: 0px 0px 0px 18px;
+}
+.dropdown:hover .dropdown-content {
+  display: grid; 
+  grid-template-columns: 185px 185px;
 }
