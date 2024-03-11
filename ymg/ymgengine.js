@@ -25,7 +25,7 @@ for (let i = 0, len = buttons.length; i < len; i++)
         else location.href = this.value;
     });
     
-    // if button's id is ymggames, don't let the button do anything
+    // if button's class is dropbtn, don't let the button do anything
     else if (buttons[i].getAttribute('class') == "dropbtn") console.log("dropdown menu made");
     
     // if the button has none of these, it's a game button, and it'll run openGame() onclick
