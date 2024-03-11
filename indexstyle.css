@@ -1,80 +1,44 @@
-.social a:link, .social a:visited {
-  color: #0BB;
-  text-decoration: none;
-  transition: 0.1s;
-}
-.social a:hover {
-  color: cyan;
-  text-decoration: none;
-  transition: 0.1s;
-}
-.social a:active {
-  color: yellow;
-  text-decoration: none;
-  transition: 0.1s;
-}
-::selection {
-  background-color:white;
-  color: black;
-}
-a, button {
-  font-family: 'Montserrat';
-  color: #DADADA;
-  font-size: 15px;
-  text-decoration: none;
-  transition: 0.1s;
-}
-a:link, a:visited {
-  color: #C0A;
-  text-decoration: none;
-  transition: 0.1s;
-}
-a:hover {
-  color: red;
-  text-decoration: none;
-  transition: 0.1s;
-  font-size: 16px;
-}
-a:active {
-  color: yellow;
-  text-decoration: none;
-  transition: 0.1s;
-}
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-
-button a {
-    color:#0bb;
-    transition: 0.1s;
-}
-button a:hover {
-    color:cyan;
-    transition: 0.1s;
-}
-
-/* table style */
-table, th, td {
-    border: 1px dotted;
-    border-color: white;
-    color: white;
-    font-family: 'Montserrat';
-}
-
-/* the rest of the style for the site */
 body {
-  margin: 20px;
-  background: rgb(20, 20, 20);
-  font-family: 'Montserrat';
-  color: white;
-  transition: 0.1s;
+    font-family: Montserrat;
+    background-color: rgb(20, 20, 20);
 }
-span {
-    font-size: 15px;
-    color: #705;
+h1 {
+    font-size: 30px;
 }
-.sub {
-    color: #C9C9C9;
+h2 {
+    font-size: 25px;
 }
-#small {
-    font-size: 15px;
+main {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+p a:link, p a:visited {
+    color: lime;
+}
+p a:hover {
+    color: #00DD00;
+}
+
+#allSites p a:link, #allSites p a:visited, #footlink, #footlink:visited {
+    color: #DADADA;
+}
+#allSites p a:hover, #footlink:hover {
     color: white;
 }
+
+footer {
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+/* navbar compatibility for all sites
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+nav, .navbar-nav, .collapse, .navbar-collapse {
+    font-family: Montserrat;
+    text-align: left !important;
+    justify-content: left !important;
+}
+*/
