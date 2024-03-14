@@ -53,7 +53,7 @@ function openGame() {
     document.getElementById("window").style.display="block";
     document.getElementById("nav").style.display="block";
     document.getElementById("header").style.display="block";
-    document.getElementById("footer").style.display="none";
+    document.getElementById("footer").style.display="block";
     
     // prepare the minimize button with the button's data
     document.getElementById("minimize").value = this.value;
