@@ -67,7 +67,7 @@ footer {
   width: 100vw;  /* Set width to 100% of the viewport width */     
   border: none; /* Remove default border */
 }
-.dropdown-toggle::after {
+.row .dropdown-toggle::after {
     display: none !important;
 }
 /* puts stuff over other stuff, used for the minimize button */
