@@ -9,13 +9,13 @@ const buttons = document.getElementsByTagName('button');
 for (let i = 0, len = buttons.length; i < len; i++)
 {
     // if button's id is 'fs', fullScreen() runs onclick
-    if (buttons[i].getAttribute('id') == 'fs') buttons[i].addEventListener('click', fullScreen);
+    if (buttons[i].getAttribute('id') == 'enlarge') buttons[i].addEventListener('click', enlarge);
     
     // if button's id is 'gameReturn', returnToIndex() runs onclick
     else if (buttons[i].getAttribute('id') == 'gameReturn') buttons[i].addEventListener('click', returnToIndex);
  
     // if button's id is 'about', aboutOpen() runs onclick
-    else if (buttons[i].getAttribute('id') == 'about') buttons[i].addEventListener('click', aboutOpen);
+    else if (buttons[i].getAttribute('id') == 'your-stats') buttons[i].addEventListener('click', seeAccount);
     
     // if button's data-isLink is 'true', it will turn button into link.
     else if (buttons[i].getAttribute('data-isLink') == "true") buttons[i].addEventListener('click', function(){
@@ -26,7 +26,7 @@ for (let i = 0, len = buttons.length; i < len; i++)
     });
     
     // if button's class is dropbtn, don't let the button do anything
-    else if (buttons[i].getAttribute('class') == "dropbtn") console.log("dropdown menu made");
+    else if (buttons[i].getAttribute('class') == "navbar-toggler" || buttons[i].getAttribute('class') == "btn btn-dark dropdown-toggle") console.log("dropdown menu made");
     
     // if the button has none of these, it's a game button, and it'll run openGame() onclick
     else buttons[i].addEventListener('click', openGame);
@@ -39,27 +39,38 @@ function openGame() {
     document.getElementById("sneaky").muted = true;
     
     // prepare the window page with the button's data
-    document.getElementById("gameheader").innerHTML = this.name;
+    document.getElementById("header-subheader").innerHTML = this.name;
     document.getElementById("frm").src = this.value;
 
     // prepare fullscreen iframe 
     document.getElementById("fullframe").src = this.value;
+    
+    // hide all but the window divs
+    document.getElementById("main").style.display="none";
+    document.getElementById("fullscreen").style.display="none";
+    document.getElementById("your-stats").style.display="none";
+    
+    document.getElementById("window").style.display="block";
+    document.getElementById("nav").style.display="block";
+    document.getElementById("header").style.display="block";
+    document.getElementById("footer").style.display="none";
     
     // prepare the minimize button with the button's data
     document.getElementById("minimize").value = this.value;
     document.getElementById("minimize").name = this.name;
     document.getElementById("minimize").setAttribute('data-isVertical', this.getAttribute('data-isVertical'));
     
-    // hide all but the window divs
-    document.getElementById("menu").style.display="none";
-    document.getElementById("fullscreen").style.display="none";
-    
     // display window div
     document.getElementById("window").style.display="block";
+    document.getElementById("gameReturn").style.display="block";
+    document.getElementById("enlarge").style.display="block";
     
     // check if the game needs a vertical frame. if not, make it normal width
     if (this.getAttribute('data-isVertical') == 'true') document.getElementById("frm").style.width = '350px';
-    else document.getElementById("frm").style.width = '1000px';
+    else document.getElementById("frm").style.width = '70%';
+    
+    document.getElementById("enlarge").innerHTML = "enlarge";
+    document.getElementById("enlarge").value = '0'
 }
 
 // when 'return' button is pressed on the window page
@@ -70,32 +81,61 @@ function returnToIndex() {
     
     // hide the divs
     document.getElementById("window").style.display="none";
-    document.getElementById('aboutIndex').style.display='none';
+    document.getElementById('your-stats-index').style.display='none';
+    document.getElementById('gameReturn').style.display='none';
+    document.getElementById('enlarge').style.display='none';
     
     // re-show main index
-    document.getElementById("menu").style.display="block";
+    document.getElementById("main").style.display="block";
+    document.getElementById("your-stats").style.display="block";
     
     // clear iframe sources for smoothness
     document.getElementById("fullframe").src = '';
     document.getElementById("frm").src = '';
+    
+    // fix subheader
+    document.getElementById("header-subheader").innerHTML = "even better video gaming";
+    
+    document.getElementById("enlarge").innerHTML = "enlarge";
+    document.getElementById("enlarge").value = '0'
 }
 
 // when the fullscreen button on window page is pressed
-function fullScreen() {
+function enlarge() {
+    if(this.value == '0') {
+        // hide the window div
+        document.getElementById("window").style.display="none";
+        document.getElementById("nav").style.display="none";
+        document.getElementById("header").style.display="none";
+        document.getElementById("footer").style.display="none";
+        
+        // display the fullscreen div
+        document.getElementById("fullscreen").style.display ="block";
+        this.value = '1';
+        this.innerHTML = "shrink";
+    }
+    else {
+        // display the window div
+        document.getElementById("window").style.display="block";
+        document.getElementById("nav").style.display="block";
+        document.getElementById("header").style.display="block";
+        document.getElementById("footer").style.display="block";
+        // hide the fullscreen div
+        document.getElementById("fullscreen").style.display ="none";
+        this.innerHTML = "enlarge";
+        this.value = '0'
+    }
     
-    // hide the window div
-    document.getElementById("window").style.display="none";
-    
-    // display the fullscreen div
-    document.getElementById("fullscreen").style.display ="block";
 }
 
 // when the about button on menu div is pressed
-function aboutOpen() {
+function seeAccount() {
     
     // hide menu div
-    document.getElementById("menu").style.display="none";
+    document.getElementById("main").style.display="none";
+    document.getElementById("your-stats").style.display="none";
     
     // display aboutIndex div
-    document.getElementById('aboutIndex').style.display='block';
+    document.getElementById('your-stats-index').style.display='block';
+    document.getElementById("gameReturn").style.display="block";
 }

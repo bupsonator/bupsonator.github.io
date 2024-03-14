@@ -1,178 +1,78 @@
-/* import comfortaa font */
-@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-/* style for the entire site */
-html, body {
-  display: flex;
-  margin: 0;
-  font-family: 'Comfortaa';
-  background: black;
-  color: #DADADA;
-  text-align: center;
-  justify-content: center;
+body {
+    font-family: Montserrat;
+    background-color: rgb(20, 20, 20);
 }
-
-/* center content inside of divs (keeps grids centered) */
-div {
-    justify-content: center;
+h1 {
+    font-size: 30px;
 }
-
+h2 {
+    font-size: 25px;
+}
+#dropdown-games {
+    background-color: #0B1332;
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+}
 /* not displaying every div except for the main one */
- #window, #fullscreen, #aboutIndex {
+ #window, #fullscreen, #your-stats-index, #gameReturn, #enlarge{
     display: none;
 }
+main, header, #window, #your-stats-index {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
 
-/* style for iframes on the windowed game pages */
+p a:link, p a:visited {
+    color: lime;
+}
+p a:hover {
+    color: #00DD00;
+}
+
+#allSites p a:link, #allSites p a:visited, #footlink, #footlink:visited {
+    color: #DADADA;
+}
+#allSites p a:hover, #footlink:hover {
+    color: white;
+}
+.col-md-3 {
+    margin: 5px 0px 5px 0px;
+}
+#main .row div button, #main .dropdown .dropdown-toggle {
+    padding: 20px 5% 20px 50%;
+    background-size: 100% 100%;
+}
+#main + row .col-md-3 {
+    margin: 0px 10px 0px 10px;
+}
+footer {
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
 #frm {
-  border: 5px solid #0B1332;
-  border-radius: 5px;
+    height: 650px;
+    width: 70%;
 }
-
-button {
-    filter: brightness(90%);
+.btn-warning {
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 15px;
 }
-/* fullscreen iframe style*/
 #fullframe {
   display: block;  /* iframes are inline by default */   
   height: 100vh;  /* Set height to 100% of the viewport height */   
   width: 100vw;  /* Set width to 100% of the viewport width */     
   border: none; /* Remove default border */
 }
-
-/* a link style for the about page links */
-a:link, a:visited {
-  color: #DDF;
-  text-decoration-line: none;
+.dropdown-toggle::after {
+    display: none !important;
 }
-a:hover {
-  color: #18D;
-  text-decoration-line: none;
-}
-
-/* grids!!! */
-.sixColumnGrid {display:grid; grid-template-columns: 185px 185px 185px 185px 185px 185px;}
-.threeColumnGrid {display:grid; grid-template-columns: 185px 185px 185px;}
-.twoColumnGrid {display:grid; grid-template-columns: 185px 185px;}
-
-/* button and button:hover style (creates that signature YMG button) */
-button {
-  border: 0.5px solid black;
-  border-radius: 10px;
-  padding: 22px;
-  margin: 19px;
-  font-size: 22px;
-  text-align: center;
-  color: #DADADA;
-  transition: .1s;
-  background-color: #181818;
-  background-size: 147px 70px;
-  box-shadow: black 1px 0 10px;
-  text-shadow: 4px 4px 4px black;
-  font-family: 'Comfortaa';
-}
-
-button:hover {
-  margin: 17px;
-  padding: 23px;
-  transition: .1s;
-  cursor: pointer;
-  box-shadow: black 2px 0 17px;
-  font-size: 23px;
-  background-size: 152px 75px;
-  font-family: 'Comfortaa';
-}
-
-/* adjusts buttons so it's the same size when it has two lines of text */
-.twoline {
-  padding: 10px !important;
-  font-size: 22px;
-}
-.twoline:hover {
-  font-size: 23px;
-  padding: 10.5px !important;
-}
-
-/* top items, used for navigation buttons */
-.topitem {
-  padding: 8px;
-  margin: 10px;
-  background-color: #0B1332;
-}
-.topitem:hover {
-  margin: 8px;
-  padding: 9px;
-  box-shadow: black 2px 0 15px;
-  font-size: 23px;
-}
-
-/* gray top items */
-.gtop {
-  padding: 8px;
-  margin: 10px;
-}
-.gtop:hover {
-  margin: 8px;
-  padding: 9px;
-  box-shadow: black 2px 0 15px;
-  font-size: 23px;
-}
-
-/* style for the minimize button on fullscreen div */
-.minimize {
-  padding: 3px;
-  margin: 10px;
-  background-color: #515111;
-  border-radius: 500px;
-}
-.minimize:hover {
-  margin: 8px;
-  padding: 4px;
-  background-color: #818111;
-  box-shadow: black 2px 0 15px;
-  font-size: 23px;
-}
-
-/* style for selected text */
-::selection {
-  background-color: white;
-  color: black;
-}
-
 /* puts stuff over other stuff, used for the minimize button */
 .over { 
   position:absolute; 
   top:20px; 
   left:20px;  
-}
-
-/* dropdowns */
-.dropbtn {
-    width: 90%;
-    margin-left: 18px;
-    margin-right: 400px;
-    background-size: 335px 70px !important;
-}
-.dropbtn:hover {
-    font-size: 22px;
-    margin: 18px;
-    padding: 23px;
-    background-size: 335px 72px !important;
-}
-
-.dropdown {
-    grid-column: span 2;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  border-radius: 10px;
-  background-color: #181818;
-  min-width: 334px;
-  z-index: 1;
-  margin: 0px 0px 0px 18px;
-}
-.dropdown:hover .dropdown-content {
-  display: grid; 
-  grid-template-columns: 185px 185px;
 }
