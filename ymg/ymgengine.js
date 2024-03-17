@@ -68,9 +68,6 @@ function openGame() {
     // check if the game needs a vertical frame. if not, make it normal width
     if (this.getAttribute('data-isVertical') == 'true') document.getElementById("frm").style.width = '350px';
     else document.getElementById("frm").style.width = '70%';
-    
-    document.getElementById("enlarge").innerHTML = "enlarge";
-    document.getElementById("enlarge").value = '0'
 }
 
 // when 'return' button is pressed on the window page
@@ -95,36 +92,18 @@ function returnToIndex() {
     
     // fix subheader
     document.getElementById("header-subheader").innerHTML = "even better video gaming";
-    
-    document.getElementById("enlarge").innerHTML = "enlarge";
-    document.getElementById("enlarge").value = '0'
 }
 
 // when the fullscreen button on window page is pressed
 function enlarge() {
-    if(this.value == '0') {
-        // hide the window div
-        document.getElementById("window").style.display="none";
-        document.getElementById("nav").style.display="none";
-        document.getElementById("header").style.display="none";
-        document.getElementById("footer").style.display="none";
-        
-        // display the fullscreen div
-        document.getElementById("fullscreen").style.display ="block";
-        this.value = '1';
-        this.innerHTML = "shrink";
-    }
-    else {
-        // display the window div
-        document.getElementById("window").style.display="block";
-        document.getElementById("nav").style.display="block";
-        document.getElementById("header").style.display="block";
-        document.getElementById("footer").style.display="block";
-        // hide the fullscreen div
-        document.getElementById("fullscreen").style.display ="none";
-        this.innerHTML = "enlarge";
-        this.value = '0'
-    }
+    // hide the window div
+    document.getElementById("window").style.display="none";
+    document.getElementById("nav").style.display="none";
+    document.getElementById("header").style.display="none";
+    document.getElementById("footer").style.display="none";
+    
+    // display the fullscreen div
+    document.getElementById("fullscreen").style.display ="block";
     
 }
 
