@@ -1,4 +1,151 @@
-// semantic tags into vars
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>interactions</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            /* style for the whole site */
+body {
+    font-family: Raleway;
+    background-color: #111611;
+    color: #EFE;
+    margin: 20px;
+    text-align: center;
+}
+
+/* semantic styles */
+header, main, nav {
+    padding: 10px 40px 40px 40px;
+    margin: 40px;
+    background-color: #113711;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+
+div {
+    display: none;
+}
+main {
+    padding: 25px 40px 25px 40px !important;
+    background-color: #112611;
+    border: 1px solid #050;
+}
+nav {
+    padding: 25px 40px 25px 40px !important;
+    background-color: #113011;
+    border: 1px solid #060;
+}
+#hovButton::before {
+    content:"hover over this";
+    transition: 0.2s;
+}
+#hovButton:hover::before {
+    content:"click to continue";
+    transition: 0.2s;
+}
+#hovButton:hover {
+    font-family: Raleway;
+    padding: 30px;
+    transition: 0.2s;
+    background-color: #113611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+
+
+/* when user highlights text */
+::selection {
+    background-color: #EFE;
+    color: #111611;
+}
+
+/* anchor link style */
+a:link, a:visited {
+    color: #DFD;
+}
+a:hover {
+    color: lime;
+}
+
+/* button style */
+button {
+    font-family: Raleway;
+    padding: 20px;
+    transition: 0.2s;
+    background-color: #113611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+button:active {
+    font-family: Raleway;
+    background-color: #114611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+        </style>
+        <link rel="icon" type="image/x-icon" href="/media/interactions.ico">
+    </head>
+    <body>
+        <header>
+            <h1>interactions</h1>
+        </header>
+        <nav>
+            <span id="counter">0</span>/6 interactions
+            <br>
+            <div id="clock"></div>
+        </nav>
+        <main>
+            <div id="first" style="display:block">
+                <button id="displayMode" onclick="darkMode();">light mode</button>
+                &emsp;&emsp;
+                <button onclick="first();">click me to begin</button>
+            </div>
+            <div id="second">
+                <button id="hovButton" onclick="second();"></button>
+            </div>
+            <div id="third">
+                <p id="highlight">highlight this text, then click 'submit'</p>
+                <button onclick="third();">submit &gt;</button>
+            </div>
+            <div id="fourth">
+                <p id="quiz">
+                    highlight the wrong answer, then click 'submit'
+                </p>
+                <p>
+                    a) incorrect<br>
+                    b) wrong<br>
+                    c) correct<br>
+                    d) bad
+                </p>
+                <button onclick="fourth();">submit</button>
+            </div>
+            <div id="fifth">
+                <p id="calcPrompt">click the button below and respond to the prompts.</p>
+                <button id="calcButton" onclick="fifth();">prompts</button>
+                <button id="calcExit" onclick="calcExit();" style="display:none;">continue</button>
+                <br><br>
+                <p id="calcResult">
+                    result prints here
+                </p>
+            </div>
+            <div id="sixth">
+                <p id="clockPrompt">click "submit" when the seconds portion of the clock is a multiple of 10.</p>
+                <button id="clockSubmit" onclick="sixth();">submit</button>
+            </div>
+            <div id="seventh">
+                that's all for now! come back later to see if there's more thingies<br>
+                <br><a href="">or restart</a>
+            </div>
+            <audio id="sneaky" controls autoplay hidden>
+                <source src="/media/audio/sneaky.mp3" type="audio/mpeg">
+            </audio>
+        </main>
+        <script>
+            // semantic tags into vars
 var header = document.getElementsByTagName("header")[0];
 var main = document.getElementsByTagName("main")[0];
 var nav = document.getElementsByTagName("nav")[0];
@@ -149,3 +296,6 @@ function sixth() {
         document.getElementById("clockPrompt").innerHTML = "that wasn't it. make sure you hit submit only when the seconds portion of the clock is a multiple of 10."
     }
 }
+        </script>
+    </body>
+</html>
