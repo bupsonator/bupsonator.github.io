@@ -70,6 +70,18 @@ footer {
 .row .dropdown-toggle::after {
     display: none !important;
 }
+li .btn {
+    display: block;
+    float: left !important;
+    padding: 5px !important;
+    color: #DADADA;
+    background-color: rgb(60, 60, 60);
+    margin: 5px;
+}
+.dropdown-menu {
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+}
 /* puts stuff over other stuff, used for the minimize button */
 .over { 
   position:absolute; 

@@ -17,15 +17,7 @@ for (let i = 0, len = buttons.length; i < len; i++)
     // if button's id is 'about', aboutOpen() runs onclick
     else if (buttons[i].getAttribute('id') == 'your-stats') buttons[i].addEventListener('click', seeAccount);
     
-    // if button's data-isLink is 'true', it will turn button into link.
-    else if (buttons[i].getAttribute('data-isLink') == "true") buttons[i].addEventListener('click', function(){
-        // if data-target is blank, it'll open the value in a new tab
-        if (this.getAttribute('data-target') == 'blank') window.open(this.value, '_blank').focus();
-        // else it'll just send the user to the page in the same tab
-        else location.href = this.value;
-    });
-    
-    // if button's class is dropbtn, don't let the button do anything
+    // if button's class is navbar-toggler, or btn btn-dark dropdown-toggle, don't let the button do anything
     else if (buttons[i].getAttribute('class') == "navbar-toggler" || buttons[i].getAttribute('class') == "btn btn-dark dropdown-toggle") console.log("dropdown menu made");
     
     // if the button has none of these, it's a game button, and it'll run openGame() onclick
@@ -34,6 +26,8 @@ for (let i = 0, len = buttons.length; i < len; i++)
 
 // when game button is pressed
 function openGame() {
+    
+    window.scrollTo(0, 0);
     
     // shut up audio
     document.getElementById("sneaky").muted = true;
@@ -92,6 +86,7 @@ function returnToIndex() {
     
     // fix subheader
     document.getElementById("header-subheader").innerHTML = "even better video gaming";
+    window.scrollTo(0, 0);
 }
 
 // when the fullscreen button on window page is pressed
