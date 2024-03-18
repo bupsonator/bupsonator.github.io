@@ -5,6 +5,10 @@
 // initialize the list of all buttons
 const buttons = document.getElementsByTagName('button');
 
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+
 // loop through every single button and apply the appropriate event listener
 for (let i = 0, len = buttons.length; i < len; i++)
 {

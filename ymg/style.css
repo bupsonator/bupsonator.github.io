@@ -102,3 +102,8 @@ li .btn {
   top:20px; 
   left:20px;  
 }
+
+.setting-a, .setting-a:hover, .setting-a:visited, .setting-a:active {
+    color: white;
+    text-decoration: none;
+}
