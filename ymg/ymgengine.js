@@ -44,7 +44,9 @@ if(localStorage.safeMode == "on")
         }
     }
     for(let i = 0; i < dropButtons.length; i++) {
-        dropButtons[i].style.display = "none";
+        if(dropButtons[i].getAttribute("data-safe") != "true") {
+            dropButtons[i].style.display = "none";
+        }
     }
 }
 
@@ -192,7 +194,9 @@ function setSetting(index)
                 }
             }
             for(let i = 0; i < dropButtons.length; i++) {
-                dropButtons[i].style.display = "none";
+                if(dropButtons[i].getAttribute("data-safe") != "true") {
+                    dropButtons[i].style.display = "none";
+                }
             }
             localStorage.safeMode = "on";
         }
