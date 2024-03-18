@@ -56,7 +56,7 @@
             <p id="header-subheader">even better video gaming</p>
             <div class="btn-group">
                 <button id='gameReturn' class="btn btn-dark">return</button>
-                <button class="btn btn-dark" type="button" id="your-stats">your stats</button>
+                <button value="0" class="btn btn-dark" type="button" id="your-stats">your stats</button>
                 <button value="0" class="btn btn-dark" type="button" id="settings">settings</button>
                 <button id="enlarge" class="btn btn-dark">enlarge</button>
             </div><br>
@@ -65,6 +65,11 @@
             <button onclick="setSetting(0)" id="set-safe" class="btn btn-dark setting" title="only show games that are less likely to be blocked (e.g. games that run natively on YMG or that the dev created)">
                 only display safe games: <span id="set-0"></span>
             </button>
+        </div>
+        <div id="your-stats-index">
+            <p id="recent-game"></p>
+            <p id="time-played"></p>
+            <p id="times-played"></p>
         </div>
         <main id="main">
             <br>
@@ -490,9 +495,6 @@
                 <br>
             </div>
         </main>
-        <div id="your-stats-index">
-            coming soon
-        </div>
 <!-------------------------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------- window & fullscreen divs, audio & script links ------------------------------------------------>
 <!-------------------------------------------------------------------------------------------------------------------------------------------->

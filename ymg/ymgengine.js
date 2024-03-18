@@ -26,6 +26,8 @@ for (let i = 0, len = buttons.length; i < len; i++)
     // if the button has none of these, it's a game button, and it'll run openGame() onclick
     else buttons[i].addEventListener('click', openGame);
 }
+
+// if user set safeMode on, display the site as needed
 if(localStorage.safeMode == "on")
 {
     let allButtons = document.getElementById("all-games").children;
@@ -41,6 +43,7 @@ if(localStorage.safeMode == "on")
         dropButtons[i].style.display = "none";
     }
 }
+
 // when game button is pressed
 function openGame() {
     // send user to page top (works sometimes)
@@ -59,7 +62,6 @@ function openGame() {
     // hide all but the essential divs
     document.getElementById("main").style.display="none";
     document.getElementById("fullscreen").style.display="none";
-    document.getElementById("your-stats").style.display="none";
     
     //  make sure navigational stuff displays (when exiting fullscreen)
     document.getElementById("nav").style.display="block";
@@ -75,6 +77,9 @@ function openGame() {
     document.getElementById("window").style.display="block";
     document.getElementById("gameReturn").style.display="block";
     document.getElementById("enlarge").style.display="block";
+    
+    // add the game to most recent game in local storage
+    localStorage.recentGame = this.name;
     
     // check if the game needs a vertical frame. if not, make it normal width
     if (this.getAttribute('data-isVertical') == 'true') document.getElementById("frm").style.width = '350px';
@@ -95,7 +100,6 @@ function returnToIndex() {
     
     // re-show main index and stat button
     document.getElementById("main").style.display="block";
-    document.getElementById("your-stats").style.display="block";
     
     // clear iframe sources for smoothness
     document.getElementById("fullframe").src = '';
@@ -122,20 +126,30 @@ function enlarge() {
 
 // when the about button on menu div is pressed
 function seeAccount() {
-    
-    // hide menu div and stat button
-    document.getElementById("main").style.display="none";
-    document.getElementById("your-stats").style.display="none";
-    
-    // display your stats div and return button
-    document.getElementById('your-stats-index').style.display='block';
-    document.getElementById("gameReturn").style.display="block";
+    if(this.value == "0")
+    {
+        if(!localStorage.recentGame) {
+            localStorage.recentGame = "none!";
+        }
+        document.getElementById("recent-game").innerHTML = "<b>recently played: </b>" + localStorage.recentGame;
+        document.getElementById("settings-panel").style.display = "none";
+        document.getElementById("settings").value = "0";
+        document.getElementById("your-stats-index").style.display = "block";
+        this.value = "1";
+    }
+    else
+    {
+        document.getElementById("your-stats-index").style.display = "none";
+        this.value = "0";
+    }
 }
 
 // when the settings button is pressed (0: safemode)
 function seeSettings() {
     if(this.value == "0")
     {
+        document.getElementById("your-stats-index").style.display = "none";
+        document.getElementById("your-stats").value = "0";
         document.getElementById("settings-panel").style.display = "block";
         if(!localStorage.safeMode || localStorage.safeMode == "off") {
             document.getElementById("set-0").style.color = "red";
@@ -160,7 +174,7 @@ function setSetting(index)
         localStorage.safeMode = "off";
     }
     
-    if(index == 0)
+    if(index == 0) // safe game setting (set-0)
     {
         let allButtons = document.getElementById("all-games").children;
         let dropButtons = document.getElementById("dropdown-games").children;
