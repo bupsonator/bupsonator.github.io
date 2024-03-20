@@ -285,7 +285,7 @@
         </div>
         <br>
 
-        <button class="js collapsible">&gt; javascript</button>
+        <button class="js collapsible">&gt; javascript (html)</button>
         <div class="content">
         <p>
           <b>console.log();</b> - This command will print something to the console for the programmer to see,
@@ -307,7 +307,7 @@
           index it by using the command and storing it into a var. Then, we can use console.log(); followed
           by [#], with # being the index of the tag we want to access.<br>
           <br>
-          <b>document.innerHTML();</b> - This function can allow you to change the innards of an HTML
+          <b>document.innerHTML = ""</b> - This allows you to change the innards of an HTML
           element, & is usually used with .getElementByID or .getElementsByName<br>
           <br>
           <b>document.createElement();</b> - This function creates new elements on your page.<br>
@@ -395,6 +395,8 @@
           <br>
           <b>$('form').serializeArray()</b> - Turns a form's data into an object.<br>
           <br>
+          <b>$(selector).html(" ")</b> - Similar to .innerHTML, this sets the inner html of a selected element.<br>
+          <br>
         </p>
         </div>
         <br>
@@ -405,7 +407,9 @@
           <b>firebase.initialize()</b> - Create a new node in Firebase. Takes an object as a parameter.<br>
           <br>
           <b>firebase.database().ref()</b> - Retrieves the current data node from Firebase. It's typically stored in a 
-          variable, since it needs to be referenced a lot.<br>
+          variable, since it needs to be referenced a lot. You can also argue a key in the 'ref' function to create a child
+          node for even more data to be stored (.ref("newKey")) using .set()! Even better, you can use a slash to go further
+          in the filesystem ("newKey/newKeyValue").<br>
           <br>
           <b>firebase.database().ref().set()</b> - Sets the value of the current data node in Firebase.<br>
           <br>
