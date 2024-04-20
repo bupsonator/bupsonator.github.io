@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>interactions</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            /* style for the whole site */
+body {
+    font-family: Raleway;
+    background-color: #111611;
+    color: #EFE;
+    margin: 20px;
+    text-align: center;
+}
+
+/* semantic styles */
+header, main, nav {
+    padding: 10px 40px 40px 40px;
+    margin: 40px;
+    background-color: #113711;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+
+div {
+    display: none;
+}
+main {
+    padding: 25px 40px 25px 40px !important;
+    background-color: #112611;
+    border: 1px solid #050;
+}
+nav {
+    padding: 25px 40px 25px 40px !important;
+    background-color: #113011;
+    border: 1px solid #060;
+}
+#hovButton::before {
+    content:"hover over this";
+    transition: 0.2s;
+}
+#hovButton:hover::before {
+    content:"click to continue";
+    transition: 0.2s;
+}
+#hovButton:hover {
+    font-family: Raleway;
+    padding: 30px;
+    transition: 0.2s;
+    background-color: #113611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+
+
+/* when user highlights text */
+::selection {
+    background-color: #EFE;
+    color: #111611;
+}
+
+/* anchor link style */
+a:link, a:visited {
+    color: #DFD;
+}
+a:hover {
+    color: lime;
+}
+
+/* button style */
+button {
+    font-family: Raleway;
+    padding: 20px;
+    transition: 0.2s;
+    background-color: #113611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+button:active {
+    font-family: Raleway;
+    background-color: #114611;
+    border: 1px solid #EFE;
+    border-radius: 20px;
+    color: #EFE;
+}
+        </style>
+        <link rel="icon" type="image/x-icon" href="/media/interactions.ico">
+    </head>
+    <body>
+        <header>
+            <h1>interactions</h1>
+        </header>
+        <nav>
+            <span id="counter">0</span>/6 interactions
+            <br>
+            <div id="clock"></div>
+        </nav>
+        <main>
+            <div id="first" style="display:block">
+                <button id="displayMode" onclick="darkMode();">light mode</button>
+                &emsp;&emsp;
+                <button onclick="first();">click me to begin</button>
+            </div>
+            <div id="second">
+                <button id="hovButton" onclick="second();"></button>
+            </div>
+            <div id="third">
+                <p id="highlight">highlight this text, then click 'submit'</p>
+                <button onclick="third();">submit &gt;</button>
+            </div>
+            <div id="fourth">
+                <p id="quiz">
+                    highlight the wrong answer, then click 'submit'
+                </p>
+                <p>
+                    a) incorrect<br>
+                    b) wrong<br>
+                    c) correct<br>
+                    d) bad
+                </p>
+                <button onclick="fourth();">submit</button>
+            </div>
+            <div id="fifth">
+                <p id="calcPrompt">click the button below and respond to the prompts.</p>
+                <button id="calcButton" onclick="fifth();">prompts</button>
+                <button id="calcExit" onclick="calcExit();" style="display:none;">continue</button>
+                <br><br>
+                <p id="calcResult">
+                    result prints here
+                </p>
+            </div>
+            <div id="sixth">
+                <p id="clockPrompt">click "submit" when the seconds portion of the clock is a multiple of 10.</p>
+                <button id="clockSubmit" onclick="sixth();">submit</button>
+            </div>
+            <div id="seventh">
+                that's all for now! come back later to see if there's more thingies<br>
+                <br><a href="">or restart</a>
+            </div>
+            <audio id="sneaky" controls autoplay hidden>
+                <source src="/media/audio/sneaky.mp3" type="audio/mpeg">
+            </audio>
+        </main>
+        <script>
+            // semantic tags into vars
+var header = document.getElementsByTagName("header")[0];
+var main = document.getElementsByTagName("main")[0];
+var nav = document.getElementsByTagName("nav")[0];
+var counter = document.getElementById("counter");
+
+// initialize the clock for num 6
+function Time() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+    hour = fixTime(hour);
+    minute = fixTime(minute);
+    second = fixTime(second);
+    document.getElementById("clock").innerHTML = "<br>Time: " + hour + " : " + minute + " : " + second;
+    setTimeout(Time, 1000);
+}
+function fixTime(t) {
+    if (t < 10) {
+        return "0" + t;
+    }
+    else {
+        return t;
+    }
+}
+Time();
+
+// 1st interaction (display mode, begin button)
+function first() {
+    document.getElementById("first").style.display="none";
+    document.getElementById("second").style.display="block";
+    counter.innerHTML = "1";
+    console.log("first function");
+}
+
+// display mode
+var current = 1; // counter for each display mode
+function darkMode() {
+    // 0 means light, 1 means dark
+    if (current == 0) {
+        current = 1;
+        document.body.style.backgroundColor="#111611";
+        document.body.style.color="#EFE";
+        header.style.backgroundColor = "#113711";
+        main.style.backgroundColor = "#112611";
+        nav.style.backgroundColor = "#113011";
+        document.getElementById("displayMode").innerHTML = "light mode";
+    }
+    else if (current == 1) {
+        current = 0;
+        document.body.style.backgroundColor="#EFE";
+        header.style.backgroundColor = "#448744";
+        main.style.backgroundColor = "#337633";
+        nav.style.backgroundColor = "#388138"
+        document.getElementById("displayMode").innerHTML = "dark mode";
+    }
+}
+
+//  2nd interaction (hover over me to continue)
+function second() {
+    document.getElementById("second").style.display="none";
+    document.getElementById("third").style.display="block";
+    counter.innerHTML = "2";
+    console.log("second function");
+}
+
+// 3rd interaction (highlight text, click submit)
+function third() {
+    let selection = window.getSelection();
+    if (selection == "")
+    {
+        document.getElementById("highlight").innerHTML = "whoops, try again. highlight this line of text and click the button."
+    }
+    else if (selection == "highlight this text, then click 'submit'" || selection == "whoops, try again. highlight this line of text and click the button." || selection == "try to be more precise, cuz my scripting is bad.")
+    {
+        document.getElementById("third").style.display="none";
+        document.getElementById("fourth").style.display="block";
+        counter.innerHTML = "3";
+    }
+    else 
+    {
+        document.getElementById("highlight").innerHTML = "try to be more precise, cuz my scripting is bad."
+    }
+}
+
+// 4th interaction (highlight wrong answer)
+function fourth() {
+    let selection = window.getSelection();
+    if (selection == "")
+    {
+        document.getElementById("quiz").innerHTML = "make sure to highlight an answer.";
+    }
+    else if (selection == "b) wrong")
+    {
+        document.getElementById("fourth").style.display="none";
+        document.getElementById("fifth").style.display="block";
+        counter.innerHTML = "4";
+    }
+    else if (selection == "a) incorrect" || selection == "c) correct" || selection == "d) bad")
+    {
+        document.getElementById("quiz").innerHTML = "that wasn't correct. highlight the wrong answer, then click 'submit'";
+    }
+    else
+    {
+        document.getElementById("quiz").innerHTML = "make sure to be precise in your highlighting pleeeease";
+    }
+    
+}
+
+// 5th interaction (calculator one)
+function calcExit() {
+        document.getElementById("fifth").style.display="none";
+        document.getElementById("sixth").style.display="block";
+        document.getElementById("clock").style.display="block";
+        counter.innerHTML = "5";
+    }
+function fifth() {
+    let first = Number(prompt("enter a number:"));
+    while (isNaN(first))
+    {
+        first = Number(prompt("Only enter numbers. Enter a number again."));
+    }
+    let second = Number(prompt("enter another number:"));
+    while (isNaN(second))
+    {
+        second = Number(prompt("Only enter numbers. Enter another number again."))
+    }
+    let result = first + second;
+    document.getElementById("calcResult").innerHTML = first + " + " + second + " = " + (result);
+    document.getElementById("calcPrompt").innerHTML = "click the same button to continue";
+    document.getElementById("calcButton").style.display = "none"
+    document.getElementById("calcExit").style.display = "inline";
+}
+
+
+function sixth() {
+    let date = new Date();
+    let secs = Number(date.getSeconds());
+    if (secs == 0 || secs == 10 || secs == 20 || secs == 30 || secs == 40 || secs == 50)
+    {
+        document.getElementById("sixth").style.display="none";
+        document.getElementById("seventh").style.display="block";
+        document.getElementById("clock").style.display="none";
+        counter.innerHTML = "6";
+    }
+    else
+    {
+        document.getElementById("clockPrompt").innerHTML = "that wasn't it. make sure you hit submit only when the seconds portion of the clock is a multiple of 10."
+    }
+}
+        </script>
+    </body>
+</html>

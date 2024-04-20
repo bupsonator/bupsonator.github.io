@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+    font-family: Montserrat;
+    background-color: rgb(20, 20, 20);
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 25px;
+}
+main {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+p a:link, p a:visited {
+    color: lime;
+}
+p a:hover {
+    color: #00DD00;
+}
+
+#allSites p a:link, #allSites p a:visited, #footlink, #footlink:visited {
+    color: #DADADA;
+}
+#allSites p a:hover, #footlink:hover {
+    color: white;
+}
+
+footer {
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+/* navbar compatibility for all sites
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+nav, .navbar-nav, .collapse, .navbar-collapse {
+    font-family: Montserrat;
+    text-align: left !important;
+    justify-content: left !important;
+}
+*/
