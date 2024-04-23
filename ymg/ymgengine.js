@@ -68,6 +68,7 @@ function openGame() {
     // hide all but the essential divs
     document.getElementById("main").style.display="none";
     document.getElementById("fullscreen").style.display="none";
+    document.getElementById("serious").style.display="none";
     
     //  make sure navigational stuff displays (when exiting fullscreen)
     document.getElementById("header").style.display="block";
@@ -102,6 +103,7 @@ function returnToIndex() {
     document.getElementById('your-stats-index').style.display='none';
     document.getElementById('gameReturn').style.display='none';
     document.getElementById('enlarge').style.display='none';
+    document.getElementById("serious").style.display="block";
     
     // re-show main index and stat button
     document.getElementById("main").style.display="block";
@@ -123,7 +125,8 @@ function enlarge() {
     document.getElementById("nav").style.display="none";
     document.getElementById("header").style.display="none";
     document.getElementById("footer").style.display="none";
-    
+    document.getElementById("serious").style.display="none";
+
     // display the fullscreen div
     document.getElementById("fullscreen").style.display ="block";
     
