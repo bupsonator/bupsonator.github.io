@@ -103,10 +103,11 @@ function returnToIndex() {
     document.getElementById('your-stats-index').style.display='none';
     document.getElementById('gameReturn').style.display='none';
     document.getElementById('enlarge').style.display='none';
-    document.getElementById("serious").style.display="block";
     
     // re-show main index and stat button
     document.getElementById("main").style.display="block";
+    document.getElementById("serious").style.display="block";
+    document.getElementById("nav").style.display="block";
     
     // clear iframe sources for smoothness
     document.getElementById("fullframe").src = '';
