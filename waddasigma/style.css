@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+    font-family: Montserrat;
+    background-color: rgb(40, 40, 40);
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 25px;
+}
+main {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+p a:link, p a:visited {
+    color: lime;
+}
+p a:hover {
+    color: #00DD00;
+}
+
+#allSites p a:link, #allSites p a:visited, #footlink, #footlink:visited {
+    color: #DADADA;
+}
+#allSites p a:hover, #footlink:hover {
+    color: white;
+}
+
+#nav {
+    background-color: rgb(30, 30, 30);
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 10px;
+    margin: 10px;
+}
+#serious {
+    border: 1px solid rgb(20, 30, 20);
+    border-radius: 10px;
+    background-color: rgb(40, 20, 20);
+    vertical-align: center;
+    justify-content: center;
+}
+#welcome {
+    vertical-align: center;
+    justify-content: center;
+}
+#featured {
+    vertical-align: center;
+    justify-content: center;
+}
+
+#what {
+    background-color:rgb(21, 40, 55);
+    vertical-align: center;
+    justify-content: center;
+}
+#launch-date {
+    background-color:rgb(16, 34, 49);
+    vertical-align: center;
+    justify-content: center;
+}
+#notes {
+    background-color:rgb(12, 31, 45);
+    vertical-align: center;
+    justify-content: center;
+}
+footer {
+    color: white;
+    background-color: rgb(30, 30, 30);
+}

@@ -1,0 +1,72 @@
+body {
+    font-family: Montserrat;
+    background-color: #227;
+    color: #DADADA;
+    margin: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+button {
+    padding: 10px 20px 10px 20px;
+    font-family: Montserrat;
+    border: 1px solid #050530;
+    border-radius: 5px;
+    background-color: #116;
+    color: white;
+    font-size: 17px;
+    margin: 3px;
+    transition: 0.2s;
+}
+button:hover {
+    padding: 11px 21px 11px 21px;
+    font-size: 18px;
+    margin: 1.6px;
+    transition: 0.2s;
+}
+button:active {
+    background-color: #228;
+}
+input {
+    font-family: Source Code Pro;
+    color: lime;
+    border: 0.5px solid #161;
+    border-radius: 5px;
+    background-color: #111;
+    padding: 4px;
+    margin: 10px 0px 10px 0px;
+}
+a:link, a:visited {
+    color: #88D;
+}
+a:hover {
+    color: #99E;
+}
+::placeholder {
+    color: #272;
+}
+#terminal {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Source Code Pro;
+}
+#clear {
+    border: 1px solid #300505;
+    background-color: #611;
+    width: 24.5%;
+    margin: 1.5px 1.5px 1.5px 2px;
+    
+}
+#clear:hover {
+    padding: 11px 22px 11px 22px;
+    font-size: 18px;
+    margin: 0px;
+    transition: 0.2s;
+}
+#clear:active {
+    background-color: #722;
+}

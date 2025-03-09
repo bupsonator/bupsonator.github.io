@@ -1,0 +1,54 @@
+/* give to me the font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/* style for the whole darn site */
+body {
+    font-family: Montserrat;
+    background-color: rgb(40, 40, 40);
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 25px;
+}
+
+/* not displaying every div except for the main one upon first load */
+ #window, #doc-buttons{
+    display: none;
+}
+
+/* styling navigational stuffs */
+main, header, #window {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* top and bottom margins for all games */
+.col-md-3 {
+    margin: 5px 0px 5px 0px;
+}
+
+#all-docs .col-md-3 button {
+    padding: 20px 10% 20px 10%;
+}
+
+/* footer style */
+footer {
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+
+/* windowed frame style */
+#frm {
+    height: 650px;
+    width: 70%;
+}
+
+#nav {
+    background-color: rgb(30, 30, 30);
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 10px;
+    margin: 10px;
+}

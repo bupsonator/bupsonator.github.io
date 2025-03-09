@@ -1,0 +1,102 @@
+/* give to me the font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/* style for the whole darn site */
+body {
+    font-family: Montserrat;
+    background-color: rgb(40, 40, 40);
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 25px;
+}
+/* not displaying every div except for the main one upon first load */
+ #window, #fullscreen, #your-stats-index {
+    display: none;
+}
+
+/* styling navigational stuffs */
+main, header, #window, #your-stats-index, #settings-panel {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* top and bottom margins for all games */
+.col-md-3 {
+    margin: 5px 0px 5px 0px;
+}
+
+/* proportions for other games */
+#main + .row .col-md-3 {
+    margin: 0px 10px 0px 10px;
+}
+
+/* footer style */
+footer {
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+
+/* windowed frame style */
+#frm {
+    height: 650px;
+    width: 70%;
+}
+
+/* minimize button style */
+.btn-warning {
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+/* enlarged frame style */
+#fullframe {
+  display: block;  /* iframes are inline by default */
+  height: 100vh;  /* Set height to 100% of the viewport height */
+  width: 100vw;  /* Set width to 100% of the viewport width */
+  border: none; /* Remove default border */
+}
+
+/* get rid of dropdown toggle arrows */
+.row .dropdown-toggle::after {
+    display: none !important;
+}
+
+/* styling game dropdown content */
+li .btn {
+    display: block;
+    float: left !important;
+    padding: 5px !important;
+    color: #DADADA;
+    background-color: rgb(60, 60, 60);
+    margin: 5px;
+}
+
+/* styling game dropdown menu */
+.dropdown-menu {
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+}
+
+/* puts stuff over other stuff, used for the minimize button */
+.over {
+  position:absolute;
+  top:20px;
+  left:20px;
+}
+
+.setting-a, .setting-a:hover, .setting-a:visited, .setting-a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#nav {
+    background-color: rgb(30, 30, 30);
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 10px;
+    margin: 10px;
+}

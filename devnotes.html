@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>web dev notes</title>
+        <link rel="icon" type="image/x-icon" href="/media/wdnicon.ico">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+        <style>
+            /* tags */
+            body {
+              background-color: #101010;
+              margin: 30px;
+              font-family: Source Code Pro, Courier;
+              color: #CBCBCB;
+            }
+            span {
+              color: rgb(149, 149, 149);
+            }
+            .html {
+              color: rgb(187, 93, 17);
+            }
+            .html:hover {
+              color: rgb(222, 183, 151) !important;
+            }
+            .css {
+              color: rgb(17, 116, 187);
+            }
+            .css:hover {
+              color: rgb(133, 178, 210) !important;
+            }
+            .js {
+              color: rgb(209, 209, 34);
+            }
+            .js:hover {
+              color: rgb(231, 231, 162) !important; 
+            }
+            .bootstrap {
+              color: rgb(151, 81, 208)
+            }
+            .bootstrap:hover {
+              color: rgb(186, 148, 218)
+            }
+            /* link style */
+            a:link, a:visited {
+              color:rgb(149, 149, 149);
+              background-color: #1b1b1b;
+              text-decoration: none;
+              padding: 2px;
+              border: solid 0.5px rgb(149, 149, 149);
+              border-radius: 10px;
+            }
+            a:hover {
+              color: #aeaeae;
+              background-color: #646464;
+              text-decoration: none;
+            }
+            /* New Style 4 collapsibles */
+            .collapsible {
+              background-color: #101010;    
+              font-family: 'Source Code Pro';
+              cursor: pointer;
+              border: none;
+              text-align: left;
+              margin: 2px;
+              font-size: 15px;
+              transition: 0.1s;
+            }
+
+            .content {
+              padding: 0 18px;
+              font-family: 'Source Code Pro';
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+            }
+            .active, .collapsible:hover {
+              color:#FFF;
+              font-family: 'Source Code Pro';
+              transition: 0.1s; 
+              font-size: 16px;
+              transition: 0.1s;
+              margin: 1.7px;
+            }
+            iframe {
+              border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <span>-$</span> web dev notes
+        </h1>
+        <h2>
+            some quick references of web language stuff
+        </h2>
+        <a href="/index.html">
+            &lt;homepage&gt;
+        </a>
+        <br><br>
+        <button class="html collapsible">&gt; html tags</button>
+        <div class="content">
+            <p>
+            <b>&lt;p&gt;</b> - Paragraph tag. Tells HTML where a paragraph is.<br>
+            <br>
+            <b>&lt;a&gt;</b> - Link tag. Use "href" to tell HTML where the link goes.<br>
+            <br>
+            <b>&lt;b&gt;</b> - Bold tag. Makes text <b>bold.</b><br>
+            <br>
+            <b><i>&lt;i&gt;</i></b> - Italicise tag. Makes text <i>slanted.</i><br>
+            <br>
+            <b><u>&lt;u&gt;</u></b> - Underline tag. <u>Underlines</u> text.<br>
+            <br>
+            <b>&lt;h1-6&gt;</b> - Header tag. It's bold text going from least(big)-greatest(small).<br>
+            <br>
+            <b>&lt;hr&gt;</b> - Inserts a line. DOESN'T need a closing tag.<br>
+            <br>
+            <b>&lt;br&gt;</b> - Line break. DOESN'T need a closing tag.<br>
+            <br>
+            <b>&lt;img&gt;</b> - Uses "src" to get the image. DOESN'T need a closing tag. 
+            Use the alt="" attribute to add a description.<br>
+            <br>
+            <b>&lt;ul&gt;</b> - Defines an unordered list (bullet points) (can be nested)<br>
+            <br>
+            <b>&lt;ol&gt;</b> - Defines an ordered list (numbered) (can be nested)<br>
+            <br>
+            <b>&lt;li&gt;</b> - Defines a list item in a list<br>
+            <br>
+            <b>&lt;table&gt;</b> - Container for all table data. border= attribute adds border<br>
+            <br>
+            <b>&lt;tr&gt;</b> - Container for a single row. border attribute works here.<br>
+            <br>
+            <b>&lt;th&gt;</b> - Single table header element<br>
+            <br>
+            <b>&lt;td&gt;</b> - Single table data element<br>
+            <br>
+            <b>style</b> - The style attribute. Use this for style! Size, color.<br>
+            <br>
+            <b>&lt;style&gt;</b> - The style tag. CSS goes in between these.<br>
+            <br>
+            <b>class</b> - The class attribute will "group" an element to make CSS easier. 
+            Class names can't have spaces, or a number as the first character.<br>
+            <br>
+            <b>id</b> - The ID attribute is like class, but more specific. ONE ID PER TAG. 
+            ID names can't have spaces, or a number as the first character.<br>
+            <br>
+            <b>&lt;meta&gt;</b> - This tag will add a short description to your site with the 
+            name="description" and the content="" attributes.<br>
+            <br>
+            <b>&lt;iframe&gt;</b> - This tag lets you add another HTML site to yours using the 
+            src attribute.<br>
+            <br>
+            <b>&lt;link&gt;</b> - This tag allows you to link a whole bunch of stuff, like CSS files 
+            and favicons! rel="" allows you to define what it is (stylesheet, icon), type="" tells 
+            HTML what it is (text/css, image/x-icon), and finally, href="" lets you tell HTML where it 
+            is.<br>
+            <br>
+            <b>&lt;div&gt;</b> - This tag allows you to separate block content on your page. It's like 
+            a p tag, without making the contents a paragraph, allowing you to add whatever style you like!<br>
+            <br>
+            <b>&lt;span&gt;</b> - This tag is like div, but it doesn't create line breaks, which means 
+            you can put inline style!<br>
+            <br>
+            <b>&lt;button&gt;</b> - This tag creates a button, which the user can click. When paired with
+            javascript, buttons can be a helpful part in making your website interactive.<br>
+            <br>
+            <b>&lt;script&gt;</b> - This tag allows you to add javascript to HTML sites. You can either code
+            in between the tags, or use src to link a .js file to your site.<br>
+            <br>
+            <b>&lt;Semantic Tags&gt;</b> - These tags can include header, main, footer, etc. They are to
+            separate content for web browsers, and they can format the page in certain ways.<br>
+            <br>
+            <b>onclick="function();"</b> - Use this in a tag (usually button) to execute the function within
+            the quotes when the element is clicked.<br>
+            <br>
+            <b>&lt;form&gt;</b> - When used with the onsubmit attribute, and input tags, and Javascript, data from
+            the user can be collected and used.<br>
+            <br>
+            <b>&lt;input&gt;</b> - When used with the type and name attributes, the form tag can actually collect data.<br>
+            <br>
+            <b>&lt;label&gt;</b> - Typically used before an input tag. Using the 'for' attribute (which should contain the
+            name of the input tag the label is 'for') allows you to tell the user what an input tag is for.<br>
+            <br>
+            </p>
+        </div>
+        <br>
+        
+        <button class="html collapsible">&gt; html skeleton</button>
+        <div class="content">
+            <p>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Your Page Title&lt;/title&gt;<br>
+            &lt;style&gt; put css here &lt;/style&gt;<br>
+            &lt;script&gt; put js here &lt;/script&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--Inside the body tag is where you put all the cool stuff<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;you want on your page!--&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+            </p>
+        </div>
+        <br>
+        
+        <button class="html collapsible">&gt; html colors</button>
+        <div class="content">
+            <br>
+            <iframe src="https://html-color-codes.info/color-names/" style="width:600px;height:400px"></iframe>
+        </div>
+        <br>
+        
+        <button class="html collapsible">&gt; html special characters</button>
+        <div class="content">
+        <p>
+            <b>&amp;amp</b> - Ampersand &amp;<br>
+            <b>&amp;nbsp</b> - Space &nbsp;<br>
+            <b>&amp;ensp</b> - 2 Spaces &nbsp;<br>
+            <b>&amp;emsp</b> - 4 Spaces (or tab space) &nbsp;<br>
+            <b>&amp;quot</b> - Quotes &quot;<br>
+            <b>&amp;gt</b> - Greater Than &gt;<br>
+            <b>&amp;lt</b> - Less Than &lt;<br>
+            <b>&amp;ndash</b> - Dash &ndash;<br>
+            <b>&amp;copy</b> - Copyright &copy;<br>
+            <b>&amp;trade</b> - Trademark &trade;<br>
+            <b>&amp;reg</b> - Registered &reg;<br>
+            <br>
+            In some cases, you can use the raw symbols instead of<br>
+            the shortcuts. Like, "", - and & were typed without<br>
+            the shortcut just now. But, when they interfere<br>
+            with code, like how &lt; &gt; do, they need the<br>
+            shortcut. For example, let's say I want to show<br>
+            the br tag. If I typed the &lt; &gt; without the<br>
+            shortcuts, HTML would think it's real code. We don't<br>
+            want that, so we use the shortcuts: &lt;br&gt;
+        </p>
+        </div>
+        <br>
+        
+        <button class="css collapsible">&gt; css rules</button>
+        <div class="content">
+                    <p>
+            CSS rules are easy. However they were written in the style= attribute, 
+            that's how you do it in pure CSS. Here's an example rule:<br>
+            <br>
+            selector {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:red;<br>
+            }<br>
+            <br>
+            Now, just replace h1 with any HTML element, and it will apply to that 
+            element. Same goes for the actual properties. Background color, text align, 
+            and all of the others that were learned. Maybe one day I'll put 'em here. <br>
+            <br>
+            TAGS (Least Specific): Selector looks like: h1<br>
+            CLASS (Middle specific): Selector looks like: .class OR tag.class<br>
+            ID (Most specific): Selector looks like: #ID<br>
+            <br>
+            The Cascade of CSS introduces a new rule: !important. This rule will override 
+            every single selector. Also, if both rules have the same specific-ness, 
+            the <b>later</b> rule will be applied. <br>
+            <br>
+            The cascade's order is Importance > Specificity > Order.<br>
+            <br>
+            We can use combinators to combine CSS elements.<br>
+            A space is a descendant selector, which is everything inside an element.<br>
+            &gt; is a child selector, which is everything one level in an element.<br>
+            + is a next sibling selector, which will select ONLY the next element in the same parent.<br>
+            <br>
+            :hover :link :visited and :active are all pseudo-classes. These classes can select an element 
+            when it is in a certain state. For example, hover will only apply the style if the element is 
+            being hovered over by the cursor. To use them: selector:pseudo-class<br>
+            <br>
+            Pseudo elements can also be used. These are before, after, first-letter, first-line, and selection. 
+            The way you use them is element::pseudo. NOTICE THE TWO COLONS. Before/after use the content: ""; 
+            attribute to add content to put before or after an element. First-letter/line will style the first 
+            letter or line. Selection will style the content that the user selects.<br>
+            <br>
+            The visibility attribute can change if an element is visible or not. It will still take up space,
+            though. The display attribute can change if an element is shown or not, so it will not take up space
+            if it's not, unlike visibility. Opacity works in a similar way, taking a value from 0-1.<br>
+            <br>
+            The CSS grid layout, which can be achieved with display:grid; and the grid-template-columns: attributes,
+            allows you to have a grid on your website.<br>
+            <br>
+        </p>
+        </div>
+        <br>
+
+        <button class="js collapsible">&gt; javascript (html)</button>
+        <div class="content">
+        <p>
+          <b>console.log();</b> - This command will print something to the console for the programmer to see,
+          to make debugging easier.<br>
+          <br>
+          <b>prompt();</b> - This command will send the user a prompt dialog from their browser.<br>
+          <br>
+          <b>alert();</b> - This command will send the user an alert dialog from their browser.<br>
+          <br>
+          <b>document. ();</b> - This command allows you to access the contents of an HTML element
+          by putting said element between the . and the (. The problem is, it cannot access elements
+          like p, div, or h. So, we can use the next two commands to do so.<br>
+          <br>
+          <b>document.getElementByID();</b> - This command will allow you alter an element by ID, so you
+          can alter the website itself.<br>
+          <br>
+          <b>document.getElementsByTagName();</b> - This command is like the above, but it targets a much
+          broader scope of elements. It will return a list of all elements, which is annoying, so we can
+          index it by using the command and storing it into a var. Then, we can use console.log(); followed
+          by [#], with # being the index of the tag we want to access.<br>
+          <br>
+          <b>document.innerHTML = ""</b> - This allows you to change the innards of an HTML
+          element, & is usually used with .getElementByID or .getElementsByName<br>
+          <br>
+          <b>document.createElement();</b> - This function creates new elements on your page.<br>
+          <br>
+          <b>document.node.appendChild();</b> - This function will add the element within the () as the
+          last child of the given node (like body, or head)<br>
+          <br>
+          <b>document.node.insertBefore(newelement, existingelement);</b> - This function will add the 
+          new element before the existing element.<br>
+          <br>
+          <b>.firstElementChild();</b> - This function returns the first child of an element.<br>
+          <br>
+          <b>.lastElementChild();</b> - This function returns the last child of an element.<br>
+          <br>
+          <b>.parentElement();</b> - This function returns the parent of an element.<br>
+          <br>
+          <b>.children();</b> - This returns a list of all children of an element.<br>
+          <br>
+          <b>.setAttribute(att, value)</b> - This will set the attribute's value.<br>
+          <br>
+          <b>.hasAttribute();</b> - This checks if an element has the attribute within the parenthesis.<br>
+          <br>
+          <b>.removeAttribute();</b> - This will remove the attribute within the parenthesis.<br>
+          <br>
+          <b>.getAttribute();</b> - This will return the value of said attribute.<br>
+          <br>
+          <b>.attributes</b> - This will return a list of all attributes.<br>
+          <br>
+          <b>element.addEventListener('event', function)</b> - This allows you to add an event to any element.<br>
+          <br>
+          <b>this keyword</b> - It will reference the tag that caused an event to occur.<br>
+          <br>
+          <b>localStorage keyword</b> - Using this keyword allows you to access local storage using a key/data system, 
+          like this: localStorage.setItem("key", "value"); To get the value back, localStorage.getItem("key"); or 
+          localStorage.key will return the value. If there is no value, getItem() returns null and .key returns undefined.<br>
+          <br>
+          <b>events: keydown & keyup</b> - These events will be triggered when the keyboard is pressed down or up
+          respectively. Using .key will return the character of the pressed key, and using .code will return the
+          actual key pressed.<br>
+          <br>
+          <b>JSON.stringify();</b> - This function will stringify a data structure (like a list) to be stored in localStorage.<br>
+          <br>
+          <b>JSON.parse();</b> - This will un-stringify data.<br>
+          <br>
+          <b>event.preventDefault();</b> - Prevents a form submission from refresing the page.<br>
+          <br>
+          <b>window.location.href = ""</b> - Sends the user to another page.<br>
+          <br>
+          <b>Objects</b> - Similar to a Python dictionary, not a Java object. Uses {}, and stores key/value pairs. Can be indexed
+          using [] too, and .value will get just the value of an index without the key.<br>
+          <br>
+        </p>
+        </div>
+        <br>
+
+        <button class="js collapsible">&gt; jquery</button>
+        <div class="content">
+        <p>
+          <b>tag: </b>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"&gt;&lt;/script&gt;<br>
+          <br>
+          <b>$("tagname")</b> - Selects any group of tags.<br>
+          <br>
+          <b>$(".class")</b> - Selects any class.<br>
+          <br>
+          <b>$("#id")</b> - Selects any id.<br>
+          <br>
+          <b>$(selector).css("attribute", "value")</b> - Alters CSS properties.<br>
+          <br>
+          <b>$(selector).on("event", function)</b> - Adds an event listener.<br>
+          <br>
+          <b>$(selector).click(function)</b> - Adds a click event. Also works with other events.<br>
+          <br>
+          <b>$(selector).append(new-element)</b> - Appends a new element to the selected element.<br>
+          <br>
+          <b>$(selector).each(function(){})</b> - Iterates through a group of selected elements (e.g. 'p'). each also has
+          index and el parameters; index being the number of element, and el being the element itself (function(index, el))<br>
+          <br>
+          <b>$(selector).animate({"css-attr": value}, "fast OR slow")</b> - Changes CSS property either quickly or slowly.<br>
+          <br>
+          <b>$(selector).hide("fast OR slow")</b> - Hides an element at the chosen speed.<br>
+          <br>
+          <b>$(selector).show("fast OR slow")</b> - Shows an element at the chosen speed.<br>
+          <br>
+          <b>$(selector).toggle("fast OR slow")</b> - Toggles between hiding and showing.<br>
+          <br>
+          <b>$('form').serializeArray()</b> - Turns a form's data into an object.<br>
+          <br>
+          <b>$(selector).html(" ")</b> - Similar to .innerHTML, this sets the inner html of a selected element.<br>
+          <br>
+        </p>
+        </div>
+        <br>
+
+        <button class="js collapsible">&gt; firebase</button>
+        <div class="content">
+        <p>
+          <b>firebase.initialize()</b> - Create a new node in Firebase. Takes an object as a parameter.<br>
+          <br>
+          <b>firebase.database().ref()</b> - Retrieves the current data node from Firebase. It's typically stored in a 
+          variable, since it needs to be referenced a lot. You can also argue a key in the 'ref' function to create a child
+          node for even more data to be stored (.ref("newKey")) using .set()! Even better, you can use a slash to go further
+          in the filesystem ("newKey/newKeyValue").<br>
+          <br>
+          <b>firebase.database().ref().set()</b> - Sets the value of the current data node in Firebase.<br>
+          <br>
+          <b>firebase.database().ref().on('value', function(data))</b> - Retrieves the value of the current
+          data node in Firebase.<br>
+          <br>
+        </p>
+        </div>
+        <br>
+
+        <button class="bootstrap collapsible">&gt; bootstrap skeleton</button>
+        <div class="content">
+          <!DOCTYPE html>
+          &lt;html&gt;<br>
+            &emsp;&lt;head&gt;<br>
+            &emsp;&emsp;&lt;meta charset="utf-8"&gt;<br>
+            &emsp;&emsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>
+            &emsp;&emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+            &emsp;&emsp;&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"&gt;<br>
+            &emsp;&emsp;&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"&gt;<br>
+            &emsp;&emsp;&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">&lt;/script&gt;<br>
+            &emsp;&lt;/head&gt;<br>
+            &emsp;&lt;body&gt;<br>
+            &emsp;&emsp;&lt;!-- Your HTML code here --&gt;<br>
+            &emsp;&lt;/body&gt;<br>
+          &lt;/html&gt;<br>
+        </div>
+        <br>
+
+        <button class="bootstrap collapsible">&gt; bootstrap classes</button>
+        <div class="content">
+          <br>
+          <b>.container</b> - This class needs to be put into the entire content of the site. It puts the site
+          into a container that will be adjusted every few viewport changing intervals.<br>
+          <br>
+          <b>.container-fluid</b> - Same idea as above, but the container is as wide as the viewport, and it always
+          adjusts.<br>
+          <br>
+          <b>.text-start</b> - This class puts the text at the right of the page.<br>
+          <br>
+          <b>.text-center</b> - This class puts the text in the middle of the page.<br>
+          <br>
+          <b>.text-end</b> - This class puts the text at the end of the page.<br>
+          <br>
+          <b>.row</b> - This specifies grid rows, though it doesn't really 'need' to be used if items use .col attributes.<br>
+          <br>
+          <b>.col-#</b> - This class will put said columns side-by-side on extra small devices (phones) and above.<br>
+          <br>
+          <b>.col-sm-#</b> - This class will put # columns side-by-side on small devices (tablets) and above.<br>
+          <br>
+          <b>.col-md-#</b> - This class will put # columns side-by-side on medium devices (laptops) and above.<br>
+          <br>
+          <b>.col-lg-#</b> - This class will put # columns side-by-side on large devices (desktops) only.<br>
+          <br>
+          <b>.btn</b> - This class indicates to Bootstrap that an a or button tag is a button.<br>
+          <br>
+          <b>.btn-group (-vertical)</b> - This class will group buttons together, vertically too!<br>
+          <br>
+          <b>.table</b> - <br> - Adds basic table style to the table tag
+          <br>
+          <b>.table-striped</b> - Stripes every other row<br>
+          <br>
+          <b>.table-bordered</b> - Adds borders between cells<br>
+          <br>
+          <b>.table-hover</b> - Darkens a row that's being hovered over<br>
+          <br>
+          <b>.table-responsive</b> - Adds a horizontal scrollbar on XS devices<br>
+          <br>
+          <b>.img-thumbnail</b> - When used in an image that's inside of an 'a' tag, will turn the link into
+          a thumbnailed link.<br>
+          <br>
+        </div>
+        <br>
+        <audio controls autoplay hidden>
+            <source src="/media/audio/sneaky.mp3" type="audio/mpeg">
+        </audio>
+        <script src="/collapsible.js"></script>
+    </body>
+</html>

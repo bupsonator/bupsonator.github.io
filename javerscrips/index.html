@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javerscrips</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="/media/jsicon.ico">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+    </head>
+    <body>
+        <main>
+            <h1>javerscrips</h1>
+            <a href="/index.html">homepage</a>
+            <br><br>
+            
+            <div class='grid'>
+                <button onclick='printSomething();'>print something</button>
+                <button onclick='manyNumbers();'>count to 1000 (will lag)</button>
+                <button onclick='stringTraversal();'>string traversal</button>
+                <button onclick='mathSqrting();'>math sqrting all over the place</button>
+                <button onclick='quizGame();'>python vs java quiz</button>
+                <button onclick='bandCYOA();'>choose adventure: band</button>
+                <button onclick='flippydo();'>binary to integer converter</button>
+                <button onclick='loopPrint();'>loop print</button>
+                <button onclick='blobMaker();'>make blobs!</button>
+                <button onclick='rollDie();'>roll dice</button>
+            </div>
+            <button id="clear"onclick='terminal.innerHTML = "<b><u>The Terminal</u> <span style=color:gray>(cleared!)</span></u></b><br>"'>clear</button>
+        </main>
+        <br>
+        <div id="terminal">
+            <b><u>The Terminal</u></b><br>
+        </div>
+        <audio id="sneaky" controls autoplay hidden>
+            <source src="/media/audio/sneaky.mp3" type="audio/mpeg">
+        </audio>
+        <script src="java.js"></script>
+    </body>
+</html>
