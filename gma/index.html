@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
         <style>
             body {
-                font: Arial;
+                
                 background: #002363;
             }
             /* Style the video: 100% width and height to cover the entire window */
@@ -21,6 +21,7 @@
 
 /* Add some content at the bottom of the video/page */
 .content {
+    font: Arial;
   position: fixed;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -94,7 +95,7 @@ function enterFullScreen() {
 }
 
 // Add an event listener to trigger full screen on a button click
-document.querySelector('#btn').addEventListener('click', enterFullScreen);
+document.querySelector('#myBtn').addEventListener('click', enterFullScreen);
 </script>
     </body>
 </html>
