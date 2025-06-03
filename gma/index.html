@@ -71,13 +71,9 @@ var btn = document.getElementById("myBtn");
 
 // Pause and play the video, and change the button text
 function myFunction() {
-  if (video.paused) {
     video.play();
     video.style.display = "block";
     enterFullScreen();
-  } else {
-    video.pause();
-  }
 }
 
 // Select the video element
