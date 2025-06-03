@@ -26,6 +26,7 @@
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
+  padding: 20px;
 }
 
 /* Style the button used to pause/play the video */
@@ -47,7 +48,7 @@
     </head>
     <body>
         <!-- The video -->
-<video autoplay controls loop id="myVideo">
+<video controls loop id="myVideo">
   <source src="/gma/vid.mp4" type="video/mp4">
 </video>
 
@@ -56,7 +57,7 @@
   <h1>Video Title</h1>
   <p>Video description...</p>
   <!-- Use a button to pause/play the video with JavaScript -->
-  <button id="myBtn" onclick="myFunction()">Pause</button>
+  <button id="myBtn" onclick="myFunction()">Play</button>
 </div>
         <script>
 // Get the video
@@ -75,6 +76,28 @@ function myFunction() {
     btn.innerHTML = "Play";
   }
 }
+
+// Select the video element
+const videoElement = document.getElementById("myVideo");
+
+// Function to make the video go full screen
+function enterFullScreen() {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // For Safari
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // For IE/Edge
+    video.msRequestFullscreen();
+  } else {
+    console.log("Fullscreen mode is not supported by this browser.");
+  }
+}
+
+// Add an event listener to trigger full screen on a button click
+document.querySelector('#btn').addEventListener('click', enterFullScreen);
 </script>
     </body>
 </html>
+
+
+
