@@ -2,8 +2,6 @@
 <html>
     <head>
         <title>Julia's 70th</title>
-        <link rel="icon" type="image/x-icon" href="/media/wdnicon.ico">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
         <style>
             body {
                 background: #002363;
@@ -61,6 +59,7 @@ var btn = document.getElementById("myBtn");
 function myFunction() {
   if (video.paused) {
     video.play();
+    video.style.visibility = "visible";
     enterFullScreen();
   } else {
     video.pause();
