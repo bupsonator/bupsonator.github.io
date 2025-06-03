@@ -30,6 +30,9 @@
   background: #ddd;
   color: black;
 }
+#myVideo {
+    display: none;
+}
 h1 {
     font-size: 60px;
     align-content: center; 
@@ -61,7 +64,7 @@ var btn = document.getElementById("myBtn");
 function myFunction() {
   if (video.paused) {
     video.play();
-    video.style.visibility = "visible";
+    video.style.display = "block";
     enterFullScreen();
   } else {
     video.pause();
