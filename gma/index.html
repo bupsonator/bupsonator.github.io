@@ -33,7 +33,7 @@
 /* Style the button used to pause/play the video */
 #myBtn {
   width: 200px;
-  font-size: 48px;
+  font-size: 54px;
   padding: 10px;
   border: none;
   background: #000;
@@ -46,10 +46,10 @@
   color: black;
 }
 h1 {
-    font-size: 54px;
+    font-size: 60px;
 }
 p {
-    font-size: 36px;
+    font-size: 48px;
 }
         </style>
     </head>
@@ -64,7 +64,7 @@ p {
   <h1>Video Title</h1>
   <p>Video description...</p>
   <!-- Use a button to pause/play the video with JavaScript -->
-  <button id="myBtn" onclick="myFunction()">Play</button>
+  <button id="myBtn" onclick="myFunction()">Play/Pause</button>
 </div>
         <script>
 // Get the video
@@ -77,10 +77,9 @@ var btn = document.getElementById("myBtn");
 function myFunction() {
   if (video.paused) {
     video.play();
-    btn.innerHTML = "Pause";
+    enterFullScreen();
   } else {
     video.pause();
-    btn.innerHTML = "Play";
   }
 }
 
@@ -100,8 +99,6 @@ function enterFullScreen() {
   }
 }
 
-// Add an event listener to trigger full screen on a button click
-document.querySelector('#myBtn').addEventListener('click', enterFullScreen);
 </script>
     </body>
 </html>
