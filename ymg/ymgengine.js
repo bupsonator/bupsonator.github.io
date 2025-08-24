@@ -35,17 +35,11 @@ for (let i = 0, len = buttons.length; i < len; i++)
 if(localStorage.safeMode == "on")
 {
     let allButtons = document.getElementById("all-games").children;
-    let dropButtons = document.getElementById("dropdown-games").children;
     document.getElementById("set-0").style.color = "lime";
     document.getElementById("set-0").innerHTML = "on";
     for(let i = 0; i < allButtons.length; i++) {
         if(allButtons[i].getAttribute("data-safe") != "true") {
             allButtons[i].style.display = "none";
-        }
-    }
-    for(let i = 0; i < dropButtons.length; i++) {
-        if(dropButtons[i].getAttribute("data-safe") != "true") {
-            dropButtons[i].style.display = "none";
         }
     }
 }
