@@ -24,9 +24,9 @@ p a:hover {
 }
 
 #youtube-link { 
-    background-color: rgb(185, 0, 0);
+    background-color: rgb(161, 0, 0);
 }
-#youtube-link a:hover {
+#youtube-link:hover {
     background-color: red;
     color: white;
 }
