@@ -23,6 +23,13 @@ p a:hover {
     color: #EEEEEE;
 }
 
+#youtube-link { 
+    background-color: rgb(185, 0, 0);
+}
+#youtube-link a:hover {
+    background-color: red;
+    color: white;
+}
 #allSites p a:link, #allSites p a:visited, #footlink, #footlink:visited {
     color: #DADADA;
 }
