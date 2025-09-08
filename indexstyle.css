@@ -30,6 +30,14 @@ p a:hover {
     background-color: red;
     color: white;
 }
+
+#discord-link { 
+    background-color: rgb(0, 64, 161);
+}
+#discord-link:hover {
+    background-color: blue;
+    color: white;
+}
 #allSites p a:link, #allSites p a:visited, #footlink, #footlink:visited {
     color: #DADADA;
 }
